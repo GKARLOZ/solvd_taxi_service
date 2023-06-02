@@ -1,4 +1,4 @@
-
+-- use solvd_taxi_service;
 -- INSERT INTO Vehicles(license_plate, vehicle_model)
 -- VALUES("34j33k","Ford F150"); 
 
@@ -321,72 +321,74 @@
 
 -- 7 statements with aggregate functions and group by and without having.-----------------
 
-
--- SELECT ID, SUM(tax_amount)
+-- SELECT  trip_id, sum(tax_amount) as tax
 -- From Invoices
--- Group by id;
+-- Group by trip_id;
 
--- SELECT trips.ride_id, AVG(distance)
+-- SELECT vehicle_model, COUNT(vehicle_model)
+-- From Vehicles
+-- Group by vehicle_model;
+
+-- SELECT ride_id, AVG(distance)
 -- FROM trips
--- GROUP BY ID;
+-- GROUP BY ride_id;
 
--- SELECT ID, MAX(TAX_AMOUNT)
+-- SELECT tax_amout, count(id)
 -- FROM INVOICES
 -- GROUP BY ID;
 
 -- SELECT ID, min(TAX_AMOUNT)
 -- FROM INVOICES
 -- GROUP BY ID;
-
--- SELECT trips.ride_id, max(distance)
--- FROM trips
--- GROUP BY ID;
-
--- select promo_codes.code, count(discount)
--- from promo_codes
--- group by code;
-
--- select promo_codes.code, max(discount)
--- from promo_codes
--- group by code
-
-
--- 7 statements with aggregate functions and group by and with having.--------------------------------
-
-
-
--- SELECT  total_amount , SUM(tax_amount) as tax
--- From Invoices
--- Group by total_amount
--- having tax >11;
-
--- SELECT trips.ride_id, AVG(distance)
--- FROM trips
--- GROUP BY ID
--- having AVG(distance) > 23;
-
--- SELECT ID, MAX(TAX_AMOUNT)
--- FROM INVOICES
--- GROUP BY ID
--- having  MAX(TAX_AMOUNT) < 5;
-
--- SELECT ID, min(TAX_AMOUNT)
--- FROM INVOICES
--- GROUP BY ID
--- having min(TAX_AMOUNT) > 2 ;
 
 -- SELECT ride_id, max(distance)
 -- FROM trips
--- GROUP BY ID
--- having ride_id = 1;
-
-
--- select code, count(discount)
--- from promo_codes
--- group by code
--- having  count(discount) = 1 ;
+-- GROUP BY ID;
 
 -- select code, max(discount)
 -- from promo_codes
+-- group by code;
+
+
+-- -- 7 statements with aggregate functions and group by and with having.--------------------------------
+
+
+-- SELECT vehicle_model, COUNT(vehicle_model) as c
+-- From Vehicles
+-- Group by vehicle_model
+-- having c > 1;
+
+-- SELECT  trip_id, sum(tax_amount) as tax
+-- From Invoices
+-- Group by trip_id
+-- having tax >11;
+
+-- SELECT trip_id, max(total_amount) as m
+-- FROM Invoices
+-- GROUP BY trip_id
+-- having m > 56;
+
+-- SELECT  trip_id, min(tax_amount) as tax
+-- From Invoices
+-- Group by trip_id
+-- having tax < 7;
+
+-- select vehicle_model, count(vehicle_model) as c
+-- from vehicles
+-- group by vehicle_model
+-- having  c = 3 ;
+
+-- SELECT user_id, count(dropoff_location) as c
+-- FROM rides
+-- GROUP BY user_id
+-- having c > 1;
+
+-- select code, max(discount) as m
+-- from promo_codes
 -- group by code
--- having  max(discount) > .3;
+-- having  m > .3;
+
+
+
+
+
