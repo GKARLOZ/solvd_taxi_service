@@ -1,15 +1,25 @@
-package com.solvd.taxiservice;
+package com.solvd.taxiservice.db.model;
 
 public class PaymentMethod {
 
+    private String id;
     private String method;
     private boolean asDefault;
 
     public PaymentMethod(){};
 
-    public PaymentMethod(String method, boolean asDefault) {
+    public PaymentMethod(String id, String method, boolean asDefault) {
+        this.id = id;
         this.method = method;
         this.asDefault = asDefault;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getMethod() {

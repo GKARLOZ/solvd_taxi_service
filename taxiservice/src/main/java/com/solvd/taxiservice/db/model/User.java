@@ -1,18 +1,28 @@
-package com.solvd.taxiservice;
+package com.solvd.taxiservice.db.model;
 
 public class User {
 
+    private String id;
     private String email;
     private Profile profile;
     private DriverLicense driverLicense;
     private Vehicle vehicle;
     public User(){};
 
-    public User(String email, Profile profile, DriverLicense driverLicense, Vehicle vehicle) {
+    public User(String id, String email, Profile profile, DriverLicense driverLicense, Vehicle vehicle) {
+        this.id = id;
         this.email = email;
         this.profile = profile;
         this.driverLicense = driverLicense;
         this.vehicle = vehicle;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getEmail() {

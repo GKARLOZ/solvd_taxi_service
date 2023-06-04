@@ -1,18 +1,19 @@
-package com.solvd.taxiservice;
-
-import java.time.LocalDateTime;
+package com.solvd.taxiservice.db.model;
 
 public class Trip {
 
-    private LocalDateTime startTime = LocalDateTime.now();
-    private LocalDateTime endTime;
+    private String id;
+    //SartTime and endtime need to be changed to localdatetime
+    private String startTime;
+    private String endTime;
     private double distance;
     private Ride ride;
     private PromoCode promoCode;
 
     public Trip(){};
 
-    public Trip(LocalDateTime startTime, LocalDateTime endTime, double distance, Ride ride, PromoCode promoCode) {
+    public Trip(String id, String startTime, String endTime, double distance, Ride ride, PromoCode promoCode) {
+        this.id = id;
         this.startTime = startTime;
         this.endTime = endTime;
         this.distance = distance;
@@ -20,19 +21,27 @@ public class Trip {
         this.promoCode = promoCode;
     }
 
-    public LocalDateTime getStartTime() {
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(LocalDateTime startTime) {
+    public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
 
-    public LocalDateTime getEndTime() {
+    public String getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(LocalDateTime endTime) {
+    public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
 

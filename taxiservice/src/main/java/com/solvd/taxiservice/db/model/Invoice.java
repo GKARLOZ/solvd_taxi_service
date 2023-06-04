@@ -1,16 +1,26 @@
-package com.solvd.taxiservice;
+package com.solvd.taxiservice.db.model;
 
 public class Invoice {
 
+    private String id;
     private double taxAmount;
     private double totalAmount;
     private Trip trip;
     public Invoice(){};
 
-    public Invoice(double taxAmount, double totalAmount, Trip trip) {
+    public Invoice(String id, double taxAmount, double totalAmount, Trip trip) {
+        this.id = id;
         this.taxAmount = taxAmount;
         this.totalAmount = totalAmount;
         this.trip = trip;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public double getTaxAmount() {

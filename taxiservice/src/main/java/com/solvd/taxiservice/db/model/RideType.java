@@ -1,15 +1,25 @@
-package com.solvd.taxiservice;
+package com.solvd.taxiservice.db.model;
 
 public class RideType {
 
+    private String id;
     private String type;
     private double costPerMile;
 
     public RideType(){};
 
-    public RideType(String type, double costPerMile) {
+    public RideType(String id, String type, double costPerMile) {
+        this.id = id;
         this.type = type;
         this.costPerMile = costPerMile;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getType() {
