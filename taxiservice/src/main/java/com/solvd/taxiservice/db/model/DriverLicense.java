@@ -49,4 +49,14 @@ public class DriverLicense {
     public void setExpirationDate(Date expirationDate) {
         this.expirationDate = expirationDate;
     }
+
+    @Override
+    public String toString() {
+        return "DriverLicense{" +
+                "id='" + id + '\'' +
+                ", licenseNumber='" + licenseNumber + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
+                ", expirationDate=" + expirationDate +
+                '}';
+    }
 }

@@ -37,4 +37,13 @@ public class Vehicle {
     public void setLicensePlate(String licensePlate) {
         this.licensePlate = licensePlate;
     }
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "id='" + id + '\'' +
+                ", model='" + model + '\'' +
+                ", licensePlate='" + licensePlate + '\'' +
+                '}';
+    }
 }
