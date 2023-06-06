@@ -1,28 +1,31 @@
 package com.solvd.taxiservice.db.model;
 
+import java.util.List;
+
 public class Ride {
 
-    private String id;
+    private long id;
     private String pickUpLocations;
     private String dropOffLocation;
+    private String status;
     private RideType rideType;
-    private User user;
+    private List<Review> reviews;
 
     public Ride(){};
 
-    public Ride(String id, String pickUpLocations, String dropOffLocation, RideType rideType, User user) {
-        this.id = id;
+    public Ride(String pickUpLocations, String dropOffLocation, String status, RideType rideType, List<Review> reviews) {
         this.pickUpLocations = pickUpLocations;
         this.dropOffLocation = dropOffLocation;
+        this.status = status;
         this.rideType = rideType;
-        this.user = user;
+        this.reviews = reviews;
     }
 
-    public String getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -42,6 +45,14 @@ public class Ride {
         this.dropOffLocation = dropOffLocation;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     public RideType getRideType() {
         return rideType;
     }
@@ -50,11 +61,23 @@ public class Ride {
         this.rideType = rideType;
     }
 
-    public User getUser() {
-        return user;
+    public List<Review> getReviews() {
+        return reviews;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setReviews(List<Review> reviews) {
+        this.reviews = reviews;
+    }
+
+    @Override
+    public String toString() {
+        return "Ride{" +
+                "id=" + id +
+                ", pickUpLocations='" + pickUpLocations + '\'' +
+                ", dropOffLocation='" + dropOffLocation + '\'' +
+                ", status='" + status + '\'' +
+                ", rideType=" + rideType +
+                ", reviews=" + reviews +
+                '}';
     }
 }

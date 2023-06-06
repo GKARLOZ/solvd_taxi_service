@@ -4,25 +4,25 @@ import java.util.Date;
 
 public class DriverLicense {
 
-    private String id;
+    private long id;
     private String licenseNumber;
     private Date dateOfBirth;
     private Date expirationDate;
 
     public DriverLicense(){};
 
-    public DriverLicense(String id, String licenseNumber, Date dateOfBirth, Date expirationDate) {
-        this.id = id;
+    public DriverLicense(String licenseNumber, Date dateOfBirth, Date expirationDate) {
+
         this.licenseNumber = licenseNumber;
         this.dateOfBirth = dateOfBirth;
         this.expirationDate = expirationDate;
     }
 
-    public String getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(long id) {
         this.id = id;
     }
 

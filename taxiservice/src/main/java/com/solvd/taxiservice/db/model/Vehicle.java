@@ -2,23 +2,23 @@ package com.solvd.taxiservice.db.model;
 
 public class Vehicle {
 
-    private String id;
+    private long id;
     private String model;
     private String licensePlate;
 
     public Vehicle(){};
 
-    public Vehicle(String id, String model, String licensePlate) {
-        this.id = id;
+    public Vehicle( String model, String licensePlate) {
+
         this.model = model;
         this.licensePlate = licensePlate;
     }
 
-    public String getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(long id) {
         this.id = id;
     }
 

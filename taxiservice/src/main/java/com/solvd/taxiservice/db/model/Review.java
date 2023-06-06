@@ -2,25 +2,23 @@ package com.solvd.taxiservice.db.model;
 
 public class Review {
 
-        private String id;
+        private long id;
         private int rating;
         private String comment;
-        private Ride ride;
 
-        public Review(){};
+    public Review(){};
 
-    public Review(String id, int rating, String comment, Ride ride) {
-        this.id = id;
+    public Review( int rating, String comment) {
+
         this.rating = rating;
         this.comment = comment;
-        this.ride = ride;
     }
 
-    public String getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -40,11 +38,12 @@ public class Review {
         this.comment = comment;
     }
 
-    public Ride getRide() {
-        return ride;
-    }
-
-    public void setRide(Ride ride) {
-        this.ride = ride;
+    @Override
+    public String toString() {
+        return "Review{" +
+                "id=" + id +
+                ", rating=" + rating +
+                ", comment='" + comment + '\'' +
+                '}';
     }
 }

@@ -1,31 +1,32 @@
 package com.solvd.taxiservice.db.mysql;
 
+import com.solvd.taxiservice.Main;
 import com.solvd.taxiservice.db.dao.IProfileDAO;
 import com.solvd.taxiservice.db.model.Profile;
-import com.solvd.taxiservice.db.model.User;
 import com.solvd.taxiservice.db.utils.DBConnectionPool;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class ProfileDAO implements IProfileDAO {
 
+    private final static Logger LOGGER = LogManager.getLogger(Profile.class);
+
     @Override
-    public Profile getById(int id) {
+    public Profile getById(long id) {
 
         Connection connection = DBConnectionPool.getInstance().getConnection();
         Profile profile = new Profile();
         PreparedStatement preparedStatement = null;
         try {
             preparedStatement = connection.prepareStatement("SELECT * FROM Profiles WHERE ID=?");
-            preparedStatement.setInt(1,id);
+            preparedStatement.setLong(1,id);
             ResultSet resultSet = preparedStatement.executeQuery();
 
             while(resultSet.next()){
 
-                profile.setId(resultSet.getString("id"));
+                profile.setId(resultSet.getLong("id"));
                 profile.setName(resultSet.getString("name"));
                 profile.setPhoneNumber(resultSet.getString("phone"));
 
@@ -46,16 +47,17 @@ public class ProfileDAO implements IProfileDAO {
         Connection connection = DBConnectionPool.getInstance().getConnection();
         PreparedStatement preparedStatement = null;
         try {
-            preparedStatement = connection.prepareStatement("INSERT INTO Profiles (name,phone) VALUES (?,?)");
+            preparedStatement = connection.prepareStatement("INSERT INTO Profiles (name,phone) VALUES (?,?)", Statement.RETURN_GENERATED_KEYS);
+
 
             preparedStatement.setString(1,profile.getName());
             preparedStatement.setString(2,profile.getPhoneNumber());
             int rowsAffected = preparedStatement.executeUpdate();
 
             if (rowsAffected > 0) {
-                System.out.println("Profile created successfully.");
+                LOGGER.info("Profile created successfully.");
             } else {
-                System.out.println("Failed to create profile.");
+                LOGGER.info("Failed to create profile.");
             }
 
 
@@ -79,13 +81,13 @@ public class ProfileDAO implements IProfileDAO {
 
             preparedStatement.setString(1,profile.getName());
             preparedStatement.setString(2,profile.getPhoneNumber());
-            preparedStatement.setInt(3, Integer.parseInt(profile.getId()));
+            preparedStatement.setLong(3, profile.getId());
             int rowsAffected = preparedStatement.executeUpdate();
 
             if (rowsAffected > 0) {
-                System.out.println("Profile updated successfully.");
+                LOGGER.info("Profile updated successfully.");
             } else {
-                System.out.println("No Profile found with the given ID.");
+                LOGGER.info("No Profile found with the given ID.");
             }
 
 
@@ -109,14 +111,14 @@ public class ProfileDAO implements IProfileDAO {
         try {
             preparedStatement = connection.prepareStatement("DELETE FROM profiles WHERE id = ?");
 
-            preparedStatement.setString(1,profile.getId());
+            preparedStatement.setLong(1,profile.getId());
 
             int rowsAffected = preparedStatement.executeUpdate();
 
             if (rowsAffected > 0) {
-                System.out.println("Profile deleted successfully.");
+                LOGGER.info("Profile deleted successfully.");
             } else {
-                System.out.println("No Profile found with the given ID.");
+                LOGGER.info("No Profile found with the given ID.");
             }
 
 
@@ -134,7 +136,7 @@ public class ProfileDAO implements IProfileDAO {
     }
 
     @Override
-    public Profile getProfileByUserId(int id) {
+    public Profile getProfileByUserId(long id) {
 
         Connection connection = DBConnectionPool.getInstance().getConnection();
         Profile profile = new Profile();
@@ -142,12 +144,12 @@ public class ProfileDAO implements IProfileDAO {
         try {
             preparedStatement = connection.prepareStatement("select * from Profiles\n" +
                     "where id = (select profile_id  from users where id = ?);");
-            preparedStatement.setInt(1,id);
+            preparedStatement.setLong(1,id);
             ResultSet resultSet = preparedStatement.executeQuery();
 
             while(resultSet.next()){
 
-                profile.setId(resultSet.getString("id"));
+                profile.setId(resultSet.getLong("id"));
                 profile.setName(resultSet.getString("name"));
                 profile.setPhoneNumber(resultSet.getString("phone"));
             }
@@ -179,7 +181,7 @@ public class ProfileDAO implements IProfileDAO {
 
             while(resultSet.next()){
 
-                profile.setId(resultSet.getString("id"));
+                profile.setId(resultSet.getLong("id"));
                 profile.setName(resultSet.getString("name"));
                 profile.setPhoneNumber(resultSet.getString("phone"));
             }
@@ -193,5 +195,40 @@ public class ProfileDAO implements IProfileDAO {
 
         return profile;
 
+    }
+
+    @Override
+    public Profile createProfile(Profile profile) {
+        Connection connection = DBConnectionPool.getInstance().getConnection();
+        PreparedStatement preparedStatement = null;
+        try {
+            preparedStatement = connection.prepareStatement("INSERT INTO Profiles (name,phone) VALUES (?,?)", Statement.RETURN_GENERATED_KEYS);
+
+            preparedStatement.setString(1, profile.getName());
+            preparedStatement.setString(2, profile.getPhoneNumber());
+
+            int rowsAffected = preparedStatement.executeUpdate();
+            ResultSet generatedKeys = preparedStatement.getGeneratedKeys();
+            long generatedId = -1;
+
+            if (generatedKeys.next()) {
+                generatedId = generatedKeys.getLong(1);
+
+            }
+            profile.setId(generatedId);
+
+            if (rowsAffected > 0) {
+                LOGGER.info("Profile created successfully.");
+            } else {
+                LOGGER.info("Failed to create profile.");
+            }
+
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            DBConnectionPool.getInstance().releaseConnection(connection);
+        }
+        return profile;
     }
 }

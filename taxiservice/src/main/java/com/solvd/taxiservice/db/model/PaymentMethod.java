@@ -2,23 +2,23 @@ package com.solvd.taxiservice.db.model;
 
 public class PaymentMethod {
 
-    private String id;
+    private long id;
     private String method;
-    private boolean asDefault;
+    private String comment;
 
     public PaymentMethod(){};
 
-    public PaymentMethod(String id, String method, boolean asDefault) {
-        this.id = id;
+    public PaymentMethod(String method, String comment) {
+
         this.method = method;
-        this.asDefault = asDefault;
+        this.comment = comment;
     }
 
-    public String getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -30,11 +30,20 @@ public class PaymentMethod {
         this.method = method;
     }
 
-    public boolean isAsDefault() {
-        return asDefault;
+    public String isComment() {
+        return comment;
     }
 
-    public void setAsDefault(boolean asDefault) {
-        this.asDefault = asDefault;
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+    @Override
+    public String toString() {
+        return "PaymentMethod{" +
+                "id=" + id +
+                ", method='" + method + '\'' +
+                ", comment='" + comment + '\'' +
+                '}';
     }
 }

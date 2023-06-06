@@ -4,25 +4,25 @@ import java.util.Date;
 
 public class PromoCode {
 
-    private String id;
+    private long id;
     private String code;
     private double discount;
     private Date expirationDate;
 
     public PromoCode(){};
 
-    public PromoCode(String id, String code, double discount, Date expirationDate) {
-        this.id = id;
+    public PromoCode( String code, double discount, Date expirationDate) {
+
         this.code = code;
         this.discount = discount;
         this.expirationDate = expirationDate;
     }
 
-    public String getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -48,5 +48,15 @@ public class PromoCode {
 
     public void setExpirationDate(Date expirationDate) {
         this.expirationDate = expirationDate;
+    }
+
+    @Override
+    public String toString() {
+        return "PromoCode{" +
+                "id=" + id +
+                ", code='" + code + '\'' +
+                ", discount=" + discount +
+                ", expirationDate=" + expirationDate +
+                '}';
     }
 }

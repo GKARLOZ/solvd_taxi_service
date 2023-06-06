@@ -2,23 +2,23 @@ package com.solvd.taxiservice.db.model;
 
 public class RideType {
 
-    private String id;
+    private long id;
     private String type;
     private double costPerMile;
 
     public RideType(){};
 
-    public RideType(String id, String type, double costPerMile) {
-        this.id = id;
+    public RideType( String type, double costPerMile) {
+
         this.type = type;
         this.costPerMile = costPerMile;
     }
 
-    public String getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -36,5 +36,14 @@ public class RideType {
 
     public void setCostPerMile(double costPerMile) {
         this.costPerMile = costPerMile;
+    }
+
+    @Override
+    public String toString() {
+        return "RideType{" +
+                "id=" + id +
+                ", type='" + type + '\'' +
+                ", costPerMile=" + costPerMile +
+                '}';
     }
 }

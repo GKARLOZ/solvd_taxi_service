@@ -33,7 +33,7 @@ public class DBConnectionPool {
                 Connection connection = new DBConnection().connect();
                 connections.offer(connection);
             }
-            System.out.println(connections.size());
+
         }
 
         public synchronized Connection getConnection(){
@@ -46,10 +46,7 @@ public class DBConnectionPool {
 
                 throw new RuntimeException(e);
             }
-            finally {
-                System.out.println(connections.size());
 
-            }
 
         }
 
@@ -57,7 +54,6 @@ public class DBConnectionPool {
 
             try{
                 connections.put(connection);
-                System.out.println(connections.size());
 
 
             }catch (InterruptedException e ) {

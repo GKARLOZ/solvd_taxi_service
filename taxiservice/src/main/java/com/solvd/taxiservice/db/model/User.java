@@ -1,27 +1,31 @@
 package com.solvd.taxiservice.db.model;
 
+import java.util.List;
+
 public class User {
 
-    private String id;
+    private long id;
     private String email;
     private Profile profile;
     private DriverLicense driverLicense;
     private Vehicle vehicle;
+    private List<Ride> rides;
+
     public User(){};
 
-    public User(String id, String email, Profile profile, DriverLicense driverLicense, Vehicle vehicle) {
-        this.id = id;
+    public User(String email, Profile profile, DriverLicense driverLicense, Vehicle vehicle, List<Ride> rides) {
         this.email = email;
         this.profile = profile;
         this.driverLicense = driverLicense;
         this.vehicle = vehicle;
+        this.rides = rides;
     }
 
-    public String getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -57,14 +61,24 @@ public class User {
         this.vehicle = vehicle;
     }
 
+    public List<Ride> getRides() {
+        return rides;
+    }
+
+    public void setRides(List<Ride> rides) {
+        this.rides = rides;
+    }
+
+
     @Override
     public String toString() {
         return "User{" +
-                "id='" + id + '\'' +
+                "id=" + id +
                 ", email='" + email + '\'' +
                 ", profile=" + profile +
                 ", driverLicense=" + driverLicense +
                 ", vehicle=" + vehicle +
+                ", rides=" + rides +
                 '}';
     }
 }

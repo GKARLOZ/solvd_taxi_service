@@ -2,23 +2,23 @@ package com.solvd.taxiservice.db.model;
 
 public class Profile {
 
-    private String id;
+    private long id;
     private String name;
     private String phoneNumber;
 
    public Profile(){};
 
-    public Profile(String id, String name, String phoneNumber) {
-        this.id = id;
+    public Profile( String name, String phoneNumber) {
+
         this.name = name;
         this.phoneNumber = phoneNumber;
     }
 
-    public String getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(long id) {
         this.id = id;
     }
 

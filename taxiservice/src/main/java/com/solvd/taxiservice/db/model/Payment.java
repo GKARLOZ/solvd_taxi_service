@@ -2,25 +2,25 @@ package com.solvd.taxiservice.db.model;
 
 public class Payment {
 
-        private String id;
+        private long id;
         private String paymentStatus;
         private PaymentMethod paymentMethod;
         private Invoice invoice;
 
         public Payment(){};
 
-    public Payment(String id, String paymentStatus, PaymentMethod paymentMethod, Invoice invoice) {
-        this.id = id;
+    public Payment( String paymentStatus, PaymentMethod paymentMethod, Invoice invoice) {
+
         this.paymentStatus = paymentStatus;
         this.paymentMethod = paymentMethod;
         this.invoice = invoice;
     }
 
-    public String getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -46,5 +46,15 @@ public class Payment {
 
     public void setInvoice(Invoice invoice) {
         this.invoice = invoice;
+    }
+
+    @Override
+    public String toString() {
+        return "Payment{" +
+                "id=" + id +
+                ", paymentStatus='" + paymentStatus + '\'' +
+                ", paymentMethod=" + paymentMethod +
+                ", invoice=" + invoice +
+                '}';
     }
 }
