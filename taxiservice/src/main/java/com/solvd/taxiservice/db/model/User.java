@@ -11,7 +11,14 @@ public class User {
     private Vehicle vehicle;
     private List<Ride> rides;
 
-    public User(){};
+    public User(){
+
+        this.profile = new Profile();
+        this.driverLicense = new DriverLicense();
+        this.vehicle = new Vehicle();
+
+    }
+
 
     public User(String email, Profile profile, DriverLicense driverLicense, Vehicle vehicle, List<Ride> rides) {
         this.email = email;

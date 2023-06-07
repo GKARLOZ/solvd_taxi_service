@@ -9,7 +9,12 @@ public class DriverLicense {
     private Date dateOfBirth;
     private Date expirationDate;
 
-    public DriverLicense(){};
+    public DriverLicense(){
+
+        this.dateOfBirth = new Date();
+        this.expirationDate = new Date();
+
+    };
 
     public DriverLicense(String licenseNumber, Date dateOfBirth, Date expirationDate) {
 

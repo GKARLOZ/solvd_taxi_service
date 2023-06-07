@@ -1,5 +1,8 @@
 package com.solvd.taxiservice.db.utils;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.sql.Connection;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
@@ -9,10 +12,11 @@ public class DBConnectionPool {
         private final int POOL_SIZE = 5;
         private BlockingQueue<Connection> connections;
         private static DBConnectionPool instance;
-        //private final static Logger LOGGER = LogManager.getLogger(DBConnectionPool.class);
+
+        private final static Logger LOGGER = LogManager.getLogger(DBConnectionPool.class);
 
         private DBConnectionPool() {
-            connections = new ArrayBlockingQueue<>(POOL_SIZE);
+            this.connections = new ArrayBlockingQueue<>(POOL_SIZE);
             initializePool();
         }
 
@@ -40,13 +44,13 @@ public class DBConnectionPool {
 
             try {
 
-                return  connections.take();
+                return connections.take();
 
             } catch (InterruptedException e) {
 
-                throw new RuntimeException(e);
+//                LOGGER.error(e);
             }
-
+            return null;
 
         }
 
@@ -58,7 +62,7 @@ public class DBConnectionPool {
 
             }catch (InterruptedException e ) {
 
-                //LOGGER.error(e.getMessage());
+                LOGGER.error(e.getMessage());
                 }
 
         }
