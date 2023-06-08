@@ -17,7 +17,7 @@ public class DBConnectionPool {
 
         private DBConnectionPool() {
             this.connections = new ArrayBlockingQueue<>(POOL_SIZE);
-            initializePool();
+
         }
 
         public static DBConnectionPool getInstance(){
@@ -25,6 +25,7 @@ public class DBConnectionPool {
                 synchronized (DBConnectionPool.class) {
                     if (instance == null) {
                         instance = new DBConnectionPool();
+                        instance.initializePool();
                     }
                 }
             }

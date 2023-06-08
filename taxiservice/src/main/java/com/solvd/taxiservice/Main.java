@@ -1,64 +1,92 @@
 package com.solvd.taxiservice;
 
-import com.solvd.taxiservice.db.dao.interfaces.IDriverLicenseDAO;
-import com.solvd.taxiservice.db.dao.interfaces.IProfileDAO;
-import com.solvd.taxiservice.db.dao.interfaces.IUserDAO;
-import com.solvd.taxiservice.db.dao.interfaces.IVehicleDAO;
-import com.solvd.taxiservice.db.dao.mysql.DriverLicenseDAO;
-import com.solvd.taxiservice.db.dao.mysql.ProfileDAO;
-import com.solvd.taxiservice.db.dao.mysql.UserDAO;
-import com.solvd.taxiservice.db.dao.mysql.VehicleDAO;
 import com.solvd.taxiservice.db.model.*;
+import com.solvd.taxiservice.db.service.*;
 import com.solvd.taxiservice.db.service.implement.*;
+import com.solvd.taxiservice.db.xml.parsers.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.List;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import static com.solvd.taxiservice.db.xml.XSDValidator.validateXMLSchema;
 
 public class Main {
 
     private final static Logger LOGGER = LogManager.getLogger(Main.class);
    public static void main(String[] args) {
-//
-//        //----------------------------User Service-----------------------------------------
-//        User user = new UserService().getUserById(3);
-//        LOGGER.info(user);
-//
-//        User user2 = new UserService().getUserbyEmail("asdfa@gmail.com");
-//
-//        LOGGER.info(user2);
 
 
-//
-//
-//        //---------------------------ride service -------------------------------
-//
-//        RideService rideService = new RideService();
-//        Ride ride = rideService.getRideById(1);
-//        List<Ride> rides = rideService.getRideByUserId(2);
-//
-//        LOGGER.info(rides);
-//        //---------------------------Trip service---------------------------
-//
-//        TripService tripService = new TripService();
-//        Trip trip = tripService.getTripById(1);
-//
-//        LOGGER.info(trip);
-//
-//        //---------------------Invoice Service------------------------
-//
-//        InvoiceService invoiceService = new InvoiceService();
-//        Invoice invoice = invoiceService.getInvoiceById(1);
-//
-//        LOGGER.info(invoice);
+          //task16();
+          task15();
 
-//        //-------------------Payment service --------------------------
-//
-//        PaymentService paymentService = new PaymentService();
-//        Payment payment = paymentService.getPaymentById(1);
-//
-//        LOGGER.info(payment);
+    }
+
+    public static void task16(){
+//        Create one XML file and XSD schema for at least 5 classes from the below hierarchy.
+//        Validate XML file using XSD schema and assigned parser.
+//        Parse XML file using one of the parsers from the title.
+
+          String [] fileList = {"Vehicle.xsd", "Vehicle.xml"};
+
+         if(fileList.length !=2) {
+             LOGGER.info("Usage : XSDValidator <file-name.xsd> <file-name.xml>");
+         } else {
+              boolean isValid = validateXMLSchema(fileList[0],fileList[1]);
+
+              if(isValid) {
+                  LOGGER.info(fileList[1] + " is valid against " + fileList[0]);
+              } else {
+                  LOGGER.info(fileList[1] + " is not valid against " + fileList[0]);
+              }
+
+              VehicleParser vp = new VehicleParser();
+              vp.parse(fileList[1]);
+
+         }
+
+    }
+
+    public static void task15(){
+
+         //----------------------------User Service-----------------------------------------
+        User user = new UserService().getUserById(3);
+        LOGGER.info(user);
+
+        User user2 = new UserService().getUserbyEmail("asdfa@gmail.com");
+
+        LOGGER.info(user2);
+
+
+
+
+        //---------------------------ride service -------------------------------
+
+        RideService rideService = new RideService();
+        Ride ride = rideService.getRideById(1);
+        List<Ride> rides = rideService.getRideByUserId(2);
+
+        LOGGER.info(rides);
+        //---------------------------Trip service---------------------------
+
+        TripService tripService = new TripService();
+        Trip trip = tripService.getTripById(1);
+
+        LOGGER.info(trip);
+
+        //---------------------Invoice Service------------------------
+
+        InvoiceService invoiceService = new InvoiceService();
+        Invoice invoice = invoiceService.getInvoiceById(1);
+
+        LOGGER.info(invoice);
+
+        //-------------------Payment service --------------------------
+
+        PaymentService paymentService = new PaymentService();
+        Payment payment = paymentService.getPaymentById(1);
+
+        LOGGER.info(payment);
 //
 //        //------------------Profile DAO ----------------------------------
 
@@ -125,12 +153,7 @@ public class Main {
 //       userService.delete(user3);
 
 
-
-
-
-
-
-
-
     }
+
+
 }
