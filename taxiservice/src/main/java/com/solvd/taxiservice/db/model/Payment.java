@@ -7,7 +7,10 @@ public class Payment {
         private PaymentMethod paymentMethod;
         private Invoice invoice;
 
-        public Payment(){};
+        public Payment(){
+            this.invoice = new Invoice();
+            this.paymentMethod = new PaymentMethod();
+        };
 
     public Payment( String paymentStatus, PaymentMethod paymentMethod, Invoice invoice) {
 

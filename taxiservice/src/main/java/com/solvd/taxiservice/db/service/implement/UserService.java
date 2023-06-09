@@ -9,12 +9,13 @@ import com.solvd.taxiservice.db.dao.mysql.ProfileDAO;
 import com.solvd.taxiservice.db.dao.mysql.UserDAO;
 import com.solvd.taxiservice.db.dao.mysql.VehicleDAO;
 import com.solvd.taxiservice.db.model.*;
+import com.solvd.taxiservice.db.service.interfaces.IUserService;
 
 
 import java.util.List;
 
 
-public class UserService {
+public class UserService implements IUserService{
 
         private IUserDAO userDAO = new UserDAO();
         private IDriverLicenseDAO driverLicenseDAO = new DriverLicenseDAO();
@@ -22,7 +23,9 @@ public class UserService {
         private IVehicleDAO vehicleDAO = new VehicleDAO();
         private RideService rideService = new RideService();
 
-        public User getUserById(int id){
+
+        @Override
+        public User getById(long id){
 
             User user = userDAO.getById(id);
             DriverLicense dl = driverLicenseDAO.getDLByUserId(id);
@@ -39,6 +42,7 @@ public class UserService {
 
 
         }
+        @Override
          public User getUserbyEmail(String email){
 
         User user = userDAO.getUserByEmail(email);
@@ -57,12 +61,12 @@ public class UserService {
 
 
     }
+    @Override
+    public void create(User user){
 
-    public void createUser(User user){
-
-            DriverLicense dl = driverLicenseDAO.createDL(user.getDriverLicense());
-            Vehicle vehicle = vehicleDAO.createVehicle(user.getVehicle());
-            Profile profile = profileDAO.createProfile(user.getProfile());
+            DriverLicense dl = driverLicenseDAO.createAndGet(user.getDriverLicense());
+            Vehicle vehicle = vehicleDAO.createAndGet(user.getVehicle());
+            Profile profile = profileDAO.createAndGet(user.getProfile());
 
             user.setDriverLicense(dl);
             user.setVehicle(vehicle);
@@ -72,7 +76,7 @@ public class UserService {
 
 
     }
-
+    @Override
     public void delete(User user){
 
                 userDAO.delete(user);
@@ -82,6 +86,7 @@ public class UserService {
 
     }
 
+    @Override
     public void update(User user){
 
             userDAO.update(user);

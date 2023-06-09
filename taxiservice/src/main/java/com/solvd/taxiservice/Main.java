@@ -17,8 +17,8 @@ public class Main {
    public static void main(String[] args) {
 
 
-          //task16();
-          task15();
+          task16();
+          //task15();
 
     }
 
@@ -50,20 +50,17 @@ public class Main {
     public static void task15(){
 
          //----------------------------User Service-----------------------------------------
-        User user = new UserService().getUserById(3);
+        User user = new UserService().getById(3);
         LOGGER.info(user);
 
         User user2 = new UserService().getUserbyEmail("asdfa@gmail.com");
-
-        LOGGER.info(user2);
-
 
 
 
         //---------------------------ride service -------------------------------
 
         RideService rideService = new RideService();
-        Ride ride = rideService.getRideById(1);
+        Ride ride = rideService.getById(1);
         List<Ride> rides = rideService.getRideByUserId(2);
 
         LOGGER.info(rides);
@@ -77,14 +74,14 @@ public class Main {
         //---------------------Invoice Service------------------------
 
         InvoiceService invoiceService = new InvoiceService();
-        Invoice invoice = invoiceService.getInvoiceById(1);
+        Invoice invoice = invoiceService.getById(1);
 
         LOGGER.info(invoice);
 
         //-------------------Payment service --------------------------
 
         PaymentService paymentService = new PaymentService();
-        Payment payment = paymentService.getPaymentById(1);
+        Payment payment = paymentService.getById(1);
 
         LOGGER.info(payment);
 //
@@ -132,25 +129,6 @@ public class Main {
 //       vehicleDAO.delete(vehicle);
 //        System.out.println(vehicle);
 //------------------------------------------------------------------------------
-
-//       User user3 = new User();
-//
-//       UserService userService = new UserService();
-//
-//       //userService.createUser(user3);
-//
-//       IUserDAO userDAO = new UserDAO();
-//       user3 = userService.getUserById(4);
-//       System.out.println(user3);
-//       user3.setEmail("a@gmail.com");
-//       userService.update(user3);
-//
-//        userDAO.delete(user3);
-//
-//       IVehicleDAO vehicleDAO = new VehicleDAO();
-//
-//       vehicleDAO.delete(vehicleDAO.getVehicleByUserId(user3.getId()));
-//       userService.delete(user3);
 
 
     }

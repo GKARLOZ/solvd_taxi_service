@@ -9,16 +9,19 @@ import com.solvd.taxiservice.db.model.RideType;
 import com.solvd.taxiservice.db.dao.mysql.ReviewDAO;
 import com.solvd.taxiservice.db.dao.mysql.RideDAO;
 import com.solvd.taxiservice.db.dao.mysql.RideTypeDAO;
+import com.solvd.taxiservice.db.service.interfaces.IRideService;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class RideService {
+public class RideService implements IRideService {
 
     private IRideDAO rideDAO = new RideDAO();
     private IRideTypeDAO rtypeDAO = new RideTypeDAO();
     private IReviewDAO reviewDAO = new ReviewDAO();
-    public Ride getRideById(long id){
+
+    @Override
+    public Ride getById(long id){
 
         Ride ride = rideDAO.getById(id);
         RideType rt = rtypeDAO.getRideTypeByRideId(id);
@@ -29,7 +32,7 @@ public class RideService {
 
         return ride;
     }
-
+    @Override
     public List<Ride> getRideByUserId(long userId){
 
         List<Ride> rides = new ArrayList<>();
@@ -37,7 +40,7 @@ public class RideService {
 
         for (Long RideId:ids) {
 
-            rides.add(getRideById(RideId));
+            rides.add(getById(RideId));
         }
         return rides;
 
@@ -57,4 +60,27 @@ public class RideService {
     }
 
 
+    @Override
+    public void create(Ride ride) {
+
+        //rideDAO.create(ride);
+    }
+
+    @Override
+    public void update(Ride ride) {
+
+        //rideDAO.update(ride);
+
+    }
+
+    @Override
+    public void delete(Ride ride) {
+//        List<Review>  reviews = reviewDAO.getReviewsByRideId(ride.getId());
+//        for (Review r: reviews) {
+//            reviewDAO.delete(r);
+//
+//        }
+//            rideDAO.delete(ride);
+//
+  }
 }

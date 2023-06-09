@@ -30,12 +30,12 @@ public class PaymentMethod {
         this.method = method;
     }
 
-    public String isComment() {
-        return comment;
-    }
-
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    public String getComment() {
+        return comment;
     }
 
     @Override
