@@ -29,7 +29,7 @@ public class ProfileDAO implements IProfileDAO {
             if (rowsAffected > 0) {
                 LOGGER.info(rowsAffected + " row affected in Profile table.");
             } else {
-                LOGGER.info("No rows affected in Profiles table");
+                LOGGER.info("No rows affected in Profile table");
             }
 
         } catch (SQLException e) {
@@ -81,8 +81,8 @@ public class ProfileDAO implements IProfileDAO {
     @Override
     public Profile getById(long id) {
         Long profileId = id;
-        Profile profile = queryGet("SELECT * FROM Profiles WHERE ID=?", profileId);
-        return profile;
+        return queryGet("SELECT * FROM Profiles WHERE ID=?", profileId);
+
 
     }
     @Override
@@ -107,23 +107,21 @@ public class ProfileDAO implements IProfileDAO {
     public Profile getProfileByUserId(long id) {
 
         Long profileId = id;
-        Profile profile = queryGet("select * from Profiles\n" +
-                "where id = (select profile_id  from users where id = ?);", profileId);
-        return profile;
+        return queryGet("select * from Profiles where id = (select profile_id  from users where id = ?);", profileId);
+
 
     }
 
     @Override
     public Profile getProfileByName(String Name) {
 
-        Profile profile = queryGet("select * from Profiles where name = ?;", Name);
+        return queryGet("select * from Profiles where name = ?;", Name);
 
-        return profile;
 
     }
 
     @Override
-    public Profile createProfile(Profile profile) {
+    public Profile createAndGet(Profile profile) {
 
         Connection connection = DBConnectionPool.getInstance().getConnection();
         PreparedStatement preparedStatement = null;

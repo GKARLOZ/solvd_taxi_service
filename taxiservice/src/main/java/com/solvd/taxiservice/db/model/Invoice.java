@@ -6,7 +6,9 @@ public class Invoice {
     private double taxAmount;
     private double totalAmount;
     private Trip trip;
-    public Invoice(){};
+    public Invoice(){
+        this.trip = new Trip();
+    };
 
     public Invoice( double taxAmount, double totalAmount, Trip trip) {
 

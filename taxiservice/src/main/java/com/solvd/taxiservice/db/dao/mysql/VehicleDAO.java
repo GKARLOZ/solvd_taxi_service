@@ -115,7 +115,7 @@ public class VehicleDAO  implements IVehicleDAO {
     }
 
     @Override
-    public Vehicle createVehicle(Vehicle vehicle) {
+    public Vehicle createAndGet(Vehicle vehicle) {
         Connection connection = DBConnectionPool.getInstance().getConnection();
         PreparedStatement preparedStatement = null;
         try {

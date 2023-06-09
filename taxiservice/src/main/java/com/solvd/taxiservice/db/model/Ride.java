@@ -11,7 +11,9 @@ public class Ride {
     private RideType rideType;
     private List<Review> reviews;
 
-    public Ride(){};
+    public Ride(){
+        this.rideType = new RideType();
+    };
 
     public Ride(String pickUpLocations, String dropOffLocation, String status, RideType rideType, List<Review> reviews) {
         this.pickUpLocations = pickUpLocations;

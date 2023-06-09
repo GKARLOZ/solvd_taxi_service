@@ -15,16 +15,15 @@ public class DBConnectionPool {
 
         private final static Logger LOGGER = LogManager.getLogger(DBConnectionPool.class);
 
-        private DBConnectionPool() {
-            this.connections = new ArrayBlockingQueue<>(POOL_SIZE);
-            initializePool();
-        }
+        private DBConnectionPool() {}
 
         public static DBConnectionPool getInstance(){
             if (instance == null) {
                 synchronized (DBConnectionPool.class) {
                     if (instance == null) {
                         instance = new DBConnectionPool();
+                        instance.initializePool();
+
                     }
                 }
             }
@@ -33,6 +32,8 @@ public class DBConnectionPool {
 
 
         private void initializePool() {
+            connections = new ArrayBlockingQueue<>(POOL_SIZE);
+
             for (int i = 0; i < POOL_SIZE; i++) {
                 Connection connection = new DBConnection().connect();
                 connections.offer(connection);

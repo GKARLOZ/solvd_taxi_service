@@ -104,8 +104,7 @@ public class DriverLicenseDAO implements IDriverLicenseDAO {
     @Override
     public DriverLicense getDLByUserId(long id) {
         Long userId = id;
-        return queryGet("select * from driver_licenses\n" +
-                "where id = (select driver_license_id from users where id = ?);",userId);
+        return queryGet("select * from driver_licenses where id = (select driver_license_id from users where id = ?);",userId);
 
     }
 
@@ -117,7 +116,7 @@ public class DriverLicenseDAO implements IDriverLicenseDAO {
     }
 
     @Override
-    public DriverLicense createDL(DriverLicense driverLicense) {
+    public DriverLicense createAndGet(DriverLicense driverLicense) {
 
         Connection connection = DBConnectionPool.getInstance().getConnection();
         PreparedStatement preparedStatement = null;
@@ -127,7 +126,6 @@ public class DriverLicenseDAO implements IDriverLicenseDAO {
             preparedStatement.setString(1, driverLicense.getLicenseNumber());
             preparedStatement.setDate(2, new Date(driverLicense.getDateOfBirth().getTime()));
             preparedStatement.setDate(3, new Date(driverLicense.getExpirationDate().getTime()));
-
 
             int rowsAffected = preparedStatement.executeUpdate();
 

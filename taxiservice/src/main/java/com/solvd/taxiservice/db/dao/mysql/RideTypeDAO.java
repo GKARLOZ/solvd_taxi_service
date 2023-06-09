@@ -17,43 +17,23 @@ public class RideTypeDAO implements IRideTypeDAO {
 
     private final static Logger LOGGER = LogManager.getLogger(Review.class);
 
-    @Override
-    public void create(RideTypeDAO rideTypeDAO) {
+    private void executeQuery(String query, Object... params){
 
-    }
-
-    @Override
-    public RideTypeDAO getById(long id) {
-        return null;
-    }
-
-    @Override
-    public void update(RideTypeDAO rideTypeDAO) {
-
-    }
-
-    @Override
-    public void delete(RideTypeDAO rideTypeDAO) {
-
-    }
-
-    @Override
-    public RideType getRideTypeByRideId(Long id) {
         Connection connection = DBConnectionPool.getInstance().getConnection();
-        RideType rt  = new RideType();
         PreparedStatement preparedStatement = null;
         try {
-            preparedStatement = connection.prepareStatement("select * from Ride_Types\n" +
-                    "where id = (select ride_type_id from Rides where id = ?);");
-            preparedStatement.setLong(1,id);
-            ResultSet resultSet = preparedStatement.executeQuery();
+            preparedStatement = connection.prepareStatement(query);
 
-            while(resultSet.next()){
+            for (int i = 0; i < params.length; i++) {
+                preparedStatement.setObject(i + 1, params[i]);
+            }
 
-                rt.setId(resultSet.getLong("id"));
-                rt.setType(resultSet.getString("type"));
-                rt.setCostPerMile(resultSet.getDouble("cost_per_mile"));
+            int rowsAffected = preparedStatement.executeUpdate();
 
+            if (rowsAffected > 0) {
+                LOGGER.info(rowsAffected + " row affected in Ride Types table.");
+            } else {
+                LOGGER.info("No rows affected in Ride Types table");
             }
 
         } catch (SQLException e) {
@@ -63,11 +43,67 @@ public class RideTypeDAO implements IRideTypeDAO {
             DBConnectionPool.getInstance().releaseConnection(connection);
         }
 
-        return rt ;
+    }
+
+    private RideType queryGet(String query, Object... params){
+
+        Connection connection = DBConnectionPool.getInstance().getConnection();
+        PreparedStatement preparedStatement = null;
+       RideType rt = new RideType();
+        try {
+            preparedStatement = connection.prepareStatement(query);
+
+            for (int i = 0; i < params.length; i++) {
+                preparedStatement.setObject(i + 1, params[i]);
+            }
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while(resultSet.next()) {
+
+                rt.setId(resultSet.getLong("id"));
+                rt.setType(resultSet.getString("type"));
+                rt.setCostPerMile(resultSet.getDouble("cost_per_mile"));
+            }
+
+        } catch (SQLException e) {
+            LOGGER.error(e);
+        }
+        finally {
+            DBConnectionPool.getInstance().releaseConnection(connection);
+        }
+        return rt;
+
     }
 
     @Override
-    public RideType getRideCostByType(String type) {
-        return null;
+    public void create(RideType rideType) {
+        executeQuery("INSERT INTO Ride_Types (type,cost_per_mile) VALUES (?,?)",rideType.getType(),rideType.getCostPerMile());
+
     }
+
+    @Override
+    public RideType getById(long id) {
+        Long rId = id;
+        return queryGet("SELECT * FROM Ride_Types WHERE ID=?",rId);
+    }
+
+    @Override
+    public void update(RideType rideType) {
+        executeQuery("UPDATE Ride_Types SET type = ?,  cost_per_mile= ? WHERE id = ?",rideType.getType(),rideType.getCostPerMile(),rideType.getId() );
+
+    }
+
+    @Override
+    public void delete(RideType rideType) {
+        executeQuery("DELETE FROM Ride_Types WHERE id = ?",rideType.getId());
+
+    }
+
+    @Override
+    public RideType getRideTypeByRideId(Long id) {
+        Long rId = id;
+        return queryGet("select * from Ride_Types where id = (select ride_type_id from Rides where id = ?);",rId);
+
+    }
+
 }

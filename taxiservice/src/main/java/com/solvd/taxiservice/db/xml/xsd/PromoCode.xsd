@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="promocodes">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="promocode" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="code" type="xs:string"/>
+                            <xs:element name="discount" type="xs:double"/>
+                            <xs:element name="expirationDate" type="xs:date"/>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:long"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

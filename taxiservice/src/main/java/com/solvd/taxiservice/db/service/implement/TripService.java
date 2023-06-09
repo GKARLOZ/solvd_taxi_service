@@ -20,7 +20,7 @@ public class TripService {
     public Trip getTripById(long id){
         Trip trip = tripDAO.getById(id);
         PromoCode promoCode = promoCodeDAO.getPromoCodeByTripId(id);
-        Ride ride = rideService.getRideById(rideDAO.getRideByTripId(id).getId());
+        Ride ride = rideService.getById(rideDAO.getRideByTripId(id).getId());
 
         trip.setPromoCode(promoCode);
         trip.setRide(ride);
