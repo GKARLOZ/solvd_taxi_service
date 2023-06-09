@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="34c19fab-94b0-44da-b27f-ec20a630844b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/xml/XSDValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/xml/difXML/DriverLicense.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/xml/difXML/Profile.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/xml/difXML/Vehicle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/xml/parsers/DriverLicenseParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/xml/parsers/ProfileParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/xml/parsers/VehicleParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/xml/xsd/DriverLicense.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/xml/xsd/Profile.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/xml/xsd/Vehicle.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxi_service_schema.mwb.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/logs/DS-20230605.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/dao/interfaces/IDriverLicenseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/dao/interfaces/IDriverLicenseDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/dao/interfaces/IProfileDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/dao/interfaces/IProfileDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/dao/interfaces/IRideTypeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/dao/interfaces/IRideTypeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/dao/interfaces/IVehicleDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/dao/interfaces/IVehicleDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/dao/mysql/DriverLicenseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/dao/mysql/DriverLicenseDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/dao/mysql/InvoiceDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/dao/mysql/InvoiceDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/dao/mysql/PaymentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/dao/mysql/PaymentDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/dao/mysql/PaymentMethodDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/dao/mysql/PaymentMethodDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/dao/mysql/ProfileDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/dao/mysql/ProfileDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/dao/mysql/PromoCodeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/dao/mysql/PromoCodeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/dao/mysql/ReviewDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/dao/mysql/ReviewDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/dao/mysql/RideDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/dao/mysql/RideDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/dao/mysql/RideTypeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/dao/mysql/RideTypeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/dao/mysql/TripDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/dao/mysql/TripDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/dao/mysql/VehicleDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/dao/mysql/VehicleDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/model/Invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/model/Invoice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/model/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/model/Payment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/model/PaymentMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/model/PaymentMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/model/Ride.java" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/model/Ride.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/service/implement/InvoiceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/service/implement/InvoiceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/service/implement/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/service/implement/PaymentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/service/implement/RideService.java" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/service/implement/RideService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/service/implement/TripService.java" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/service/implement/TripService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/service/implement/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/service/implement/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/utils/DBConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/src/main/java/com/solvd/taxiservice/db/utils/DBConnectionPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/dao/interfaces/IDriverLicenseDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/dao/interfaces/IDriverLicenseDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/dao/interfaces/IProfileDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/dao/interfaces/IProfileDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/dao/interfaces/IRideTypeDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/dao/interfaces/IRideTypeDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/dao/interfaces/IVehicleDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/dao/interfaces/IVehicleDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/dao/mysql/DriverLicenseDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/dao/mysql/DriverLicenseDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/dao/mysql/InvoiceDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/dao/mysql/InvoiceDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/dao/mysql/PaymentDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/dao/mysql/PaymentDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/dao/mysql/PaymentMethodDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/dao/mysql/PaymentMethodDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/dao/mysql/ProfileDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/dao/mysql/ProfileDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/dao/mysql/PromoCodeDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/dao/mysql/PromoCodeDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/dao/mysql/ReviewDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/dao/mysql/ReviewDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/dao/mysql/RideDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/dao/mysql/RideDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/dao/mysql/RideTypeDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/dao/mysql/RideTypeDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/dao/mysql/TripDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/dao/mysql/TripDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/dao/mysql/VehicleDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/dao/mysql/VehicleDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/model/Invoice.class" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/model/Invoice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/model/Payment.class" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/model/Payment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/model/PaymentMethod.class" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/model/PaymentMethod.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/model/Ride.class" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/model/Ride.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/service/implement/InvoiceService.class" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/service/implement/InvoiceService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/service/implement/PaymentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/service/implement/PaymentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/service/implement/RideService.class" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/service/implement/RideService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/service/implement/TripService.class" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/service/implement/TripService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/service/implement/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/service/implement/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/utils/DBConnectionPool.class" beforeDir="false" afterPath="$PROJECT_DIR$/taxiservice/target/classes/com/solvd/taxiservice/db/utils/DBConnectionPool.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2QxHWelHW2TtCFN6dDQAkD9dz8s" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/gianm/Desktop/taxi_service"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="34c19fab-94b0-44da-b27f-ec20a630844b" name="Changes" comment="" />
+      <created>1686288345706</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1686288345706</updated>
+    </task>
+    <servers />
+  </component>
+</project>
