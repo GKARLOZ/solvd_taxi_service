@@ -1,8 +1,0 @@
-<?xml version = "1.0" encoding="UTF-8"?>
-<promocodes>
-    <promocode id ="1">
-        <code>ABC123</code>
-        <discount>0.2</discount>
-        <expirationDate>2023-12-31</expirationDate>
-    </promocode>
-</promocodes>
