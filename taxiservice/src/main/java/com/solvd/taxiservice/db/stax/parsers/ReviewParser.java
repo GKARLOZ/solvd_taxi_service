@@ -1,8 +1,6 @@
-package com.solvd.taxiservice.db.xml.parsers;
+package com.solvd.taxiservice.db.stax.parsers;
 
-import com.solvd.taxiservice.Main;
-import com.solvd.taxiservice.db.model.DriverLicense;
-import com.solvd.taxiservice.db.model.PromoCode;
+import com.solvd.taxiservice.db.model.Review;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -16,57 +14,46 @@ import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
-public class PromoCodeParser {
-
-    private final static Logger LOGGER = LogManager.getLogger(PromoCodeParser.class);
-
+public class ReviewParser {
+    private final static Logger LOGGER = LogManager.getLogger(ReviewParser.class);
     public void parse(String path){
 
         XMLInputFactory xmlInputFactory = XMLInputFactory.newInstance();
         XMLEventReader reader = null;
-       PromoCode pc = null;
+        Review review = null;
         try {
 
-            reader = xmlInputFactory.createXMLEventReader(new FileInputStream( "src/main/java/com/solvd/taxiservice/db/xml/difXML/" + path));
+            reader = xmlInputFactory.createXMLEventReader(new FileInputStream( "src/main/resources/xml/difXML/" + path));
 
             while (reader.hasNext()) {
                 XMLEvent nextEvent = reader.nextEvent();
                 if (nextEvent.isStartElement()) {
                     StartElement startElement = nextEvent.asStartElement();
                     switch (startElement.getName().getLocalPart()) {
-                        case "promocode":
-                            pc = new PromoCode();
+                        case "review":
+                            review = new Review();
                             Attribute id = startElement.getAttributeByName(new QName("id"));
                             if (id != null) {
-                                pc.setId(pc.getId());
+                                review.setId(review.getId());
                             }
                             break;
-                        case "code":
+                        case "rating":
                             nextEvent = reader.nextEvent();
-                            pc.setCode(nextEvent.asCharacters().getData());
+                            review.setRating(Integer.parseInt(nextEvent.asCharacters().getData()));
                             break;
-                        case "discount":
+                        case "comment":
                             nextEvent = reader.nextEvent();
-                            pc.setDiscount(Double.parseDouble(nextEvent.asCharacters().getData()));
-                            break;
-                        case "expirationDate":
-                            nextEvent = reader.nextEvent();
-                            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-                            Date expDate = dateFormat.parse(nextEvent.asCharacters().getData());
-                            pc.setExpirationDate(expDate);
+                            review.setComment(nextEvent.asCharacters().getData());
                             break;
 
                     }
                 }
                 if (nextEvent.isEndElement()) {
                     EndElement endElement = nextEvent.asEndElement();
-                    if (endElement.getName().getLocalPart().equals("promocode")) {
+                    if (endElement.getName().getLocalPart().equals("review")) {
 
-                        LOGGER.info(pc);
+                        LOGGER.info(review);
 
                     }
                 }
@@ -74,8 +61,6 @@ public class PromoCodeParser {
         } catch (XMLStreamException e) {
             LOGGER.error(e);
         } catch (FileNotFoundException e) {
-            LOGGER.error(e);
-        } catch (ParseException e) {
             LOGGER.error(e);
         }
 

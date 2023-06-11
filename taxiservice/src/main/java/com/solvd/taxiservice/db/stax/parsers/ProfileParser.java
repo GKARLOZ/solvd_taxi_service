@@ -1,6 +1,5 @@
-package com.solvd.taxiservice.db.xml.parsers;
+package com.solvd.taxiservice.db.stax.parsers;
 
-import com.solvd.taxiservice.Main;
 import com.solvd.taxiservice.db.model.Profile;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -25,7 +24,7 @@ public class ProfileParser {
         Profile profile = null;
         try {
 
-            reader = xmlInputFactory.createXMLEventReader(new FileInputStream( "src/main/java/com/solvd/taxiservice/db/xml/difXML/" + path));
+            reader = xmlInputFactory.createXMLEventReader(new FileInputStream( "src/main/resources/xml/difXML/" + path));
 
         while (reader.hasNext()) {
             XMLEvent nextEvent = reader.nextEvent();

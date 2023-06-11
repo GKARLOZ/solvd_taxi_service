@@ -1,4 +1,4 @@
-package com.solvd.taxiservice.db.xml;
+package com.solvd.taxiservice.db.stax;
 import javax.xml.XMLConstants;
 import javax.xml.transform.stream.StreamSource;
 
@@ -20,9 +20,9 @@ public class XSDValidator {
         try {
 
             SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-            Schema schema = factory.newSchema(new File( "src/main/java/com/solvd/taxiservice/db/xml/xsd/" + xsdPath));
+            Schema schema = factory.newSchema(new File( "src/main/resources/xml/xsd/" + xsdPath));
             Validator validator = schema.newValidator();
-            validator.validate(new StreamSource(new File( "src/main/java/com/solvd/taxiservice/db/xml/difXML/"+ xmlPath)));
+            validator.validate(new StreamSource(new File( "src/main/resources/xml/difXML/"+ xmlPath)));
         } catch (IOException e) {
             LOGGER.error("Exception: " + e.getMessage());
             return false;

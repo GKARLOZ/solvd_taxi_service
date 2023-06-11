@@ -1,0 +1,16 @@
+<?xml version = "1.0" encoding="UTF-8"?>
+<driverLicenses>
+
+    <driverLicense id="1">
+        <licenseNumber>f33433k332</licenseNumber>
+        <dateOfBirth>2023-12-31</dateOfBirth>
+        <expirationDate>2023-12-31</expirationDate>
+    </driverLicense>
+
+    <driverLicense id="2">
+        <licenseNumber>g33433k332</licenseNumber>
+        <dateOfBirth>2023-12-31</dateOfBirth>
+        <expirationDate>2023-12-31</expirationDate>
+    </driverLicense>
+
+</driverLicenses>

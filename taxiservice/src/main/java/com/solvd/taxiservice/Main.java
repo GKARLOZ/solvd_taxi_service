@@ -1,27 +1,50 @@
 package com.solvd.taxiservice;
 
+import com.solvd.taxiservice.db.jaxb.DriverLicenseJAXB;
+import com.solvd.taxiservice.db.jaxb.JAXB;
 import com.solvd.taxiservice.db.model.*;
-import com.solvd.taxiservice.db.service.*;
 import com.solvd.taxiservice.db.service.implement.*;
-import com.solvd.taxiservice.db.xml.parsers.*;
+import com.solvd.taxiservice.db.stax.parsers.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javax.xml.bind.JAXBException;
+import java.io.FileNotFoundException;
 import java.util.List;
 
-import static com.solvd.taxiservice.db.xml.XSDValidator.validateXMLSchema;
+import static com.solvd.taxiservice.db.stax.XSDValidator.validateXMLSchema;
 
 public class Main {
 
     private final static Logger LOGGER = LogManager.getLogger(Main.class);
    public static void main(String[] args) {
-
-
-          task16();
-          //task15();
+       task17();
+//       task16();
+//       task15();
 
     }
 
+    public static void task17(){
+//        Add JAXB annotations to the hierarchy. Date, List, and complex objects should be covered.
+//        Parse XML using JAXB.
+
+        try {
+
+        DriverLicenseJAXB dl = new DriverLicenseJAXB();
+        dl.setLicenseNumber("434rwf34wr2g");
+
+        JAXB jaxb = new JAXB();
+        jaxb.marshal(dl);
+        LOGGER.info(jaxb.unmarshal());
+
+        } catch (JAXBException e) {
+            LOGGER.error(e);
+        } catch (FileNotFoundException e) {
+            LOGGER.error(e);
+        }
+
+
+    }
     public static void task16(){
 //        Create one XML file and XSD schema for at least 5 classes from the below hierarchy.
 //        Validate XML file using XSD schema and assigned parser.
