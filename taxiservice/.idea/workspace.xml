@@ -5,36 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0449240d-3f44-4e16-9c43-f11897609218" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/jaxb/DateAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/jaxb/DriverLicenseJAXB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/jaxb/JAXB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/DS-20230608.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/DS-20230608.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/DS-20230610.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/DS-20230610.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/xml/XSDValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/stax/XSDValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/xml/difXML/DriverLicense.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/xml/difXML/DriverLicense.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/xml/difXML/Profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/xml/difXML/Profile.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/xml/difXML/PromoCode.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/xml/difXML/PromoCode.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/xml/difXML/Review.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/xml/difXML/Review.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/xml/difXML/Vehicle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/xml/difXML/Vehicle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/xml/parsers/DriverLicenseParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/stax/parsers/DriverLicenseParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/xml/parsers/ProfileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/stax/parsers/ProfileParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/xml/parsers/PromoCodeParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/stax/parsers/PromoCodeParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/xml/parsers/ReviewParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/stax/parsers/ReviewParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/xml/parsers/VehicleParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/stax/parsers/VehicleParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/xml/xsd/DriverLicense.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/xml/xsd/DriverLicense.xsd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/xml/xsd/Profile.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/xml/xsd/Profile.xsd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/xml/xsd/PromoCode.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/xml/xsd/PromoCode.xsd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/xml/xsd/Review.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/xml/xsd/Review.xsd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/xml/xsd/Vehicle.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/xml/xsd/Vehicle.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/utils/DBConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/utils/DBConnectionPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/JAXBresults.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/JAXBresults.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/db/xml/XSDValidator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/db/xml/parsers/DriverLicenseParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/db/xml/parsers/ProfileParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/db/xml/parsers/PromoCodeParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/db/xml/parsers/ReviewParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/db/xml/parsers/VehicleParser.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +47,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/gianm/Desktop/taxi_service/taxiservice/src/main/resources"
+    "last_opened_file_path": "C:/Users/gianm/Desktop/deliveryservice"
   }
 }]]></component>
   <component name="RecentsManager">

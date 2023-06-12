@@ -5,12 +5,15 @@ import com.solvd.taxiservice.db.jaxb.JAXB;
 import com.solvd.taxiservice.db.model.*;
 import com.solvd.taxiservice.db.service.implement.*;
 import com.solvd.taxiservice.db.stax.parsers.*;
+import com.solvd.taxiservice.db.utils.DBConnectionPool;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.xml.bind.JAXBException;
 import java.io.FileNotFoundException;
+import java.sql.Connection;
 import java.util.List;
+import java.util.concurrent.*;
 
 import static com.solvd.taxiservice.db.stax.XSDValidator.validateXMLSchema;
 
@@ -18,9 +21,12 @@ public class Main {
 
     private final static Logger LOGGER = LogManager.getLogger(Main.class);
    public static void main(String[] args) {
+
        task17();
-//       task16();
-//       task15();
+       //task16();
+       //task15();
+       //multiThread();
+
 
     }
 
@@ -156,5 +162,37 @@ public class Main {
 
     }
 
+
+    public static void multiThread(){
+
+        Thread client2 = new Thread(() -> {
+            try {
+
+                Connection conn = DBConnectionPool.getInstance().getConnection();
+                LOGGER.info(Thread.currentThread().getName() + ": Get Connection successful.");
+                Thread.sleep(1000);
+                DBConnectionPool.getInstance().releaseConnection(conn);
+                LOGGER.info(Thread.currentThread().getName() + ": Release Connection successful.");
+
+            } catch (InterruptedException e) {
+                LOGGER.error(e.getMessage());
+            }
+        });
+
+        ExecutorService executorService = Executors.newFixedThreadPool(7);
+        ;
+        executorService.execute(client2);
+        executorService.execute(client2);
+        executorService.execute(client2);
+        executorService.execute(client2);
+        executorService.execute(client2);
+        executorService.execute(client2);
+        executorService.execute(client2);
+        executorService.execute(client2);
+        executorService.execute(client2);
+        executorService.execute(client2);
+        executorService.shutdown();
+
+   }
 
 }
