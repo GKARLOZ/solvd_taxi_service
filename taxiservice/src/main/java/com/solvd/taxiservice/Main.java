@@ -1,7 +1,9 @@
 package com.solvd.taxiservice;
 
+import com.solvd.taxiservice.db.jaxb.ManyUsersJAXB;
 import com.solvd.taxiservice.db.jaxb.DriverLicenseJAXB;
 import com.solvd.taxiservice.db.jaxb.JAXB;
+import com.solvd.taxiservice.db.jaxb.UserJAXB;
 import com.solvd.taxiservice.db.model.*;
 import com.solvd.taxiservice.db.service.implement.*;
 import com.solvd.taxiservice.db.stax.parsers.*;
@@ -12,6 +14,7 @@ import org.apache.logging.log4j.Logger;
 import javax.xml.bind.JAXBException;
 import java.io.FileNotFoundException;
 import java.sql.Connection;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
 
@@ -35,13 +38,27 @@ public class Main {
 //        Parse XML using JAXB.
 
         try {
+            ManyUsersJAXB users = new ManyUsersJAXB();
+            users.setUsers(new ArrayList<>());
 
-        DriverLicenseJAXB dl = new DriverLicenseJAXB();
-        dl.setLicenseNumber("434rwf34wr2g");
+            DriverLicenseJAXB dl = new DriverLicenseJAXB();
+            dl.setLicenseNumber("434rwf34wr2g");
+            UserJAXB user = new UserJAXB("john","email@gmali.com",dl);
+            users.getUsers().add(user);
 
-        JAXB jaxb = new JAXB();
-        jaxb.marshal(dl);
-        LOGGER.info(jaxb.unmarshal());
+            DriverLicenseJAXB dlTwo = new DriverLicenseJAXB();
+            dlTwo.setLicenseNumber("23423ewrq");
+            UserJAXB userTwo = new UserJAXB("juanito","yeah@gmali.com",dl);
+            users.getUsers().add(userTwo);
+
+            DriverLicenseJAXB dlThree = new DriverLicenseJAXB();
+            dlThree.setLicenseNumber("67867gsgfa");
+            UserJAXB userThree = new UserJAXB("jj","jj@gmali.com",dl);
+            users.getUsers().add(userThree);
+
+            JAXB jaxb = new JAXB();
+            jaxb.marshal(users);
+            LOGGER.info(jaxb.unmarshal());
 
         } catch (JAXBException e) {
             LOGGER.error(e);
