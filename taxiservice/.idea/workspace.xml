@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0449240d-3f44-4e16-9c43-f11897609218" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/jaxb/ManyUsersJAXB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/jaxb/UserJAXB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/DS-20230612.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/DS-20230612.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/jaxb/JAXB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/jaxb/JAXB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/JAXBresults.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/JaxbResults.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/JAXBresults.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JAXBresults.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/db/jaxb/JAXB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/db/jaxb/JAXB.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

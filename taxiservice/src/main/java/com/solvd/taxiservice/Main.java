@@ -43,7 +43,7 @@ public class Main {
 
             DriverLicenseJAXB dl = new DriverLicenseJAXB();
             dl.setLicenseNumber("434rwf34wr2g");
-            UserJAXB user = new UserJAXB("john","email@gmali.com",dl);
+            UserJAXB user = new UserJAXB("johnny","email@gmali.com",dl);
             users.getUsers().add(user);
 
             DriverLicenseJAXB dlTwo = new DriverLicenseJAXB();
