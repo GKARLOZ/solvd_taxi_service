@@ -38,7 +38,7 @@ public class DBConnectionPool {
 
         try {
 
-            if(count < POOL_SIZE){
+            if((connections.size() == 0) && (count < POOL_SIZE)){
                 count++;
                 connections.offer(new DBConnection().connect());
 
