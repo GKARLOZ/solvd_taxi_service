@@ -20,9 +20,7 @@ public class PromoCodeDAO implements IPromoCodeDAO {
     private void executeQuery(String query, Object... params){
 
         Connection connection = DBConnectionPool.getInstance().getConnection();
-        PreparedStatement preparedStatement = null;
-        try {
-            preparedStatement = connection.prepareStatement(query);
+        try(PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
             for (int i = 0; i < params.length; i++) {
                 preparedStatement.setObject(i + 1, params[i]);
@@ -48,24 +46,23 @@ public class PromoCodeDAO implements IPromoCodeDAO {
     private PromoCode queryGet(String query, Object... params) {
 
         Connection connection = DBConnectionPool.getInstance().getConnection();
-        PreparedStatement preparedStatement = null;
-       PromoCode promoCode = new PromoCode();
-        try {
-            preparedStatement = connection.prepareStatement("SELECT * FROM Promo_codes WHERE ID=?");
+        PromoCode promoCode = new PromoCode();
+        try(PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
             for (int i = 0; i < params.length; i++) {
                 preparedStatement.setObject(i + 1, params[i]);
             }
-            ResultSet resultSet = preparedStatement.executeQuery();
+            try(ResultSet resultSet = preparedStatement.executeQuery()) {
 
-            while (resultSet.next()) {
+                while (resultSet.next()) {
 
-                promoCode.setId(resultSet.getLong("id"));
-                promoCode.setCode(resultSet.getString("code"));
-                promoCode.setDiscount(resultSet.getDouble("discount"));
-                promoCode.setExpirationDate(resultSet.getDate("expiration_date"));
+                    promoCode.setId(resultSet.getLong("id"));
+                    promoCode.setCode(resultSet.getString("code"));
+                    promoCode.setDiscount(resultSet.getDouble("discount"));
+                    promoCode.setExpirationDate(resultSet.getDate("expiration_date"));
 
 
+                }
             }
 
         } catch (SQLException e) {

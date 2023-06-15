@@ -1,5 +1,9 @@
 package com.solvd.taxiservice;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.solvd.taxiservice.db.jaxb.ManyUsersJAXB;
 import com.solvd.taxiservice.db.jaxb.DriverLicenseJAXB;
 import com.solvd.taxiservice.db.jaxb.JAXB;
@@ -12,7 +16,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.xml.bind.JAXBException;
+import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,8 +30,8 @@ public class Main {
 
     private final static Logger LOGGER = LogManager.getLogger(Main.class);
    public static void main(String[] args) {
-
-       task17();
+        task18();
+       //task17();
        //task16();
        //task15();
        //multiThread();
@@ -33,6 +39,60 @@ public class Main {
 
     }
 
+    public static void task18(){
+//        Create one Json file for at least 5 classes from the hierarchy.
+//        Add Jackson’s annotation to the hierarchy. Date, List, and complex objects should be covered.
+//        Parse JSON using Jackson.
+
+        Profile profile = new Profile();
+        profile.setName("Johnny");
+        profile.setPhoneNumber("911");
+
+        DriverLicense driverLicense = new DriverLicense();
+        driverLicense.setLicenseNumber("234werwe324");
+
+        Vehicle vehicle = new Vehicle();
+        vehicle.setModel("Jeep");
+        vehicle.setLicensePlate("24l3j");
+
+        List<Ride> rides = new ArrayList<>();
+        Ride rideOne = new Ride();
+        rideOne.setPickUpLocations("123 Circle street");
+        rideOne.setDropOffLocation("32 Hollywood Blvd");
+        Ride rideTwo = new Ride();
+        rideTwo.setPickUpLocations("24 Fire street");
+        rideTwo.setDropOffLocation("74453 Main ave");
+        rides.add(rideOne);
+        rides.add(rideTwo);
+        rides.add(rideOne);
+
+        User user = new User();
+        user.setId(11);
+        user.setEmail("email@gmail.com");
+
+        user.setProfile(profile);
+        user.setDriverLicense(driverLicense);
+        user.setRides(rides);
+        user.setVehicle(vehicle);
+
+
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            //serialize
+            mapper.enable(SerializationFeature.WRAP_ROOT_VALUE, SerializationFeature.INDENT_OUTPUT);
+            mapper.writeValue(new File("src/main/resources/results.json"),user);
+
+            //deserialize
+            mapper.enable(DeserializationFeature.UNWRAP_ROOT_VALUE);
+            User deserializeUser = mapper.readValue(new File("src/main/resources/results.json"), User.class);
+            LOGGER.info(deserializeUser.toString());
+
+        } catch (IOException e) {
+            LOGGER.error(e);
+        }
+
+
+    }
     public static void task17(){
 //        Add JAXB annotations to the hierarchy. Date, List, and complex objects should be covered.
 //        Parse XML using JAXB.
@@ -92,7 +152,6 @@ public class Main {
          }
 
     }
-
     public static void task15(){
 
          //----------------------------User Service-----------------------------------------
@@ -100,8 +159,6 @@ public class Main {
         LOGGER.info(user);
 
         User user2 = new UserService().getUserbyEmail("asdfa@gmail.com");
-
-
 
         //---------------------------ride service -------------------------------
 
@@ -178,8 +235,6 @@ public class Main {
 
 
     }
-
-
     public static void multiThread(){
 
         Thread client2 = new Thread(() -> {

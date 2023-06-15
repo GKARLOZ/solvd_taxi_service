@@ -1,14 +1,26 @@
 package com.solvd.taxiservice.db.model;
 
-import java.util.List;
+import com.fasterxml.jackson.annotation.*;
 
+import java.util.List;
+@JsonRootName(value="User")
 public class User {
 
+    @JsonProperty("Id")
     private long id;
+    @JsonProperty("Email")
     private String email;
+
+    @JsonProperty("Profile")
     private Profile profile;
+
+    @JsonProperty("Driver License")
     private DriverLicense driverLicense;
+
+    @JsonProperty("Vehicle")
     private Vehicle vehicle;
+
+    @JsonProperty("Rides")
     private List<Ride> rides;
 
     public User(){

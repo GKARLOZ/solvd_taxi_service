@@ -20,9 +20,7 @@ public class PaymentMethodDAO implements IPaymentMethodDAO {
     private void executeQuery(String query, Object... params){
 
         Connection connection = DBConnectionPool.getInstance().getConnection();
-        PreparedStatement preparedStatement = null;
-        try {
-            preparedStatement = connection.prepareStatement(query);
+        try(PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
             for (int i = 0; i < params.length; i++) {
                 preparedStatement.setObject(i + 1, params[i]);
@@ -48,21 +46,21 @@ public class PaymentMethodDAO implements IPaymentMethodDAO {
     private PaymentMethod queryGet(String query, Object... params){
 
         Connection connection = DBConnectionPool.getInstance().getConnection();
-        PreparedStatement preparedStatement = null;
         PaymentMethod pm = new PaymentMethod();
-        try {
-            preparedStatement = connection.prepareStatement("SELECT * FROM payment_methods WHERE ID=?");
+        try(PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
             for (int i = 0; i < params.length; i++) {
                 preparedStatement.setObject(i + 1, params[i]);
             }
-            ResultSet resultSet = preparedStatement.executeQuery();
 
-            while(resultSet.next()) {
 
-                pm.setId(resultSet.getLong("id"));
-                pm.setMethod(resultSet.getString("method"));
-                pm.setComment(resultSet.getString("comment"));
+            try(ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
+
+                    pm.setId(resultSet.getLong("id"));
+                    pm.setMethod(resultSet.getString("method"));
+                    pm.setComment(resultSet.getString("comment"));
+                }
             }
 
         } catch (SQLException e) {

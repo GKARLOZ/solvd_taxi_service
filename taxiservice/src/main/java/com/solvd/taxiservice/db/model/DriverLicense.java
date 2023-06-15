@@ -1,12 +1,21 @@
 package com.solvd.taxiservice.db.model;
 
+import com.fasterxml.jackson.annotation.*;
+
 import java.util.Date;
 
+@JsonRootName(value="Driver License")
 public class DriverLicense {
 
+    @JsonIgnore
     private long id;
+    @JsonProperty("License Number")
     private String licenseNumber;
+    @JsonProperty("Date Of Birth")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private Date dateOfBirth;
+    @JsonProperty("Expiration Date")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private Date expirationDate;
 
     public DriverLicense(){

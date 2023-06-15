@@ -22,9 +22,7 @@ public class RideDAO implements IRideDAO {
     private void executeQuery(String query, Object... params){
 
         Connection connection = DBConnectionPool.getInstance().getConnection();
-        PreparedStatement preparedStatement = null;
-        try {
-            preparedStatement = connection.prepareStatement(query);
+        try(PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
             for (int i = 0; i < params.length; i++) {
                 preparedStatement.setObject(i + 1, params[i]);
@@ -50,24 +48,23 @@ public class RideDAO implements IRideDAO {
     private Ride queryGet(String query, Object... params) {
 
         Connection connection = DBConnectionPool.getInstance().getConnection();
-        PreparedStatement preparedStatement = null;
         Ride ride = new Ride();
-        try {
-            preparedStatement = connection.prepareStatement("SELECT * FROM Rides WHERE ID=?");
+
+        try(PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
             for (int i = 0; i < params.length; i++) {
                 preparedStatement.setObject(i + 1, params[i]);
             }
-            ResultSet resultSet = preparedStatement.executeQuery();
 
-            while (resultSet.next()) {
+            try(ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
 
-                ride.setId(resultSet.getLong("id"));
-                ride.setPickUpLocations(resultSet.getString("pickup_location"));
-                ride.setDropOffLocation(resultSet.getString("dropoff_location"));
-                ride.setStatus(resultSet.getString("ride_status"));
+                    ride.setId(resultSet.getLong("id"));
+                    ride.setPickUpLocations(resultSet.getString("pickup_location"));
+                    ride.setDropOffLocation(resultSet.getString("dropoff_location"));
+                    ride.setStatus(resultSet.getString("ride_status"));
 
-
+                }
             }
 
         } catch (SQLException e) {
@@ -116,16 +113,15 @@ public class RideDAO implements IRideDAO {
 
         Connection connection = DBConnectionPool.getInstance().getConnection();
         List<Long> rideList = new ArrayList<>();
-        PreparedStatement preparedStatement = null;
-        try {
-            preparedStatement = connection.prepareStatement("select * from Rides\n" +
-                    "where user_id = ?");
+        try(PreparedStatement preparedStatement = connection.prepareStatement("select * from Rides\n" +
+                "where user_id = ?");) {
+
             preparedStatement.setLong(1,id);
-            ResultSet resultSet = preparedStatement.executeQuery();
+            try(ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
 
-            while(resultSet.next()){
-
-                rideList.add(resultSet.getLong("id"));
+                    rideList.add(resultSet.getLong("id"));
+                }
             }
 
         } catch (SQLException e) {

@@ -1,9 +1,17 @@
 package com.solvd.taxiservice.db.model;
 
-public class Profile {
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonRootName;
 
+@JsonRootName(value="Profile")
+public class Profile {
+    @JsonIgnore
     private long id;
+    @JsonProperty("Name")
     private String name;
+    @JsonProperty("Phone Number")
     private String phoneNumber;
 
    public Profile(){};

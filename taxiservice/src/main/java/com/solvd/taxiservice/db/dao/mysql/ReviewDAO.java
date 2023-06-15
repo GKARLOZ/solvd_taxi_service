@@ -22,9 +22,7 @@ public class ReviewDAO implements IReviewDAO {
     private void executeQuery(String query, Object... params){
 
         Connection connection = DBConnectionPool.getInstance().getConnection();
-        PreparedStatement preparedStatement = null;
-        try {
-            preparedStatement = connection.prepareStatement(query);
+        try(PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
             for (int i = 0; i < params.length; i++) {
                 preparedStatement.setObject(i + 1, params[i]);
@@ -50,21 +48,20 @@ public class ReviewDAO implements IReviewDAO {
     private Review queryGet(String query, Object... params){
 
         Connection connection = DBConnectionPool.getInstance().getConnection();
-        PreparedStatement preparedStatement = null;
         Review review = new Review();
-        try {
-            preparedStatement = connection.prepareStatement("SELECT * FROM Reviews WHERE ID=?");
+        try(PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
             for (int i = 0; i < params.length; i++) {
                 preparedStatement.setObject(i + 1, params[i]);
             }
-            ResultSet resultSet = preparedStatement.executeQuery();
+            try(ResultSet resultSet = preparedStatement.executeQuery()) {
 
-            while(resultSet.next()) {
+                while (resultSet.next()) {
 
-                review.setId(resultSet.getLong("id"));
-                review.setRating(resultSet.getInt("rating"));
-                review.setComment(resultSet.getString("comment"));
+                    review.setId(resultSet.getLong("id"));
+                    review.setRating(resultSet.getInt("rating"));
+                    review.setComment(resultSet.getString("comment"));
+                }
             }
 
         } catch (SQLException e) {
@@ -104,21 +101,22 @@ public class ReviewDAO implements IReviewDAO {
 
     @Override
     public List<Review> getReviewsByRideId(long id) {
+
         Connection connection = DBConnectionPool.getInstance().getConnection();
        List<Review> reviewList = new ArrayList<>();
-        PreparedStatement preparedStatement = null;
-        try {
-            preparedStatement = connection.prepareStatement("select * from Reviews\n" +
-                    "where ride_id = ?");
-            preparedStatement.setLong(1,id);
-            ResultSet resultSet = preparedStatement.executeQuery();
+        try(PreparedStatement preparedStatement = connection.prepareStatement("select * from Reviews\n" +
+                "where ride_id = ?");) {
 
-            while(resultSet.next()){
-                Review review = new Review();
-                review.setId(resultSet.getLong("id"));
-                review.setRating(resultSet.getInt("rating"));
-                review.setComment(resultSet.getString("comment"));
-                reviewList.add(review);
+            preparedStatement.setLong(1,id);
+
+            try(ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
+                    Review review = new Review();
+                    review.setId(resultSet.getLong("id"));
+                    review.setRating(resultSet.getInt("rating"));
+                    review.setComment(resultSet.getString("comment"));
+                    reviewList.add(review);
+                }
             }
 
         } catch (SQLException e) {

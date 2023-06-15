@@ -1,11 +1,20 @@
 package com.solvd.taxiservice.db.model;
 
+import com.fasterxml.jackson.annotation.JsonIncludeProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonRootName;
+
 import java.util.List;
 
+@JsonRootName(value="Ride")
+@JsonIncludeProperties({"PickUp Location","DropOff Location"})
 public class Ride {
 
     private long id;
+    @JsonProperty("PickUp Location")
     private String pickUpLocations;
+
+    @JsonProperty("DropOff Location")
     private String dropOffLocation;
     private String status;
     private RideType rideType;

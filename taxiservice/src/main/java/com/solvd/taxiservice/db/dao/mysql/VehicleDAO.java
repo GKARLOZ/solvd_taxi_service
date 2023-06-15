@@ -15,9 +15,7 @@ public class VehicleDAO  implements IVehicleDAO {
     private void executeQuery(String query, Object... params){
 
         Connection connection = DBConnectionPool.getInstance().getConnection();
-        PreparedStatement preparedStatement = null;
-        try {
-            preparedStatement = connection.prepareStatement(query);
+        try(PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
             for (int i = 0; i < params.length; i++) {
                 preparedStatement.setObject(i + 1, params[i]);
@@ -43,22 +41,22 @@ public class VehicleDAO  implements IVehicleDAO {
     private Vehicle queryGet(String query, Object... params){
 
         Connection connection = DBConnectionPool.getInstance().getConnection();
-        PreparedStatement preparedStatement = null;
         Vehicle vehicle = new Vehicle();
-        try {
-            preparedStatement = connection.prepareStatement(query);
+
+        try(PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
             for (int i = 0; i < params.length; i++) {
                 preparedStatement.setObject(i + 1, params[i]);
             }
-            ResultSet resultSet = preparedStatement.executeQuery();
 
-            while(resultSet.next()) {
+            try(ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
 
-                vehicle.setId(resultSet.getLong("id"));
-                vehicle.setLicensePlate(resultSet.getString("license_plate"));
-                vehicle.setModel(resultSet.getString("vehicle_model"));
+                    vehicle.setId(resultSet.getLong("id"));
+                    vehicle.setLicensePlate(resultSet.getString("license_plate"));
+                    vehicle.setModel(resultSet.getString("vehicle_model"));
                 }
+            }
 
             } catch (SQLException e) {
             LOGGER.error(e);
@@ -117,9 +115,7 @@ public class VehicleDAO  implements IVehicleDAO {
     @Override
     public Vehicle createAndGet(Vehicle vehicle) {
         Connection connection = DBConnectionPool.getInstance().getConnection();
-        PreparedStatement preparedStatement = null;
-        try {
-            preparedStatement = connection.prepareStatement("INSERT INTO vehicles (license_plate,vehicle_model) VALUES (?,?)",Statement.RETURN_GENERATED_KEYS);
+        try (PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO vehicles (license_plate,vehicle_model) VALUES (?,?)",Statement.RETURN_GENERATED_KEYS)){
 
             preparedStatement.setString(1, vehicle.getLicensePlate());
             preparedStatement.setString(2,vehicle.getModel());
@@ -132,14 +128,14 @@ public class VehicleDAO  implements IVehicleDAO {
                 LOGGER.info("Failed to create Vehicle.");
             }
 
-            ResultSet generatedKeys = preparedStatement.getGeneratedKeys();
-            long generatedId = -1;
-            if (generatedKeys.next()) {
-                generatedId = generatedKeys.getLong(1);
+            try(ResultSet generatedKeys = preparedStatement.getGeneratedKeys()) {
+                long generatedId = -1;
+                if (generatedKeys.next()) {
+                    generatedId = generatedKeys.getLong(1);
 
+                }
+                vehicle.setId(generatedId);
             }
-            vehicle.setId(generatedId);
-
 
         } catch (SQLException e) {
             LOGGER.error(e);

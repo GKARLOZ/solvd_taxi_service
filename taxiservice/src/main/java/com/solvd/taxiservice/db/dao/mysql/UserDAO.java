@@ -13,13 +13,10 @@ import java.sql.*;
 public class UserDAO  implements IUserDAO {
 
     private final static Logger LOGGER = LogManager.getLogger(User.class);
-
     private void executeQuery(String query, Object... params){
 
         Connection connection = DBConnectionPool.getInstance().getConnection();
-        PreparedStatement preparedStatement = null;
-        try {
-            preparedStatement = connection.prepareStatement(query);
+        try(PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
             for (int i = 0; i < params.length; i++) {
                 preparedStatement.setObject(i + 1, params[i]);
@@ -41,25 +38,23 @@ public class UserDAO  implements IUserDAO {
         }
 
     }
-
     private User queryGet(String query, Object... params){
 
         Connection connection = DBConnectionPool.getInstance().getConnection();
-        PreparedStatement preparedStatement = null;
         User user = new User();
+        try(PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
-        try {
-            preparedStatement = connection.prepareStatement(query);
 
             for (int i = 0; i < params.length; i++) {
                 preparedStatement.setObject(i + 1, params[i]);
             }
-            ResultSet resultSet = preparedStatement.executeQuery();
 
-            while(resultSet.next()){
+            try(ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
 
-                user.setId(resultSet.getLong("id"));
-                user.setEmail(resultSet.getString("email"));
+                    user.setId(resultSet.getLong("id"));
+                    user.setEmail(resultSet.getString("email"));
+                }
             }
 
         } catch (SQLException e) {

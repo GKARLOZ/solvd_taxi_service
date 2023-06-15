@@ -20,9 +20,7 @@ public class PaymentDAO implements IDAO<Payment> {
     private void executeQuery(String query, Object... params){
 
         Connection connection = DBConnectionPool.getInstance().getConnection();
-        PreparedStatement preparedStatement = null;
-        try {
-            preparedStatement = connection.prepareStatement(query);
+        try(PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
             for (int i = 0; i < params.length; i++) {
                 preparedStatement.setObject(i + 1, params[i]);
@@ -48,21 +46,21 @@ public class PaymentDAO implements IDAO<Payment> {
     private Payment queryGet(String query, Object... params) {
 
         Connection connection = DBConnectionPool.getInstance().getConnection();
-        PreparedStatement preparedStatement = null;
         Payment payment = new Payment();
-        try {
-            preparedStatement = connection.prepareStatement("SELECT * FROM Payments WHERE ID=?");
+
+        try(PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
             for (int i = 0; i < params.length; i++) {
                 preparedStatement.setObject(i + 1, params[i]);
             }
-            ResultSet resultSet = preparedStatement.executeQuery();
 
-            while (resultSet.next()) {
+            try(ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
 
-                payment.setId(resultSet.getLong("id"));
-                payment.setPaymentStatus(resultSet.getString("payment_status"));
+                    payment.setId(resultSet.getLong("id"));
+                    payment.setPaymentStatus(resultSet.getString("payment_status"));
 
+                }
             }
 
         } catch (SQLException e) {

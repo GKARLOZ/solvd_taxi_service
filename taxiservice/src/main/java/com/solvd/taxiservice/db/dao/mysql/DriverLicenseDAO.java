@@ -14,12 +14,10 @@ public class DriverLicenseDAO implements IDriverLicenseDAO {
 
     private final static Logger LOGGER = LogManager.getLogger(DriverLicense.class);
 
-    private void executeQuery(String query, Object... params){
+    private void executeQuery(String query, Object... params) {
 
         Connection connection = DBConnectionPool.getInstance().getConnection();
-        PreparedStatement preparedStatement = null;
-        try {
-            preparedStatement = connection.prepareStatement(query);
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
             for (int i = 0; i < params.length; i++) {
                 preparedStatement.setObject(i + 1, params[i]);
@@ -28,15 +26,14 @@ public class DriverLicenseDAO implements IDriverLicenseDAO {
             int rowsAffected = preparedStatement.executeUpdate();
 
             if (rowsAffected > 0) {
-                LOGGER.info(rowsAffected + " row affected in Driver License table.");
+                LOGGER.info(rowsAffected + " row affected in DL table.");
             } else {
-                LOGGER.info("No rows affected in Driver Licenses table");
+                LOGGER.info("No rows affected in DL table");
             }
 
         } catch (SQLException e) {
             LOGGER.error(e);
-        }
-        finally {
+        } finally {
             DBConnectionPool.getInstance().releaseConnection(connection);
         }
 
@@ -45,23 +42,23 @@ public class DriverLicenseDAO implements IDriverLicenseDAO {
     private DriverLicense queryGet(String query, Object... params){
 
         Connection connection = DBConnectionPool.getInstance().getConnection();
-        PreparedStatement preparedStatement = null;
+
         DriverLicense dl = new DriverLicense();
 
-        try {
-            preparedStatement = connection.prepareStatement(query);
+        try(PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
             for (int i = 0; i < params.length; i++) {
                 preparedStatement.setObject(i + 1, params[i]);
             }
-            ResultSet resultSet = preparedStatement.executeQuery();
 
-            while(resultSet.next()){
+            try(ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
 
-                dl.setId(resultSet.getLong("id"));
-                dl.setLicenseNumber(resultSet.getString("license_number"));
-                dl.setDateOfBirth(resultSet.getDate("date_of_birth"));
-                dl.setExpirationDate(resultSet.getDate("expiration_date"));
+                    dl.setId(resultSet.getLong("id"));
+                    dl.setLicenseNumber(resultSet.getString("license_number"));
+                    dl.setDateOfBirth(resultSet.getDate("date_of_birth"));
+                    dl.setExpirationDate(resultSet.getDate("expiration_date"));
+                }
             }
 
         } catch (SQLException e) {
@@ -119,9 +116,8 @@ public class DriverLicenseDAO implements IDriverLicenseDAO {
     public DriverLicense createAndGet(DriverLicense driverLicense) {
 
         Connection connection = DBConnectionPool.getInstance().getConnection();
-        PreparedStatement preparedStatement = null;
-        try {
-            preparedStatement = connection.prepareStatement("INSERT INTO driver_licenses (license_number,date_of_birth,expiration_date) VALUES (?,?,?)",Statement.RETURN_GENERATED_KEYS);
+
+        try(PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO driver_licenses (license_number,date_of_birth,expiration_date) VALUES (?,?,?)",Statement.RETURN_GENERATED_KEYS)) {
 
             preparedStatement.setString(1, driverLicense.getLicenseNumber());
             preparedStatement.setDate(2, new Date(driverLicense.getDateOfBirth().getTime()));
@@ -135,14 +131,14 @@ public class DriverLicenseDAO implements IDriverLicenseDAO {
                 LOGGER.info("Failed to create Driver License.");
             }
 
-            ResultSet generatedKeys = preparedStatement.getGeneratedKeys();
-            long generatedId = -1;
-            if (generatedKeys.next()) {
-                generatedId = generatedKeys.getLong(1);
+            try(ResultSet generatedKeys = preparedStatement.getGeneratedKeys()) {
 
+                long generatedId = -1;
+                if (generatedKeys.next()) {
+                    generatedId = generatedKeys.getLong(1);
+                }
+                driverLicense.setId(generatedId);
             }
-            driverLicense.setId(generatedId);
-
 
         } catch (SQLException e) {
             LOGGER.error(e);

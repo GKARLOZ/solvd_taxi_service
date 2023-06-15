@@ -20,9 +20,7 @@ public class TripDAO implements ITripDAO {
     private void executeQuery(String query, Object... params){
 
         Connection connection = DBConnectionPool.getInstance().getConnection();
-        PreparedStatement preparedStatement = null;
-        try {
-            preparedStatement = connection.prepareStatement(query);
+        try(PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
             for (int i = 0; i < params.length; i++) {
                 preparedStatement.setObject(i + 1, params[i]);
@@ -48,22 +46,22 @@ public class TripDAO implements ITripDAO {
     private Trip queryGet(String query, Object... params) {
 
         Connection connection = DBConnectionPool.getInstance().getConnection();
-        PreparedStatement preparedStatement = null;
         Trip trip = new Trip();
-        try {
-            preparedStatement = connection.prepareStatement("SELECT * FROM Trips WHERE ID=?");
+
+        try(PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
             for (int i = 0; i < params.length; i++) {
                 preparedStatement.setObject(i + 1, params[i]);
             }
-            ResultSet resultSet = preparedStatement.executeQuery();
 
-            while (resultSet.next()) {
+            try(ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
 
-                trip.setId(resultSet.getLong("id"));
-                trip.setEndTime(resultSet.getTimestamp("start_date_time").toLocalDateTime());
-                trip.setStartTime(resultSet.getTimestamp("end_date_time").toLocalDateTime());
-                trip.setDistance(resultSet.getDouble("distance"));
+                    trip.setId(resultSet.getLong("id"));
+                    trip.setEndTime(resultSet.getTimestamp("start_date_time").toLocalDateTime());
+                    trip.setStartTime(resultSet.getTimestamp("end_date_time").toLocalDateTime());
+                    trip.setDistance(resultSet.getDouble("distance"));
+                }
             }
 
         } catch (SQLException e) {

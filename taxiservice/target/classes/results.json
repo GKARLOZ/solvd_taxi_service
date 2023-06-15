@@ -1,0 +1,25 @@
+{
+  "User" : {
+    "Id" : 11,
+    "Email" : "email@gmail.com",
+    "Profile" : {
+      "Name" : "Johnny",
+      "Phone Number" : "911"
+    },
+    "Driver License" : {
+      "License Number" : "234werwe324",
+      "Date Of Birth" : "2023-06-15",
+      "Expiration Date" : "2023-06-15"
+    },
+    "Rides" : [ {
+      "PickUp Location" : "123 Circle street",
+      "DropOff Location" : "32 Hollywood Blvd"
+    }, {
+      "PickUp Location" : "24 Fire street",
+      "DropOff Location" : "74453 Main ave"
+    }, {
+      "PickUp Location" : "123 Circle street",
+      "DropOff Location" : "32 Hollywood Blvd"
+    } ]
+  }
+}

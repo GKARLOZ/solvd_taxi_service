@@ -16,9 +16,7 @@ public class ProfileDAO implements IProfileDAO {
     private void executeQuery(String query, Object... params){
 
         Connection connection = DBConnectionPool.getInstance().getConnection();
-        PreparedStatement preparedStatement = null;
-        try {
-            preparedStatement = connection.prepareStatement(query);
+        try(PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
             for (int i = 0; i < params.length; i++) {
                 preparedStatement.setObject(i + 1, params[i]);
@@ -45,22 +43,21 @@ public class ProfileDAO implements IProfileDAO {
     private Profile queryGet(String query, Object... params){
 
         Connection connection = DBConnectionPool.getInstance().getConnection();
-        PreparedStatement preparedStatement = null;
         Profile profile = new Profile();
 
-        try {
-            preparedStatement = connection.prepareStatement(query);
+        try(PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
             for (int i = 0; i < params.length; i++) {
                 preparedStatement.setObject(i + 1, params[i]);
             }
-            ResultSet resultSet = preparedStatement.executeQuery();
 
-            while(resultSet.next()){
+            try(ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
 
-                profile.setId(resultSet.getLong("id"));
-                profile.setName(resultSet.getString("name"));
-                profile.setPhoneNumber(resultSet.getString("phone"));
+                    profile.setId(resultSet.getLong("id"));
+                    profile.setName(resultSet.getString("name"));
+                    profile.setPhoneNumber(resultSet.getString("phone"));
+                }
             }
 
         } catch (SQLException e) {
@@ -124,22 +121,24 @@ public class ProfileDAO implements IProfileDAO {
     public Profile createAndGet(Profile profile) {
 
         Connection connection = DBConnectionPool.getInstance().getConnection();
-        PreparedStatement preparedStatement = null;
-        try {
-            preparedStatement = connection.prepareStatement("INSERT INTO Profiles (name,phone) VALUES (?,?)", Statement.RETURN_GENERATED_KEYS);
+
+        try(PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO Profiles (name,phone) VALUES (?,?)", Statement.RETURN_GENERATED_KEYS);) {
 
             preparedStatement.setString(1, profile.getName());
             preparedStatement.setString(2, profile.getPhoneNumber());
 
-            int rowsAffected = preparedStatement.executeUpdate();
-            ResultSet generatedKeys = preparedStatement.getGeneratedKeys();
-            long generatedId = -1;
 
-            if (generatedKeys.next()) {
-                generatedId = generatedKeys.getLong(1);
+            try(ResultSet generatedKeys = preparedStatement.getGeneratedKeys()) {
+                long generatedId = -1;
 
+                if (generatedKeys.next()) {
+                    generatedId = generatedKeys.getLong(1);
+
+                }
+                profile.setId(generatedId);
             }
-            profile.setId(generatedId);
+
+            int rowsAffected = preparedStatement.executeUpdate();
 
             if (rowsAffected > 0) {
                 LOGGER.info("Profile created successfully.");

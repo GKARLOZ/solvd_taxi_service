@@ -20,9 +20,7 @@ public class RideTypeDAO implements IRideTypeDAO {
     private void executeQuery(String query, Object... params){
 
         Connection connection = DBConnectionPool.getInstance().getConnection();
-        PreparedStatement preparedStatement = null;
-        try {
-            preparedStatement = connection.prepareStatement(query);
+        try(PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
             for (int i = 0; i < params.length; i++) {
                 preparedStatement.setObject(i + 1, params[i]);
@@ -48,21 +46,21 @@ public class RideTypeDAO implements IRideTypeDAO {
     private RideType queryGet(String query, Object... params){
 
         Connection connection = DBConnectionPool.getInstance().getConnection();
-        PreparedStatement preparedStatement = null;
        RideType rt = new RideType();
-        try {
-            preparedStatement = connection.prepareStatement(query);
+
+        try(PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
             for (int i = 0; i < params.length; i++) {
                 preparedStatement.setObject(i + 1, params[i]);
             }
-            ResultSet resultSet = preparedStatement.executeQuery();
 
-            while(resultSet.next()) {
+            try(ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
 
-                rt.setId(resultSet.getLong("id"));
-                rt.setType(resultSet.getString("type"));
-                rt.setCostPerMile(resultSet.getDouble("cost_per_mile"));
+                    rt.setId(resultSet.getLong("id"));
+                    rt.setType(resultSet.getString("type"));
+                    rt.setCostPerMile(resultSet.getDouble("cost_per_mile"));
+                }
             }
 
         } catch (SQLException e) {

@@ -1,9 +1,19 @@
 package com.solvd.taxiservice.db.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonRootName;
+
+@JsonRootName(value="Vehicle")
 public class Vehicle {
 
+    @JsonIgnore
     private long id;
+
+    @JsonProperty("Model")
     private String model;
+
+    @JsonProperty("License Plate")
     private String licensePlate;
 
     public Vehicle(){};
