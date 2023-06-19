@@ -1,7 +1,6 @@
 package com.solvd.taxiservice.db.dao.mysql;
 
-import com.solvd.taxiservice.db.dao.interfaces.IRideTypeDAO;
-import com.solvd.taxiservice.db.model.Profile;
+import com.solvd.taxiservice.db.dao.IRideTypeDAO;
 import com.solvd.taxiservice.db.model.Review;
 import com.solvd.taxiservice.db.model.RideType;
 import com.solvd.taxiservice.db.utils.DBConnectionPool;

@@ -1,9 +1,8 @@
 package com.solvd.taxiservice.db.dao.mysql;
 
-import com.solvd.taxiservice.db.dao.interfaces.IRideDAO;
+import com.solvd.taxiservice.db.dao.IRideDAO;
 import com.solvd.taxiservice.db.model.DriverLicense;
 import com.solvd.taxiservice.db.model.Ride;
-import com.solvd.taxiservice.db.model.Trip;
 import com.solvd.taxiservice.db.utils.DBConnectionPool;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -79,7 +78,7 @@ public class RideDAO implements IRideDAO {
 
     @Override
     public void create(Ride ride) {
-        executeQuery("INSERT INTO Rides (pickup_location,dropoff_location,ride_status,user_id,ride_type_id) VALUES (?,?,?,?,?)",ride.getPickUpLocations(),ride.getDropOffLocation(),ride.getStatus(),0,ride.getRideType().getId());
+        //executeQuery("INSERT INTO Rides (pickup_location,dropoff_location,ride_status,user_id,ride_type_id) VALUES (?,?,?,?,?)",ride.getPickUpLocations(),ride.getDropOffLocation(),ride.getStatus(),0,ride.getRideType().getId());
 
     }
 

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.solvd.taxiservice.db.dao.IRideTypeDAO">
+
+    <select id="getById" resultMap="com.solvd.taxiservice.db.dao.IRideTypeDAO.rideTypeResultMap">
+                SELECT * FROM ride_types WHERE ID= #{id}
+
+    </select>
+
+
+    <resultMap id="rideTypeResultMap" type="com.solvd.taxiservice.db.model.RideType" autoMapping="false">
+        <id property="id" column="id"/>
+        <result property="type" column="type"/>
+        <result property="costPerMile" column="cost_per_mile"/>
+    </resultMap>
+
+</mapper>

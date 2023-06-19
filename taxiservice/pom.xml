@@ -75,6 +75,11 @@
       <artifactId>jackson-core</artifactId>
       <version>2.15.2</version>
     </dependency>
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis</artifactId>
+      <version>3.5.13</version>
+    </dependency>
 
 
 
@@ -123,6 +128,7 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
+
       </plugins>
     </pluginManagement>
       <plugins>
@@ -134,6 +140,7 @@
                   <target>8</target>
               </configuration>
           </plugin>
+
       </plugins>
   </build>
 </project>

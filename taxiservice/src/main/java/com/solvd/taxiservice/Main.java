@@ -1,17 +1,28 @@
 package com.solvd.taxiservice;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import com.solvd.taxiservice.db.dao.IDriverLicenseDAO;
+import com.solvd.taxiservice.db.dao.IProfileDAO;
+import com.solvd.taxiservice.db.dao.IRideDAO;
+import com.solvd.taxiservice.db.dao.IUserDAO;
+import com.solvd.taxiservice.db.dao.mysql.DriverLicenseDAO;
+import com.solvd.taxiservice.db.dao.mysql.RideDAO;
 import com.solvd.taxiservice.db.jaxb.ManyUsersJAXB;
 import com.solvd.taxiservice.db.jaxb.DriverLicenseJAXB;
 import com.solvd.taxiservice.db.jaxb.JAXB;
 import com.solvd.taxiservice.db.jaxb.UserJAXB;
 import com.solvd.taxiservice.db.model.*;
-import com.solvd.taxiservice.db.service.implement.*;
+import com.solvd.taxiservice.db.service.IRideService;
+import com.solvd.taxiservice.db.service.IUserService;
+import com.solvd.taxiservice.db.service.manualimple.*;
+import com.solvd.taxiservice.db.service.mybatisimple.*;
 import com.solvd.taxiservice.db.stax.parsers.*;
 import com.solvd.taxiservice.db.utils.DBConnectionPool;
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -19,6 +30,7 @@ import javax.xml.bind.JAXBException;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
@@ -30,15 +42,40 @@ public class Main {
 
     private final static Logger LOGGER = LogManager.getLogger(Main.class);
    public static void main(String[] args) {
-        task18();
-       //task17();
-       //task16();
-       //task15();
-       //multiThread();
+
+       task19();
+//       task18();
+//       task17();
+//       task16();
+//       task15();
+//       multiThread();
 
 
     }
+    public static void task19(){
+//        Add MyBatis DAOs to the existing hierarchy with the same requirements. Choose any XML or interface mapping.
+//        Switch service classes to MyBatis.
 
+
+
+        //----------------------------User Service myBatis-----------------------------------------
+        IUserService userService = new UserServiceMB();
+
+        User user = userService.getUserbyEmail("java@gmail.com");
+        LOGGER.info(user);
+
+        //------------------------------Ride Service myBatis--------------------------------------
+
+        IRideService rideService = new RideServiceMB();
+        Ride ride = rideService.getById(2);
+        LOGGER.info(ride);
+
+
+
+
+
+
+    }
     public static void task18(){
 //        Create one Json file for at least 5 classes from the hierarchy.
 //        Add Jackson’s annotation to the hierarchy. Date, List, and complex objects should be covered.

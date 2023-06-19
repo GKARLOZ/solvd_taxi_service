@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.solvd.taxiservice.db.dao.IRideDAO">
+
+    <select id="getById" resultMap="com.solvd.taxiservice.db.dao.IRideDAO.rideResultMap">
+        SELECT * FROM Rides
+        Left join ride_types rt on ride_type_id = rt.id
+        WHERE Rides.id = #{id}
+    </select>
+
+    <select id="getRideIdByUserId" resultMap="com.solvd.taxiservice.db.dao.IRideDAO.rideResultMap">
+        select * from Rides where user_id = #{id}
+    </select>
+
+    <insert id="create" parameterType="com.solvd.taxiservice.db.model.Ride">
+        INSERT INTO Rides (pickup_location,dropoff_location,ride_status,user_id,ride_type_id) VALUES (#{pickUpLocation},#{dropOffLocation},#{status},#{rideType.id})
+
+    </insert>
+
+    <update id="update" parameterType="com.solvd.taxiservice.db.model.Ride" >
+        "UPDATE Rides SET pickup_location = #{pickUpLocation},dropoff_location=#{dropOffLocation},ride_status=#{status} WHERE id = #{id}
+    </update>
+
+    <delete id="delete" parameterType="com.solvd.taxiservice.db.model.Ride">
+        DELETE FROM Rides WHERE id = #{id}
+    </delete>
+
+
+    <resultMap id="rideResultMap" type="com.solvd.taxiservice.db.model.Ride" autoMapping="false">
+       <id property="id" column="id"/>
+        <result property="pickUpLocations" column="pickup_location"/>
+        <result property="dropOffLocation" column="dropoff_location"/>
+        <result property="status" column="ride_status"/>
+        <association property="rideType" resultMap="com.solvd.taxiservice.db.dao.IRideTypeDAO.rideTypeResultMap" />
+    </resultMap>
+
+</mapper>

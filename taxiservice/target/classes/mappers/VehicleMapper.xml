@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.solvd.taxiservice.db.dao.IVehicleDAO">
+
+    <select id="getById" resultMap="com.solvd.taxiservice.db.dao.IVehicleDAO.vehicleResultMap">
+        SELECT * FROM Vehicles WHERE ID= #{id}
+    </select>
+
+    <select id="getVehicleByUserId" resultMap="com.solvd.taxiservice.db.dao.IVehicleDAO.vehicleResultMap">
+        select * from vehicles where id = (select vehicle_id  from users where id = #{id});
+    </select>
+
+    <insert id="create" parameterType= "com.solvd.taxiservice.db.model.Vehicle">
+
+        <selectKey keyProperty="id" resultType="long" order="AFTER">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        INSERT INTO vehicles (license_plate,vehicle_model)  VALUES (#{licensePlate}, #{model})
+
+    </insert>
+
+    <delete id="delete" parameterType="com.solvd.taxiservice.db.model.Vehicle">
+        DELETE FROM vehicles WHERE id = #{id}
+    </delete>
+
+
+    <resultMap id="vehicleResultMap" type="com.solvd.taxiservice.db.model.Vehicle" autoMapping="false">
+        <id property="id" column="id"/>
+        <result property="model" column="vehicle_model"/>
+        <result property="licensePlate" column="license_plate" />
+
+    </resultMap>
+
+</mapper>

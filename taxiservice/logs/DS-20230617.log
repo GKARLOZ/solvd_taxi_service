@@ -1,0 +1,414 @@
+19:24:27.333 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @244             - pool-2-thread-2: Get Connection successful.
+19:24:27.368 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @244             - pool-2-thread-3: Get Connection successful.
+19:24:27.401 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @244             - pool-2-thread-6: Get Connection successful.
+19:24:27.433 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @244             - pool-2-thread-4: Get Connection successful.
+19:24:27.463 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @244             - pool-2-thread-7: Get Connection successful.
+19:24:28.357 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @247             - pool-2-thread-2: Release Connection successful.
+19:24:28.357 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @244             - pool-2-thread-5: Get Connection successful.
+19:24:28.370 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @247             - pool-2-thread-3: Release Connection successful.
+19:24:28.370 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @244             - pool-2-thread-1: Get Connection successful.
+19:24:28.417 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @244             - pool-2-thread-2: Get Connection successful.
+19:24:28.417 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @247             - pool-2-thread-6: Release Connection successful.
+19:24:28.448 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @244             - pool-2-thread-3: Get Connection successful.
+19:24:28.448 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @247             - pool-2-thread-4: Release Connection successful.
+19:24:28.480 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @247             - pool-2-thread-7: Release Connection successful.
+19:24:28.480 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @244             - pool-2-thread-6: Get Connection successful.
+19:24:29.360 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @247             - pool-2-thread-5: Release Connection successful.
+19:24:29.372 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @247             - pool-2-thread-1: Release Connection successful.
+19:24:29.421 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @247             - pool-2-thread-2: Release Connection successful.
+19:24:29.453 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @247             - pool-2-thread-3: Release Connection successful.
+19:24:29.485 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @247             - pool-2-thread-6: Release Connection successful.
+20:10:47.705 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+20:10:47.724 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:10:47.725 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:10:47.725 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:10:47.727 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:12:32.917 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+20:12:32.941 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:12:32.942 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:12:32.943 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:12:32.943 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:13:07.693 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+20:13:07.714 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:13:07.715 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:13:07.715 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:13:07.716 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:13:07.780 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection() @143             - Opening JDBC Connection
+20:13:08.291 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection() @454             - Created connection 1027569178.
+20:13:08.292 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.setDesiredAutoCommit() @107             - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3d3f761a]
+20:13:08.298 DEBUG com.solvd.taxiservice.db.model.Profile.getById.debug() @135             - ==>  Preparing: SELECT * FROM Profiles WHERE ID= ?
+20:13:08.340 DEBUG com.solvd.taxiservice.db.model.Profile.getById.debug() @135             - ==> Parameters: 2(Integer)
+20:13:08.413 TRACE com.solvd.taxiservice.db.model.Profile.getById.trace() @141             - <==    Columns: id, name, phone
+20:13:08.413 TRACE com.solvd.taxiservice.db.model.Profile.getById.trace() @141             - <==        Row: 2, Fredy, (222)222-2222
+20:13:08.416 DEBUG com.solvd.taxiservice.db.model.Profile.getById.debug() @135             - <==      Total: 1
+20:13:08.419 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.resetAutoCommit() @130             - Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3d3f761a]
+20:13:08.420 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.close() @97             - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3d3f761a]
+20:13:08.421 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection() @409             - Returned connection 1027569178 to pool.
+20:37:08.319 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+20:37:08.341 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:37:08.342 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:37:08.342 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:37:08.343 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:37:08.413 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection() @143             - Opening JDBC Connection
+20:37:08.932 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection() @454             - Created connection 1027569178.
+20:37:08.932 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.setDesiredAutoCommit() @107             - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3d3f761a]
+20:37:08.937 DEBUG com.solvd.taxiservice.db.model.Profile.getById.debug() @135             - ==>  Preparing: SELECT * FROM Profiles WHERE ID= ?
+20:37:08.977 DEBUG com.solvd.taxiservice.db.model.Profile.getById.debug() @135             - ==> Parameters: 2(Integer)
+20:37:09.009 TRACE com.solvd.taxiservice.db.model.Profile.getById.trace() @141             - <==    Columns: id, name, phone
+20:37:09.010 TRACE com.solvd.taxiservice.db.model.Profile.getById.trace() @141             - <==        Row: 2, Fredy, (222)222-2222
+20:37:09.012 DEBUG com.solvd.taxiservice.db.model.Profile.getById.debug() @135             - <==      Total: 1
+20:37:09.014 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.resetAutoCommit() @130             - Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3d3f761a]
+20:37:09.015 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.close() @97             - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3d3f761a]
+20:37:09.016 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection() @409             - Returned connection 1027569178 to pool.
+20:39:16.667 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+20:39:16.689 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:39:16.689 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:39:16.689 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:39:16.689 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:41:03.784 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+20:41:03.808 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:41:03.809 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:41:03.809 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:41:03.810 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:41:03.896 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection() @143             - Opening JDBC Connection
+20:41:04.630 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection() @454             - Created connection 1027569178.
+20:41:04.631 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.setDesiredAutoCommit() @107             - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3d3f761a]
+20:41:04.639 DEBUG com.solvd.taxiservice.db.mapper.Profile.getById.debug() @135             - ==>  Preparing: SELECT * FROM Profiles WHERE ID= ?
+20:41:04.709 DEBUG com.solvd.taxiservice.db.mapper.Profile.getById.debug() @135             - ==> Parameters: 2(Integer)
+20:41:04.755 TRACE com.solvd.taxiservice.db.mapper.Profile.getById.trace() @141             - <==    Columns: id, name, phone
+20:41:04.755 TRACE com.solvd.taxiservice.db.mapper.Profile.getById.trace() @141             - <==        Row: 2, Fredy, (222)222-2222
+20:41:04.759 DEBUG com.solvd.taxiservice.db.mapper.Profile.getById.debug() @135             - <==      Total: 1
+20:41:04.762 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.resetAutoCommit() @130             - Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3d3f761a]
+20:41:04.764 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.close() @97             - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3d3f761a]
+20:41:04.764 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection() @409             - Returned connection 1027569178 to pool.
+20:48:54.543 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+20:48:54.567 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:48:54.568 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:48:54.569 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:48:54.569 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:48:54.637 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection() @143             - Opening JDBC Connection
+20:48:55.147 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection() @454             - Created connection 1888639813.
+20:48:55.148 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.setDesiredAutoCommit() @107             - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@70925b45]
+20:48:55.157 DEBUG com.solvd.taxiservice.db.mapper.Profile.getById.debug() @135             - ==>  Preparing: SELECT * FROM Profiles WHERE ID= ?
+20:48:55.204 DEBUG com.solvd.taxiservice.db.mapper.Profile.getById.debug() @135             - ==> Parameters: 2(Integer)
+20:48:55.240 TRACE com.solvd.taxiservice.db.mapper.Profile.getById.trace() @141             - <==    Columns: id, name, phone
+20:48:55.241 TRACE com.solvd.taxiservice.db.mapper.Profile.getById.trace() @141             - <==        Row: 2, Fredy, (222)222-2222
+20:48:55.243 DEBUG com.solvd.taxiservice.db.mapper.Profile.getById.debug() @135             - <==      Total: 1
+20:48:55.246 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.resetAutoCommit() @130             - Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@70925b45]
+20:48:55.248 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.close() @97             - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@70925b45]
+20:48:55.248 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection() @409             - Returned connection 1888639813 to pool.
+20:54:20.530 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+20:54:20.548 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:54:20.549 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:54:20.549 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:54:20.550 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:55:00.719 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+20:55:00.738 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:55:00.739 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:55:00.739 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:55:00.740 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:56:36.035 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+20:56:36.061 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:56:36.062 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:56:36.063 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:56:36.064 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+20:56:36.142 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection() @143             - Opening JDBC Connection
+20:56:36.683 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection() @454             - Created connection 2030138610.
+20:56:36.685 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.setDesiredAutoCommit() @107             - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@790174f2]
+20:56:36.689 DEBUG com.solvd.taxiservice.db.mapper.Profile.getById.debug() @135             - ==>  Preparing: SELECT * FROM Profiles WHERE ID= ?
+20:56:36.738 DEBUG com.solvd.taxiservice.db.mapper.Profile.getById.debug() @135             - ==> Parameters: 2(Integer)
+20:56:36.765 TRACE com.solvd.taxiservice.db.mapper.Profile.getById.trace() @141             - <==    Columns: id, name, phone
+20:56:36.765 TRACE com.solvd.taxiservice.db.mapper.Profile.getById.trace() @141             - <==        Row: 2, Fredy, (222)222-2222
+20:56:36.767 DEBUG com.solvd.taxiservice.db.mapper.Profile.getById.debug() @135             - <==      Total: 1
+20:56:36.769 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.resetAutoCommit() @130             - Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@790174f2]
+20:56:36.770 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.close() @97             - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@790174f2]
+20:56:36.770 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection() @409             - Returned connection 2030138610 to pool.
+21:10:54.843 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+21:10:54.869 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:10:54.869 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:10:54.870 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:10:54.871 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:13:26.149 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+21:13:26.172 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:13:26.172 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:13:26.173 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:13:26.173 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:13:26.280 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection() @143             - Opening JDBC Connection
+21:13:26.818 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection() @454             - Created connection 973604791.
+21:13:26.819 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.setDesiredAutoCommit() @107             - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3a0807b7]
+21:13:26.824 DEBUG com.solvd.taxiservice.db.dao.IProfileDAO.getById.debug() @135             - ==>  Preparing: SELECT * FROM Profiles WHERE ID= ?
+21:13:26.863 DEBUG com.solvd.taxiservice.db.dao.IProfileDAO.getById.debug() @135             - ==> Parameters: 2(Long)
+21:13:26.891 TRACE com.solvd.taxiservice.db.dao.IProfileDAO.getById.trace() @141             - <==    Columns: id, name, phone
+21:13:26.892 TRACE com.solvd.taxiservice.db.dao.IProfileDAO.getById.trace() @141             - <==        Row: 2, Fredy, (222)222-2222
+21:13:26.894 DEBUG com.solvd.taxiservice.db.dao.IProfileDAO.getById.debug() @135             - <==      Total: 1
+21:13:26.898 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.resetAutoCommit() @130             - Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3a0807b7]
+21:13:26.899 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.close() @97             - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3a0807b7]
+21:13:26.900 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection() @409             - Returned connection 973604791 to pool.
+21:30:17.916 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+21:30:17.934 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:30:17.935 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:30:17.935 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:30:17.936 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:30:18.028 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection() @143             - Opening JDBC Connection
+21:30:18.594 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection() @454             - Created connection 973604791.
+21:30:18.598 DEBUG com.solvd.taxiservice.db.dao.IProfileDAO.getById.debug() @135             - ==>  Preparing: SELECT * FROM Profiles WHERE ID= ?
+21:30:18.644 DEBUG com.solvd.taxiservice.db.dao.IProfileDAO.getById.debug() @135             - ==> Parameters: 2(Long)
+21:30:18.679 TRACE com.solvd.taxiservice.db.dao.IProfileDAO.getById.trace() @141             - <==    Columns: id, name, phone
+21:30:18.679 TRACE com.solvd.taxiservice.db.dao.IProfileDAO.getById.trace() @141             - <==        Row: 2, Fredy, (222)222-2222
+21:30:18.681 DEBUG com.solvd.taxiservice.db.dao.IProfileDAO.getById.debug() @135             - <==      Total: 1
+21:30:18.684 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.close() @97             - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3a0807b7]
+21:30:18.685 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection() @409             - Returned connection 973604791 to pool.
+21:30:34.366 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+21:30:34.395 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:30:34.395 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:30:34.397 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:30:34.397 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:30:34.521 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection() @143             - Opening JDBC Connection
+21:30:35.266 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection() @454             - Created connection 973604791.
+21:30:35.271 DEBUG com.solvd.taxiservice.db.dao.IProfileDAO.getById.debug() @135             - ==>  Preparing: SELECT * FROM Profiles WHERE ID= ?
+21:30:35.322 DEBUG com.solvd.taxiservice.db.dao.IProfileDAO.getById.debug() @135             - ==> Parameters: 2(Long)
+21:30:35.359 TRACE com.solvd.taxiservice.db.dao.IProfileDAO.getById.trace() @141             - <==    Columns: id, name, phone
+21:30:35.360 TRACE com.solvd.taxiservice.db.dao.IProfileDAO.getById.trace() @141             - <==        Row: 2, Fredy, (222)222-2222
+21:30:35.362 DEBUG com.solvd.taxiservice.db.dao.IProfileDAO.getById.debug() @135             - <==      Total: 1
+21:30:35.366 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.close() @97             - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3a0807b7]
+21:30:35.366 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection() @409             - Returned connection 973604791 to pool.
+21:30:35.381 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:30:35.786 INFO  com.solvd.taxiservice.Main.task18() @106             - User{id=11, email='email@gmail.com', profile=Profile{id='0', name='Johnny', phoneNumber='911'}, driverLicense=DriverLicense{id='0', licenseNumber='234werwe324', dateOfBirth=Sat Jun 17 17:00:00 PDT 2023, expirationDate=Sat Jun 17 17:00:00 PDT 2023}, vehicle=Vehicle{id='0', model='Jeep', licensePlate='24l3j'}, rides=[Ride{id=0, pickUpLocations='123 Circle street', dropOffLocation='32 Hollywood Blvd', status='null', rideType=RideType{id=0, type='null', costPerMile=0.0}, reviews=null}, Ride{id=0, pickUpLocations='24 Fire street', dropOffLocation='74453 Main ave', status='null', rideType=RideType{id=0, type='null', costPerMile=0.0}, reviews=null}, Ride{id=0, pickUpLocations='123 Circle street', dropOffLocation='32 Hollywood Blvd', status='null', rideType=RideType{id=0, type='null', costPerMile=0.0}, reviews=null}]}
+21:30:36.058 INFO  com.solvd.taxiservice.Main.task17() @139             - ManyUsersJAXB{users=[UserJAXB{id=0, name='johnny', email='email@gmali.com', driverLicenseJAXB=DriverLicenseJAXB{id=0, licenseNumber='434rwf34wr2g', dateOfBirth=Sat Jun 17 00:00:00 PDT 2023, expirationDate=Sat Jun 17 00:00:00 PDT 2023}}, UserJAXB{id=0, name='juanito', email='yeah@gmali.com', driverLicenseJAXB=DriverLicenseJAXB{id=0, licenseNumber='434rwf34wr2g', dateOfBirth=Sat Jun 17 00:00:00 PDT 2023, expirationDate=Sat Jun 17 00:00:00 PDT 2023}}, UserJAXB{id=0, name='jj', email='jj@gmali.com', driverLicenseJAXB=DriverLicenseJAXB{id=0, licenseNumber='434rwf34wr2g', dateOfBirth=Sat Jun 17 00:00:00 PDT 2023, expirationDate=Sat Jun 17 00:00:00 PDT 2023}}]}
+21:30:36.151 INFO  com.solvd.taxiservice.Main.task16() @162             - Vehicle.xml is valid against Vehicle.xsd
+21:30:36.214 INFO  com.solvd.taxiservice.db.stax.parsers.VehicleParser.parse() @56             - Vehicle{id='0', model='Ford', licensePlate='H445He4'}
+21:30:36.214 INFO  com.solvd.taxiservice.db.stax.parsers.VehicleParser.parse() @56             - Vehicle{id='0', model='Jeep', licensePlate='ret54r'}
+21:30:36.345 INFO  com.solvd.taxiservice.Main.task15() @177             - User{id=3, email='temp@gmail.com', profile=Profile{id='3', name='Juanito', phoneNumber='(432)123-1234'}, driverLicense=DriverLicense{id='3', licenseNumber='xd3FH323421', dateOfBirth=1989-12-23, expirationDate=2123-05-01}, vehicle=Vehicle{id='1', model='Ford F150', licensePlate='94ghy6'}, rides=[Ride{id=2, pickUpLocations=' 323 Pineapple st, San Francisco', dropOffLocation='321 orange, Fresno', status=' DONE ', rideType=RideType{id=2, type='luxury', costPerMile=0.9}, reviews=[]}]}
+21:30:36.366 INFO  com.solvd.taxiservice.Main.task15() @187             - [Ride{id=1, pickUpLocations=' 123 apple st, San Francisco', dropOffLocation='321 orange, Fresno', status='in progress', rideType=RideType{id=1, type='standard', costPerMile=0.5}, reviews=[]}]
+21:30:36.397 INFO  com.solvd.taxiservice.Main.task15() @193             - Trip{id=1, startTime=2023-06-01T16:29:55, endTime=2023-06-01T16:29:55, distance=22.0, ride=Ride{id=1, pickUpLocations=' 123 apple st, San Francisco', dropOffLocation='321 orange, Fresno', status='in progress', rideType=RideType{id=1, type='standard', costPerMile=0.5}, reviews=[]}, promoCode=PromoCode{id=1, code='TAXI40', discount=0.75, expirationDate=2023-12-30}}
+21:30:36.422 INFO  com.solvd.taxiservice.Main.task15() @200             - Invoice{id=0, taxAmount=0.0, totalAmount=0.0, trip=Trip{id=0, startTime=null, endTime=null, distance=0.0, ride=Ride{id=0, pickUpLocations='null', dropOffLocation='null', status='null', rideType=RideType{id=0, type='null', costPerMile=0.0}, reviews=[]}, promoCode=PromoCode{id=0, code='null', discount=0.0, expirationDate=null}}}
+21:30:36.452 INFO  com.solvd.taxiservice.Main.task15() @207             - Payment{id=0, paymentStatus='null', paymentMethod=PaymentMethod{id=0, method='null', comment='null'}, invoice=Invoice{id=0, taxAmount=0.0, totalAmount=0.0, trip=Trip{id=0, startTime=null, endTime=null, distance=0.0, ride=Ride{id=0, pickUpLocations='null', dropOffLocation='null', status='null', rideType=RideType{id=0, type='null', costPerMile=0.0}, reviews=[]}, promoCode=PromoCode{id=0, code='null', discount=0.0, expirationDate=null}}}}
+21:30:36.454 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @262             - pool-2-thread-1: Get Connection successful.
+21:30:36.481 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @262             - pool-2-thread-2: Get Connection successful.
+21:30:36.506 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @262             - pool-2-thread-7: Get Connection successful.
+21:30:36.532 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @262             - pool-2-thread-6: Get Connection successful.
+21:30:36.561 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @262             - pool-2-thread-5: Get Connection successful.
+21:30:37.458 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @265             - pool-2-thread-1: Release Connection successful.
+21:30:37.458 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @262             - pool-2-thread-4: Get Connection successful.
+21:30:37.483 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @265             - pool-2-thread-2: Release Connection successful.
+21:30:37.483 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @262             - pool-2-thread-3: Get Connection successful.
+21:30:37.507 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @262             - pool-2-thread-1: Get Connection successful.
+21:30:37.507 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @265             - pool-2-thread-7: Release Connection successful.
+21:30:37.544 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @265             - pool-2-thread-6: Release Connection successful.
+21:30:37.544 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @262             - pool-2-thread-2: Get Connection successful.
+21:30:37.576 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @265             - pool-2-thread-5: Release Connection successful.
+21:30:37.576 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @262             - pool-2-thread-7: Get Connection successful.
+21:30:38.460 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @265             - pool-2-thread-4: Release Connection successful.
+21:30:38.485 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @265             - pool-2-thread-3: Release Connection successful.
+21:30:38.522 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @265             - pool-2-thread-1: Release Connection successful.
+21:30:38.554 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @265             - pool-2-thread-2: Release Connection successful.
+21:30:38.586 INFO  com.solvd.taxiservice.Main.lambda$multiThread$0() @265             - pool-2-thread-7: Release Connection successful.
+21:47:09.940 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+21:47:09.963 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:47:09.964 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:47:09.964 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:47:09.965 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:47:10.038 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection() @143             - Opening JDBC Connection
+21:47:10.584 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection() @454             - Created connection 2030138610.
+21:47:10.588 DEBUG com.solvd.taxiservice.db.mapper.Profile.getById.debug() @135             - ==>  Preparing: SELECT * FROM Profiles WHERE ID= ?
+21:47:10.621 DEBUG com.solvd.taxiservice.db.mapper.Profile.getById.debug() @135             - ==> Parameters: 2(Integer)
+21:47:10.649 TRACE com.solvd.taxiservice.db.mapper.Profile.getById.trace() @141             - <==    Columns: id, name, phone
+21:47:10.650 TRACE com.solvd.taxiservice.db.mapper.Profile.getById.trace() @141             - <==        Row: 2, Fredy, (222)222-2222
+21:47:10.652 DEBUG com.solvd.taxiservice.db.mapper.Profile.getById.debug() @135             - <==      Total: 1
+21:47:10.655 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.close() @97             - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@790174f2]
+21:47:10.656 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection() @409             - Returned connection 2030138610 to pool.
+21:54:07.863 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+21:54:07.882 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:54:07.882 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:54:07.882 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:54:07.882 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:56:02.784 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+21:56:02.806 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:56:02.807 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:56:02.807 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:56:02.808 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:57:19.163 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+21:57:19.187 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:57:19.187 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:57:19.188 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:57:19.189 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:58:43.404 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+21:58:43.424 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:58:43.424 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:58:43.425 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+21:58:43.425 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:02:40.188 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+22:02:40.207 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:02:40.208 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:02:40.208 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:02:40.208 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:05:11.667 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+22:05:11.692 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:05:11.692 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:05:11.693 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:05:11.694 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:05:48.202 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+22:05:48.225 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:05:48.225 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:05:48.226 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:05:48.227 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:07:26.948 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+22:07:26.971 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:07:26.972 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:07:26.972 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:07:26.973 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:07:27.044 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection() @143             - Opening JDBC Connection
+22:07:27.550 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection() @454             - Created connection 2030138610.
+22:07:27.554 DEBUG com.solvd.taxiservice.db.mapper.Profile.getById.debug() @135             - ==>  Preparing: SELECT * FROM Profiles WHERE ID= ?
+22:07:27.594 DEBUG com.solvd.taxiservice.db.mapper.Profile.getById.debug() @135             - ==> Parameters: 1(Integer)
+22:07:27.625 TRACE com.solvd.taxiservice.db.mapper.Profile.getById.trace() @141             - <==    Columns: id, name, phone
+22:07:27.626 TRACE com.solvd.taxiservice.db.mapper.Profile.getById.trace() @141             - <==        Row: 1, Eddy,  (321)123-1234
+22:07:27.628 DEBUG com.solvd.taxiservice.db.mapper.Profile.getById.debug() @135             - <==      Total: 1
+22:07:27.630 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.close() @97             - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@790174f2]
+22:07:27.631 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection() @409             - Returned connection 2030138610 to pool.
+22:09:54.252 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+22:09:54.275 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:09:54.276 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:09:54.277 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:09:54.277 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:11:05.136 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+22:11:05.158 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:11:05.158 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:11:05.159 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:11:05.159 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:11:29.347 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+22:11:29.365 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:11:29.366 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:11:29.367 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:11:29.367 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:15:13.691 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+22:15:13.714 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:15:13.715 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:15:13.716 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:15:13.716 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:16:27.235 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+22:16:27.256 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:16:27.257 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:16:27.257 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:16:27.258 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:16:27.347 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection() @143             - Opening JDBC Connection
+22:16:27.883 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection() @454             - Created connection 1752856108.
+22:16:27.887 DEBUG com.solvd.taxiservice.db.mapper.Vehicle.getVehicleById.debug() @135             - ==>  Preparing: SELECT * FROM Vehicles WHERE ID= ?
+22:16:27.921 DEBUG com.solvd.taxiservice.db.mapper.Vehicle.getVehicleById.debug() @135             - ==> Parameters: 1(Integer)
+22:16:27.952 TRACE com.solvd.taxiservice.db.mapper.Vehicle.getVehicleById.trace() @141             - <==    Columns: id, license_plate, vehicle_model
+22:16:27.952 TRACE com.solvd.taxiservice.db.mapper.Vehicle.getVehicleById.trace() @141             - <==        Row: 1, 94ghy6, Ford F150
+22:16:27.955 DEBUG com.solvd.taxiservice.db.mapper.Vehicle.getVehicleById.debug() @135             - <==      Total: 1
+22:16:27.957 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.close() @97             - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@687a762c]
+22:16:27.957 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection() @409             - Returned connection 1752856108 to pool.
+22:18:14.030 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+22:18:14.051 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:18:14.052 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:18:14.053 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:18:14.053 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:18:14.149 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection() @143             - Opening JDBC Connection
+22:18:14.661 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection() @454             - Created connection 1888639813.
+22:18:14.666 DEBUG com.solvd.taxiservice.db.mapper.DriverLicense.getById.debug() @135             - ==>  Preparing: SELECT * FROM driver_licenses WHERE ID= ?
+22:18:14.699 DEBUG com.solvd.taxiservice.db.mapper.DriverLicense.getById.debug() @135             - ==> Parameters: 1(Integer)
+22:18:14.732 TRACE com.solvd.taxiservice.db.mapper.DriverLicense.getById.trace() @141             - <==    Columns: id, license_number, date_of_birth, expiration_date
+22:18:14.733 TRACE com.solvd.taxiservice.db.mapper.DriverLicense.getById.trace() @141             - <==        Row: 1, E323dede4, 1789-12-23, 2023-05-01
+22:18:14.736 DEBUG com.solvd.taxiservice.db.mapper.DriverLicense.getById.debug() @135             - <==      Total: 1
+22:18:14.738 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.close() @97             - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@70925b45]
+22:18:14.739 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection() @409             - Returned connection 1888639813 to pool.
+22:20:42.317 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+22:20:42.337 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:20:42.338 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:20:42.338 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:20:42.339 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:20:42.439 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection() @143             - Opening JDBC Connection
+22:20:42.969 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection() @454             - Created connection 1888639813.
+22:20:42.973 DEBUG com.solvd.taxiservice.db.mapper.DriverLicense.getById.debug() @135             - ==>  Preparing: SELECT * FROM driver_licenses WHERE ID= ?
+22:20:43.004 DEBUG com.solvd.taxiservice.db.mapper.DriverLicense.getById.debug() @135             - ==> Parameters: 1(Integer)
+22:20:43.034 TRACE com.solvd.taxiservice.db.mapper.DriverLicense.getById.trace() @141             - <==    Columns: id, license_number, date_of_birth, expiration_date
+22:20:43.034 TRACE com.solvd.taxiservice.db.mapper.DriverLicense.getById.trace() @141             - <==        Row: 1, E323dede4, 1789-12-23, 2023-05-01
+22:20:43.036 DEBUG com.solvd.taxiservice.db.mapper.DriverLicense.getById.debug() @135             - <==      Total: 1
+22:20:43.039 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.close() @97             - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@70925b45]
+22:20:43.040 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection() @409             - Returned connection 1888639813 to pool.
+22:23:47.324 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+22:23:47.345 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:23:47.346 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:23:47.346 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:23:47.347 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:23:47.460 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection() @143             - Opening JDBC Connection
+22:23:47.959 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection() @454             - Created connection 1113829504.
+22:23:47.963 DEBUG com.solvd.taxiservice.db.mapper.Ride.getById.debug() @135             - ==>  Preparing: SELECT * FROM Rides WHERE ID= ?
+22:23:48.001 DEBUG com.solvd.taxiservice.db.mapper.Ride.getById.debug() @135             - ==> Parameters: 1(Integer)
+22:23:48.034 TRACE com.solvd.taxiservice.db.mapper.Ride.getById.trace() @141             - <==    Columns: id, pickup_location, dropoff_location, ride_status, user_id, ride_type_id
+22:23:48.035 TRACE com.solvd.taxiservice.db.mapper.Ride.getById.trace() @141             - <==        Row: 1,  123 apple st, San Francisco, 321 orange, Fresno, in progress, 2, 1
+22:23:48.037 DEBUG com.solvd.taxiservice.db.mapper.Ride.getById.debug() @135             - <==      Total: 1
+22:23:48.039 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.close() @97             - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4263b080]
+22:23:48.040 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection() @409             - Returned connection 1113829504 to pool.
+22:27:17.704 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+22:27:17.728 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:27:17.729 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:27:17.730 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:27:17.730 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:27:17.843 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection() @143             - Opening JDBC Connection
+22:27:18.351 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection() @454             - Created connection 1113829504.
+22:27:18.355 DEBUG com.solvd.taxiservice.db.mapper.Ride.getById.debug() @135             - ==>  Preparing: SELECT * FROM Rides WHERE ID= ?
+22:27:18.385 DEBUG com.solvd.taxiservice.db.mapper.Ride.getById.debug() @135             - ==> Parameters: 1(Integer)
+22:27:18.415 TRACE com.solvd.taxiservice.db.mapper.Ride.getById.trace() @141             - <==    Columns: id, pickup_location, dropoff_location, ride_status, user_id, ride_type_id
+22:27:18.415 TRACE com.solvd.taxiservice.db.mapper.Ride.getById.trace() @141             - <==        Row: 1,  123 apple st, San Francisco, 321 orange, Fresno, in progress, 2, 1
+22:27:18.418 DEBUG com.solvd.taxiservice.db.mapper.Ride.getById.debug() @135             - <==      Total: 1
+22:27:18.421 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.close() @97             - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4263b080]
+22:27:18.421 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection() @409             - Returned connection 1113829504 to pool.
+22:30:20.481 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+22:30:20.506 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:30:20.507 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:30:20.507 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:30:20.508 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:30:20.628 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection() @143             - Opening JDBC Connection
+22:30:21.148 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection() @454             - Created connection 1038820134.
+22:30:21.152 DEBUG com.solvd.taxiservice.db.mapper.User.getById.debug() @135             - ==>  Preparing: SELECT * FROM Users WHERE ID= ?
+22:30:21.189 DEBUG com.solvd.taxiservice.db.mapper.User.getById.debug() @135             - ==> Parameters: 1(Integer)
+22:30:21.219 TRACE com.solvd.taxiservice.db.mapper.User.getById.trace() @141             - <==    Columns: id, email, profile_id, vehicle_id, driver_license_id
+22:30:21.220 TRACE com.solvd.taxiservice.db.mapper.User.getById.trace() @141             - <==        Row: 1, temp@gmail.com, 1, 1, 1
+22:30:21.221 DEBUG com.solvd.taxiservice.db.mapper.User.getById.debug() @135             - <==      Total: 1
+22:30:21.224 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.close() @97             - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3deb2326]
+22:30:21.224 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection() @409             - Returned connection 1038820134 to pool.
+22:38:36.526 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+22:38:36.544 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:38:36.546 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:38:36.547 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:38:36.547 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:38:36.672 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection() @143             - Opening JDBC Connection
+22:38:37.183 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection() @454             - Created connection 1038820134.
+22:38:37.188 DEBUG com.solvd.taxiservice.db.mapper.User.getById.debug() @135             - ==>  Preparing: SELECT * FROM Users WHERE ID= ?
+22:38:37.222 DEBUG com.solvd.taxiservice.db.mapper.User.getById.debug() @135             - ==> Parameters: 1(Integer)
+22:38:37.251 TRACE com.solvd.taxiservice.db.mapper.User.getById.trace() @141             - <==    Columns: id, email, profile_id, vehicle_id, driver_license_id
+22:38:37.252 TRACE com.solvd.taxiservice.db.mapper.User.getById.trace() @141             - <==        Row: 1, temp@gmail.com, 1, 1, 1
+22:38:37.253 DEBUG com.solvd.taxiservice.db.mapper.User.getById.debug() @135             - <==      Total: 1
+22:38:37.256 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.close() @97             - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3deb2326]
+22:38:37.256 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection() @409             - Returned connection 1038820134 to pool.
+22:52:28.350 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+22:52:28.374 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:52:28.375 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:52:28.376 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:52:28.376 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:52:28.497 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection() @143             - Opening JDBC Connection
+22:52:29.018 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection() @454             - Created connection 1038820134.
+22:52:29.022 DEBUG com.solvd.taxiservice.db.mapper.User.getById.debug() @135             - ==>  Preparing: Select * From Users Left JOIN Profiles p ON profile_id = p.id Left JOIN vehicles v ON vehicle_id = v.id Left JOIN driver_licenses dl on driver_license_id = dl.id WHERE users.id = ?;
+22:52:29.058 DEBUG com.solvd.taxiservice.db.mapper.User.getById.debug() @135             - ==> Parameters: 1(Integer)
+22:52:29.096 TRACE com.solvd.taxiservice.db.mapper.User.getById.trace() @141             - <==    Columns: id, email, profile_id, vehicle_id, driver_license_id, id, name, phone, id, license_plate, vehicle_model, id, license_number, date_of_birth, expiration_date
+22:52:29.097 TRACE com.solvd.taxiservice.db.mapper.User.getById.trace() @141             - <==        Row: 1, temp@gmail.com, 1, 1, 1, 1, Eddy,  (321)123-1234, 1, 94ghy6, Ford F150, 1, E323dede4, 1789-12-23, 2023-05-01
+22:52:29.100 DEBUG com.solvd.taxiservice.db.mapper.User.getById.debug() @135             - <==      Total: 1
+22:52:29.102 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.close() @97             - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3deb2326]
+22:52:29.103 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection() @409             - Returned connection 1038820134 to pool.
+22:54:42.230 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+22:54:42.250 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:54:42.251 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:54:42.251 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:54:42.252 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+22:54:42.379 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection() @143             - Opening JDBC Connection
+22:54:42.895 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection() @454             - Created connection 1038820134.
+22:54:42.900 DEBUG com.solvd.taxiservice.db.mapper.User.getById.debug() @135             - ==>  Preparing: Select * From Users Left JOIN Profiles p ON profile_id = p.id Left JOIN vehicles v ON vehicle_id = v.id Left JOIN driver_licenses dl on driver_license_id = dl.id WHERE users.id = ?;
+22:54:42.937 DEBUG com.solvd.taxiservice.db.mapper.User.getById.debug() @135             - ==> Parameters: 1(Integer)
+22:54:42.968 TRACE com.solvd.taxiservice.db.mapper.User.getById.trace() @141             - <==    Columns: id, email, profile_id, vehicle_id, driver_license_id, id, name, phone, id, license_plate, vehicle_model, id, license_number, date_of_birth, expiration_date
+22:54:42.969 TRACE com.solvd.taxiservice.db.mapper.User.getById.trace() @141             - <==        Row: 1, temp@gmail.com, 1, 1, 1, 1, Eddy,  (321)123-1234, 1, 94ghy6, Ford F150, 1, E323dede4, 1789-12-23, 2023-05-01
+22:54:42.972 DEBUG com.solvd.taxiservice.db.mapper.User.getById.debug() @135             - <==      Total: 1
+22:54:42.974 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.close() @97             - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3deb2326]
+22:54:42.975 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection() @409             - Returned connection 1038820134 to pool.

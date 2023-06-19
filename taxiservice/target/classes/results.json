@@ -8,8 +8,12 @@
     },
     "Driver License" : {
       "License Number" : "234werwe324",
-      "Date Of Birth" : "2023-06-15",
-      "Expiration Date" : "2023-06-15"
+      "Date Of Birth" : "2023-06-18",
+      "Expiration Date" : "2023-06-18"
+    },
+    "Vehicle" : {
+      "Model" : "Jeep",
+      "License Plate" : "24l3j"
     },
     "Rides" : [ {
       "PickUp Location" : "123 Circle street",

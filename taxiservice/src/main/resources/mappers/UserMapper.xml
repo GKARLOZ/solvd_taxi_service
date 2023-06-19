@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.solvd.taxiservice.db.dao.IUserDAO">
+
+    <select id="getById" resultMap="com.solvd.taxiservice.db.dao.IUserDAO.userResultMap">
+        <!--        SELECT * FROM Users WHERE ID= #{id}-->
+
+        Select * From Users
+        Left JOIN Profiles p ON profile_id = p.id
+        Left JOIN vehicles v ON vehicle_id = v.id
+        Left JOIN driver_licenses dl on driver_license_id = dl.id
+        Left JOIN rides r on user_id = users.id
+        WHERE users.id = #{id};
+
+    </select>
+
+    <select id="getUserByEmail" resultMap="com.solvd.taxiservice.db.dao.IUserDAO.userResultMap">
+        SELECT * FROM USERS WHERE EMAIL= #{email}
+
+    </select>
+
+    <insert id="create" parameterType="com.solvd.taxiservice.db.model.User">
+        INSERT INTO Users (email,profile_id, vehicle_id, driver_license_id) VALUES (#{email},#{profile.id},#{vehicle.id},#{driverLicense.id})
+
+    </insert>
+
+    <update id="update" parameterType="com.solvd.taxiservice.db.model.User" >
+        UPDATE Users SET email = #{email} WHERE id = #{id}
+    </update>
+
+    <delete id="delete" parameterType="com.solvd.taxiservice.db.model.User">
+        DELETE FROM users WHERE id = #{id}
+    </delete>
+
+
+    <resultMap id="userResultMap" type="com.solvd.taxiservice.db.model.User" autoMapping="false">
+        <id property="id" column="id"/>
+        <result property="email" column="email"/>
+        <association property="profile" resultMap="com.solvd.taxiservice.db.dao.IProfileDAO.profileResultMap"/>
+        <association property="driverLicense" resultMap="com.solvd.taxiservice.db.dao.IDriverLicenseDAO.DLResultMap"/>
+        <association property="vehicle" resultMap="com.solvd.taxiservice.db.dao.IVehicleDAO.vehicleResultMap"/>
+        <collection property="rides" ofType="com.solvd.taxiservice.db.model.Ride" resultMap="com.solvd.taxiservice.db.mapper.Ride.rideResultMap"/>
+    </resultMap>
+
+
+
+</mapper>

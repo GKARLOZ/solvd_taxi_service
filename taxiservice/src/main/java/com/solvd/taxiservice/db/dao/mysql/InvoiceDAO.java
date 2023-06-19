@@ -1,9 +1,7 @@
 package com.solvd.taxiservice.db.dao.mysql;
 
-import com.solvd.taxiservice.db.dao.interfaces.IInvoiceDAO;
-import com.solvd.taxiservice.db.model.DriverLicense;
+import com.solvd.taxiservice.db.dao.IInvoiceDAO;
 import com.solvd.taxiservice.db.model.Invoice;
-import com.solvd.taxiservice.db.model.Ride;
 import com.solvd.taxiservice.db.utils.DBConnectionPool;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

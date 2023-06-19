@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.solvd.taxiservice.db.dao.IDriverLicenseDAO">
+
+    <select id="getById" resultMap="com.solvd.taxiservice.db.dao.IDriverLicenseDAO.DLResultMap">
+        SELECT * FROM driver_licenses WHERE ID= #{id}
+    </select>
+
+    <select id="getDLByUserId" resultMap="com.solvd.taxiservice.db.dao.IDriverLicenseDAO.DLResultMap">
+        select * from driver_licenses where id = (select driver_license_id from users where id =  #{id});
+    </select>
+
+    <insert id="create" parameterType= "com.solvd.taxiservice.db.model.DriverLicense">
+
+        <selectKey keyProperty="id" resultType="long" order="AFTER">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        INSERT INTO driver_licenses (license_number,date_of_birth,expiration_date) VALUES (#{licenseNumber},#{dateOfBirth},#{expirationDate})
+
+    </insert>
+
+    <delete id="delete" parameterType="com.solvd.taxiservice.db.model.DriverLicense">
+        DELETE FROM driver_licenses WHERE id = #{id}
+    </delete>
+
+    <resultMap id="DLResultMap" type="com.solvd.taxiservice.db.model.DriverLicense" autoMapping="false">
+        <id property="id" column="id"/>
+        <result property="licenseNumber" column="license_number"/>
+        <result property="dateOfBirth" column="date_of_birth"/>
+        <result property="expirationDate" column="expiration_date"/>
+
+    </resultMap>
+
+</mapper>
