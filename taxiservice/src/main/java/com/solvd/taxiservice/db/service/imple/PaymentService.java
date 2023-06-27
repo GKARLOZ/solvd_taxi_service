@@ -1,4 +1,4 @@
-package com.solvd.taxiservice.db.service.manualimple;
+package com.solvd.taxiservice.db.service.imple;
 
 import com.solvd.taxiservice.db.dao.IInvoiceDAO;
 import com.solvd.taxiservice.db.dao.IPaymentMethodDAO;

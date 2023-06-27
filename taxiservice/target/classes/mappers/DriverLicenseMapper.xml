@@ -12,7 +12,7 @@
         select * from driver_licenses where id = (select driver_license_id from users where id =  #{id});
     </select>
 
-    <insert id="create" parameterType= "com.solvd.taxiservice.db.model.DriverLicense">
+    <insert id="create" parameterType= "com.solvd.taxiservice.db.model.DriverLicense" >
 
         <selectKey keyProperty="id" resultType="long" order="AFTER">
             SELECT LAST_INSERT_ID()
@@ -20,6 +20,10 @@
         INSERT INTO driver_licenses (license_number,date_of_birth,expiration_date) VALUES (#{licenseNumber},#{dateOfBirth},#{expirationDate})
 
     </insert>
+
+    <update id="update" parameterType="com.solvd.taxiservice.db.model.DriverLicense" >
+        UPDATE driver_licenses SET license_number = #{licenseNumber},  date_of_birth= #{dateOfBirth}, expiration_date=#{expirationDate} WHERE id = #{id}
+    </update>
 
     <delete id="delete" parameterType="com.solvd.taxiservice.db.model.DriverLicense">
         DELETE FROM driver_licenses WHERE id = #{id}

@@ -1,15 +1,13 @@
-package com.solvd.taxiservice.db.service.manualimple;
+package com.solvd.taxiservice.db.service.imple;
 
 import com.solvd.taxiservice.db.dao.IDriverLicenseDAO;
 import com.solvd.taxiservice.db.dao.IProfileDAO;
 import com.solvd.taxiservice.db.dao.IUserDAO;
 import com.solvd.taxiservice.db.dao.IVehicleDAO;
-import com.solvd.taxiservice.db.dao.mysql.DriverLicenseDAO;
-import com.solvd.taxiservice.db.dao.mysql.ProfileDAO;
-import com.solvd.taxiservice.db.dao.mysql.UserDAO;
-import com.solvd.taxiservice.db.dao.mysql.VehicleDAO;
 import com.solvd.taxiservice.db.model.*;
 import com.solvd.taxiservice.db.service.IUserService;
+//import com.solvd.taxiservice.db.dao.mysql.*;
+import com.solvd.taxiservice.db.dao.mybatis.*;
 
 
 import java.util.List;
@@ -31,7 +29,7 @@ public class UserService implements IUserService{
             DriverLicense dl = driverLicenseDAO.getDLByUserId(id);
             Vehicle vehicle = vehicleDAO.getVehicleByUserId(id);
             Profile profile = profileDAO.getProfileByUserId(id);
-            List<Ride> rides = rideService.getRideByUserId(id);
+           List<Ride> rides = rideService.getRideByUserId(id);
 
             user.setDriverLicense(dl);
             user.setVehicle(vehicle);
@@ -64,15 +62,19 @@ public class UserService implements IUserService{
     @Override
     public void create(User user){
 
-            DriverLicense dl = driverLicenseDAO.createAndGet(user.getDriverLicense());
-            Vehicle vehicle = vehicleDAO.createAndGet(user.getVehicle());
-            Profile profile = profileDAO.createAndGet(user.getProfile());
 
-            user.setDriverLicense(dl);
-            user.setVehicle(vehicle);
-            user.setProfile(profile);
+//            DriverLicense dl = driverLicenseDAO.createAndGet(user.getDriverLicense());
+//            Vehicle vehicle = vehicleDAO.createAndGet(user.getVehicle());
+//            Profile profile = profileDAO.createAndGet(user.getProfile());
 
-            userDAO.create(user);
+//            user.setDriverLicense(dl);
+//            user.setVehicle(vehicle);
+//            user.setProfile(profile);
+
+        driverLicenseDAO.create(user.getDriverLicense());
+        vehicleDAO.create(user.getVehicle());
+        profileDAO.create(user.getProfile());
+        userDAO.create(user);
 
 
     }

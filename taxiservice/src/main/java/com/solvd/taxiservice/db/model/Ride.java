@@ -7,14 +7,14 @@ import com.fasterxml.jackson.annotation.JsonRootName;
 import java.util.List;
 
 @JsonRootName(value="Ride")
-@JsonIncludeProperties({"PickUp Location","DropOff Location"})
+@JsonIncludeProperties({"PickUp_Location","DropOff_Location"})
 public class Ride {
 
     private long id;
-    @JsonProperty("PickUp Location")
+    @JsonProperty("PickUp_Location")
     private String pickUpLocations;
 
-    @JsonProperty("DropOff Location")
+    @JsonProperty("DropOff_Location")
     private String dropOffLocation;
     private String status;
     private RideType rideType;

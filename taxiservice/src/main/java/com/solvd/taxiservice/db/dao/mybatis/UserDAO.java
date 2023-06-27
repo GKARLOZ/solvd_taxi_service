@@ -1,4 +1,4 @@
-package com.solvd.taxiservice.db.service.mybatisimple;
+package com.solvd.taxiservice.db.dao.mybatis;
 
 import com.solvd.taxiservice.db.dao.IDriverLicenseDAO;
 import com.solvd.taxiservice.db.dao.IProfileDAO;
@@ -16,9 +16,9 @@ import java.io.IOException;
 import java.io.InputStream;
 
 
-public class UserServiceMB implements IUserService {
+public class UserDAO implements IUserDAO {
 
-    private final static Logger LOGGER = LogManager.getLogger(UserServiceMB.class);
+    private final static Logger LOGGER = LogManager.getLogger(UserDAO.class);
 
     @Override
     public void create(User user) {
@@ -27,9 +27,12 @@ public class UserServiceMB implements IUserService {
         try(InputStream stream = Resources.getResourceAsStream("mybatis-config.xml");
             SqlSession session = new SqlSessionFactoryBuilder().build(stream).openSession(true)){
 
-            session.getMapper(IProfileDAO.class).create(user.getProfile());
-            session.getMapper(IVehicleDAO.class).create(user.getVehicle());
-            session.getMapper(IDriverLicenseDAO.class).create(user.getDriverLicense());
+//            Profile profile = user.getProfile();
+//            session.getMapper(IProfileDAO.class).create(profile);
+//            System.out.println("testing userDao CREATE: "+profile);
+//            session.getMapper(IVehicleDAO.class).create(user.getVehicle());
+//            session.getMapper(IDriverLicenseDAO.class).create(user.getDriverLicense());
+
             session.getMapper(IUserDAO.class).create(user);
 
 
@@ -96,7 +99,7 @@ public class UserServiceMB implements IUserService {
     }
 
     @Override
-    public User getUserbyEmail(String email) {
+    public User getUserByEmail(String email) {
 
         User user = null;
 
@@ -113,4 +116,5 @@ public class UserServiceMB implements IUserService {
 
         return user;
     }
+
 }

@@ -75,7 +75,7 @@ public class ReviewDAO implements IReviewDAO {
 
     @Override
     public void create(Review review) {
-        executeQuery("INSERT INTO Reviews (rating,comment) VALUES (?,?)",review.getRating(),review.getComment());
+        //executeQuery("INSERT INTO Reviews (rating,comment,ride_id) VALUES (?,?,?)",review.getRating(),review.getComment());
 
     }
 

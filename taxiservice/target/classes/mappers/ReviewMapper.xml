@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.solvd.taxiservice.db.dao.IReviewDAO">
+
+    <select id="getById" resultMap="com.solvd.taxiservice.db.dao.IReviewDAO.reviewResultMap">
+        SELECT * FROM Reviews WHERE ID=#{id}
+    </select>
+
+    <select id="getReviewsByRideId" resultMap="com.solvd.taxiservice.db.dao.IReviewDAO.reviewResultMap">
+        select * from Reviews where ride_id = #{id}
+    </select>
+
+    <insert id="create" parameterType= "com.solvd.taxiservice.db.model.Profile">
+
+        <selectKey keyProperty="id" resultType="long" order="AFTER">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        INSERT INTO Reviews (rating,comment,ride_id) VALUES (#{rating},#{comment}#{ride.id})
+
+    </insert>
+
+    <update id="update" parameterType="com.solvd.taxiservice.db.model.Review" >
+
+        UPDATE Reviews SET rating = #{rating},  comment= #{comment} WHERE id = #{id}
+    </update>
+
+    <delete id="delete" parameterType="com.solvd.taxiservice.db.model.Review">
+        DELETE FROM Reviews WHERE id = #{id}
+    </delete>
+
+
+    <resultMap id="reviewResultMap" type="com.solvd.taxiservice.db.model.Review" autoMapping="false">
+        <id property="id" column="id"/>
+        <result property="rating" column="rating"/>
+        <result property="comment" column="comment"/>
+    </resultMap>
+
+</mapper>

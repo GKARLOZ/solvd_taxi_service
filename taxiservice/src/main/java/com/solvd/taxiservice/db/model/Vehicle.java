@@ -13,7 +13,7 @@ public class Vehicle {
     @JsonProperty("Model")
     private String model;
 
-    @JsonProperty("License Plate")
+    @JsonProperty("License_Plate")
     private String licensePlate;
 
     public Vehicle(){};

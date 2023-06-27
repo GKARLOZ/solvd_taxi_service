@@ -4,17 +4,17 @@ import com.fasterxml.jackson.annotation.*;
 
 import java.util.Date;
 
-@JsonRootName(value="Driver License")
+@JsonRootName(value="Driver_License")
 public class DriverLicense {
 
     @JsonIgnore
     private long id;
-    @JsonProperty("License Number")
+    @JsonProperty("License_Number")
     private String licenseNumber;
-    @JsonProperty("Date Of Birth")
+    @JsonProperty("Date_Of_Birth")
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private Date dateOfBirth;
-    @JsonProperty("Expiration Date")
+    @JsonProperty("Expiration_Date")
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private Date expirationDate;
 

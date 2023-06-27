@@ -1,4 +1,4 @@
-package com.solvd.taxiservice.db.service.manualimple;
+package com.solvd.taxiservice.db.service.imple;
 
 import com.solvd.taxiservice.db.dao.IReviewDAO;
 import com.solvd.taxiservice.db.dao.IRideDAO;
@@ -6,9 +6,10 @@ import com.solvd.taxiservice.db.dao.IRideTypeDAO;
 import com.solvd.taxiservice.db.model.Review;
 import com.solvd.taxiservice.db.model.Ride;
 import com.solvd.taxiservice.db.model.RideType;
-import com.solvd.taxiservice.db.dao.mysql.ReviewDAO;
-import com.solvd.taxiservice.db.dao.mysql.RideDAO;
-import com.solvd.taxiservice.db.dao.mysql.RideTypeDAO;
+//import com.solvd.taxiservice.db.dao.mysql.ReviewDAO;
+//import com.solvd.taxiservice.db.dao.mysql.RideDAO;
+//import com.solvd.taxiservice.db.dao.mysql.RideTypeDAO;
+import com.solvd.taxiservice.db.dao.mybatis.*;
 import com.solvd.taxiservice.db.service.IRideService;
 
 import java.util.ArrayList;
@@ -37,7 +38,6 @@ public class RideService implements IRideService {
 
         List<Ride> rides = new ArrayList<>();
         List<Long> ids = rideDAO.getRideIdByUserId(userId);
-
         for (Long RideId:ids) {
 
             rides.add(getById(RideId));
@@ -48,15 +48,16 @@ public class RideService implements IRideService {
 
     public Ride getRideByTripId(long id){
 
-        Ride ride = rideDAO.getRideByTripId(id);
-        Long rideId = ride.getId();
-        RideType rt = rtypeDAO.getRideTypeByRideId(rideId);
-        List<Review> reviewList = reviewDAO.getReviewsByRideId(rideId);
-
-        ride.setRideType(rt);
-        ride.setReviews(reviewList);
-
-        return ride;
+//        Ride ride = rideDAO.getRideByTripId(id);
+//        Long rideId = ride.getId();
+//        RideType rt = rtypeDAO.getRideTypeByRideId(rideId);
+//        List<Review> reviewList = reviewDAO.getReviewsByRideId(rideId);
+//
+//        ride.setRideType(rt);
+//        ride.setReviews(reviewList);
+//
+//        return ride;
+        return null;
     }
 
 

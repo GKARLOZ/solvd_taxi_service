@@ -21,6 +21,10 @@
 
     </insert>
 
+    <update id="update" parameterType="com.solvd.taxiservice.db.model.Vehicle" >
+        UPDATE Vehicles SET license_plate = #{licensePlate}, vehicle_model= #{model} WHERE id = #{id}
+    </update>
+
     <delete id="delete" parameterType="com.solvd.taxiservice.db.model.Vehicle">
         DELETE FROM vehicles WHERE id = #{id}
     </delete>

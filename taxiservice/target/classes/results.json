@@ -4,26 +4,26 @@
     "Email" : "email@gmail.com",
     "Profile" : {
       "Name" : "Johnny",
-      "Phone Number" : "911"
+      "Phone_Number" : "911"
     },
-    "Driver License" : {
-      "License Number" : "234werwe324",
-      "Date Of Birth" : "2023-06-18",
-      "Expiration Date" : "2023-06-18"
+    "Driver_License" : {
+      "License_Number" : "234werwe324",
+      "Date_Of_Birth" : "2023-06-20",
+      "Expiration_Date" : "2023-06-20"
     },
     "Vehicle" : {
       "Model" : "Jeep",
-      "License Plate" : "24l3j"
+      "License_Plate" : "24l3j"
     },
     "Rides" : [ {
-      "PickUp Location" : "123 Circle street",
-      "DropOff Location" : "32 Hollywood Blvd"
+      "PickUp_Location" : "123 Circle street",
+      "DropOff_Location" : "32 Hollywood Blvd"
     }, {
-      "PickUp Location" : "24 Fire street",
-      "DropOff Location" : "74453 Main ave"
+      "PickUp_Location" : "24 Fire street",
+      "DropOff_Location" : "74453 Main ave"
     }, {
-      "PickUp Location" : "123 Circle street",
-      "DropOff Location" : "32 Hollywood Blvd"
+      "PickUp_Location" : "123 Circle street",
+      "DropOff_Location" : "32 Hollywood Blvd"
     } ]
   }
 }

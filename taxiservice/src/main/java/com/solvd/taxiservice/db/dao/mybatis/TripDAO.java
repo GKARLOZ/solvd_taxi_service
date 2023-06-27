@@ -1,9 +1,11 @@
-package com.solvd.taxiservice.db.service.mybatisimple;
+package com.solvd.taxiservice.db.dao.mybatis;
 
+import com.solvd.taxiservice.db.dao.ITripDAO;
 import com.solvd.taxiservice.db.model.Trip;
 import com.solvd.taxiservice.db.service.IService;
 
-public class TripServiceMB implements IService<Trip> {
+public class TripDAO implements ITripDAO {
+
     @Override
     public void create(Trip trip) {
 
@@ -22,5 +24,15 @@ public class TripServiceMB implements IService<Trip> {
     @Override
     public void delete(Trip trip) {
 
+    }
+
+    @Override
+    public Trip getTripByRideId(long id) {
+        return null;
+    }
+
+    @Override
+    public Trip getTripByInvoiceId(long id) {
+        return null;
     }
 }

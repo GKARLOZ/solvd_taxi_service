@@ -14,7 +14,7 @@ public class User {
     @JsonProperty("Profile")
     private Profile profile;
 
-    @JsonProperty("Driver License")
+    @JsonProperty("Driver_License")
     private DriverLicense driverLicense;
 
     @JsonProperty("Vehicle")

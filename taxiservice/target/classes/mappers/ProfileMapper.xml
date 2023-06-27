@@ -12,6 +12,10 @@
         select * from Profiles where id = (select profile_id  from users where id = #{id});
     </select>
 
+    <update id="update" parameterType="com.solvd.taxiservice.db.model.Profile" >
+        UPDATE profiles SET name = #{name}, phone = #{phoneNumber} WHERE id = #{id}
+    </update>
+
     <insert id="create" parameterType= "com.solvd.taxiservice.db.model.Profile">
 
         <selectKey keyProperty="id" resultType="long" order="AFTER">

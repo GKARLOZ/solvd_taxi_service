@@ -1,0 +1,55 @@
+17:13:46.190 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+17:13:46.212 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+17:13:46.214 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+17:13:46.215 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+17:13:46.215 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+17:13:46.414 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection() @143             - Opening JDBC Connection
+17:13:46.941 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection() @454             - Created connection 2081964843.
+17:13:46.945 DEBUG com.solvd.taxiservice.db.dao.IUserDAO.getUserByEmail.debug() @135             - ==>  Preparing: SELECT * FROM USERS WHERE EMAIL= ?
+17:13:46.973 DEBUG com.solvd.taxiservice.db.dao.IUserDAO.getUserByEmail.debug() @135             - ==> Parameters: java@gmail.com(String)
+17:13:47.014 DEBUG com.solvd.taxiservice.db.dao.IUserDAO.getUserByEmail.debug() @135             - <==      Total: 0
+17:13:47.017 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.close() @97             - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7c18432b]
+17:13:47.017 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection() @409             - Returned connection 2081964843 to pool.
+17:13:47.018 INFO  com.solvd.taxiservice.Main.task19() @65             - null
+17:13:47.031 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+17:13:47.032 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+17:13:47.032 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+17:13:47.032 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+17:13:47.095 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+17:13:47.111 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection() @143             - Opening JDBC Connection
+17:13:47.139 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection() @454             - Created connection 1177101170.
+17:13:47.140 DEBUG com.solvd.taxiservice.db.dao.IRideDAO.getById.debug() @135             - ==>  Preparing: SELECT * FROM Rides Left join ride_types rt on ride_type_id = rt.id WHERE Rides.id = ?
+17:13:47.141 DEBUG com.solvd.taxiservice.db.dao.IRideDAO.getById.debug() @135             - ==> Parameters: 2(Long)
+17:13:47.147 TRACE com.solvd.taxiservice.db.dao.IRideDAO.getById.trace() @141             - <==    Columns: id, pickup_location, dropoff_location, ride_status, user_id, ride_type_id, id, type, cost_per_mile
+17:13:47.148 TRACE com.solvd.taxiservice.db.dao.IRideDAO.getById.trace() @141             - <==        Row: 2,  323 Pineapple st, San Francisco, 321 orange, Fresno,  DONE , 3, 2, 2, luxury, 0.9
+17:13:47.151 DEBUG com.solvd.taxiservice.db.dao.IRideDAO.getById.debug() @135             - <==      Total: 1
+17:13:47.153 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.close() @97             - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@46292372]
+17:13:47.154 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection() @409             - Returned connection 1177101170 to pool.
+17:13:47.155 INFO  com.solvd.taxiservice.Main.task19() @71             - Ride{id=2, pickUpLocations=' 323 Pineapple st, San Francisco', dropOffLocation='321 orange, Fresno', status=' DONE ', rideType=RideType{id=2, type='luxury', costPerMile=0.9}, reviews=null}
+17:15:48.858 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+17:15:48.873 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+17:15:48.874 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+17:15:48.874 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+17:15:48.874 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+17:15:49.037 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection() @143             - Opening JDBC Connection
+17:15:49.436 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection() @454             - Created connection 2081964843.
+17:15:49.439 DEBUG com.solvd.taxiservice.db.dao.IUserDAO.getUserByEmail.debug() @135             - ==>  Preparing: SELECT * FROM USERS WHERE EMAIL= ?
+17:15:49.467 DEBUG com.solvd.taxiservice.db.dao.IUserDAO.getUserByEmail.debug() @135             - ==> Parameters: java@gmail.com(String)
+17:15:49.498 DEBUG com.solvd.taxiservice.db.dao.IUserDAO.getUserByEmail.debug() @135             - <==      Total: 0
+17:15:49.500 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.close() @97             - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7c18432b]
+17:15:49.501 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection() @409             - Returned connection 2081964843 to pool.
+17:15:49.501 INFO  com.solvd.taxiservice.Main.task19() @56             - null
+17:15:49.511 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+17:15:49.511 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+17:15:49.511 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+17:15:49.511 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
+17:15:49.578 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection() @143             - Opening JDBC Connection
+17:15:49.597 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection() @454             - Created connection 1177101170.
+17:15:49.597 DEBUG com.solvd.taxiservice.db.dao.IRideDAO.getById.debug() @135             - ==>  Preparing: SELECT * FROM Rides Left join ride_types rt on ride_type_id = rt.id WHERE Rides.id = ?
+17:15:49.598 DEBUG com.solvd.taxiservice.db.dao.IRideDAO.getById.debug() @135             - ==> Parameters: 2(Long)
+17:15:49.602 TRACE com.solvd.taxiservice.db.dao.IRideDAO.getById.trace() @141             - <==    Columns: id, pickup_location, dropoff_location, ride_status, user_id, ride_type_id, id, type, cost_per_mile
+17:15:49.602 TRACE com.solvd.taxiservice.db.dao.IRideDAO.getById.trace() @141             - <==        Row: 2,  323 Pineapple st, San Francisco, 321 orange, Fresno,  DONE , 3, 2, 2, luxury, 0.9
+17:15:49.604 DEBUG com.solvd.taxiservice.db.dao.IRideDAO.getById.debug() @135             - <==      Total: 1
+17:15:49.604 DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction.close() @97             - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@46292372]
+17:15:49.604 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection() @409             - Returned connection 1177101170 to pool.
+17:15:49.605 INFO  com.solvd.taxiservice.Main.task19() @62             - Ride{id=2, pickUpLocations=' 323 Pineapple st, San Francisco', dropOffLocation='321 orange, Fresno', status=' DONE ', rideType=RideType{id=2, type='luxury', costPerMile=0.9}, reviews=null}

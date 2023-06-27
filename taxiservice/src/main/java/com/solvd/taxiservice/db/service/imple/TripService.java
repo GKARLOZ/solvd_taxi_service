@@ -1,4 +1,4 @@
-package com.solvd.taxiservice.db.service.manualimple;
+package com.solvd.taxiservice.db.service.imple;
 
 import com.solvd.taxiservice.db.dao.IPromoCodeDAO;
 import com.solvd.taxiservice.db.dao.IRideDAO;

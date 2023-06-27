@@ -1,9 +1,8 @@
-package com.solvd.taxiservice.db.service.mybatisimple;
+package com.solvd.taxiservice.db.dao.mybatis;
 
 import com.solvd.taxiservice.db.dao.*;
-import com.solvd.taxiservice.db.model.Ride;
+import com.solvd.taxiservice.db.model.Profile;
 import com.solvd.taxiservice.db.model.User;
-import com.solvd.taxiservice.db.service.IRideService;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
@@ -12,68 +11,18 @@ import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
 
-public class RideServiceMB implements IRideService {
+public class ProfileDAO implements IProfileDAO {
 
-    private final static Logger LOGGER = LogManager.getLogger(UserServiceMB.class);
-
+    private final static Logger LOGGER = LogManager.getLogger(UserDAO.class);
 
     @Override
-    public void create(Ride ride) {
-
+    public void create(Profile profile) {
 
         try(InputStream stream = Resources.getResourceAsStream("mybatis-config.xml");
             SqlSession session = new SqlSessionFactoryBuilder().build(stream).openSession(true)){
 
-            //session.getMapper(IRideDAO.class).create(ride);
-
-
-        } catch (IOException e) {
-            LOGGER.error(e);
-        }
-
-    }
-
-    @Override
-    public Ride getById(long id) {
-        Ride ride = null;
-
-        try(InputStream stream = Resources.getResourceAsStream("mybatis-config.xml");
-            SqlSession session = new SqlSessionFactoryBuilder().build(stream).openSession(true)){
-
-            ride = session.getMapper(IRideDAO.class).getById(id);
-
-        } catch (IOException e) {
-            LOGGER.error(e);
-        }
-
-        return ride;
-    }
-
-    @Override
-    public void update(Ride ride) {
-
-        try(InputStream stream = Resources.getResourceAsStream("mybatis-config.xml");
-            SqlSession session = new SqlSessionFactoryBuilder().build(stream).openSession(true)){
-
-            session.getMapper(IRideDAO.class).update(ride);
-
-        } catch (IOException e) {
-            LOGGER.error(e);
-        }
-
-
-    }
-
-    @Override
-    public void delete(Ride ride) {
-
-        try(InputStream stream = Resources.getResourceAsStream("mybatis-config.xml");
-            SqlSession session = new SqlSessionFactoryBuilder().build(stream).openSession(true)){
-
-            session.getMapper(IRideDAO.class).delete(ride);
+            session.getMapper(IProfileDAO.class).create(profile);
 
         } catch (IOException e) {
             LOGGER.error(e);
@@ -83,14 +32,80 @@ public class RideServiceMB implements IRideService {
 
     }
 
-
     @Override
-    public List<Ride> getRideByUserId(long userId) {
-    return null;
+    public Profile getById(long id) {
+        Profile profile = null;
+
+        try(InputStream stream = Resources.getResourceAsStream("mybatis-config.xml");
+            SqlSession session = new SqlSessionFactoryBuilder().build(stream).openSession(true)){
+
+            IProfileDAO profileDAO = session.getMapper(IProfileDAO.class);
+            profile = profileDAO.getById(id);
+
+
+        } catch (IOException e) {
+            LOGGER.error(e);
+        }
+
+        return profile;
     }
 
     @Override
-    public Ride getRideByTripId(long id) {
+    public void update(Profile profile) {
+
+        try(InputStream stream = Resources.getResourceAsStream("mybatis-config.xml");
+            SqlSession session = new SqlSessionFactoryBuilder().build(stream).openSession(true)){
+
+            IProfileDAO profileDAO = session.getMapper(IProfileDAO.class);
+            profileDAO.update(profile);
+
+
+
+        } catch (IOException e) {
+            LOGGER.error(e);
+        }
+
+    }
+
+    @Override
+    public void delete(Profile profile) {
+
+    }
+
+    @Override
+    public Profile getProfileByUserId(long id) {
+        Profile profile = null;
+
+        try(InputStream stream = Resources.getResourceAsStream("mybatis-config.xml");
+            SqlSession session = new SqlSessionFactoryBuilder().build(stream).openSession(true)){
+
+            IProfileDAO profileDAO = session.getMapper(IProfileDAO.class);
+            profile = profileDAO.getProfileByUserId(id);
+
+
+        } catch (IOException e) {
+            LOGGER.error(e);
+        }
+
+        return profile;
+    }
+
+    @Override
+    public Profile getProfileByName(String Name) {
         return null;
+    }
+
+    @Override
+    public Profile createAndGet(Profile profile) {
+
+        try(InputStream stream = Resources.getResourceAsStream("mybatis-config.xml");
+            SqlSession session = new SqlSessionFactoryBuilder().build(stream).openSession(true)){
+
+            session.getMapper(IProfileDAO.class).create(profile);
+
+        } catch (IOException e) {
+            LOGGER.error(e);
+        }return  profile;
+
     }
 }

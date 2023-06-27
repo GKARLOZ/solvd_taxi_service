@@ -10,7 +10,7 @@
         WHERE Rides.id = #{id}
     </select>
 
-    <select id="getRideIdByUserId" resultMap="com.solvd.taxiservice.db.dao.IRideDAO.rideResultMap">
+    <select id="getRideIdByUserId" resultMap="com.solvd.taxiservice.db.dao.IRideDAO.ride2ResultMap">
         select * from Rides where user_id = #{id}
     </select>
 
@@ -34,6 +34,14 @@
         <result property="dropOffLocation" column="dropoff_location"/>
         <result property="status" column="ride_status"/>
         <association property="rideType" resultMap="com.solvd.taxiservice.db.dao.IRideTypeDAO.rideTypeResultMap" />
+    </resultMap>
+
+    <resultMap id="ride2ResultMap" type="java.lang.Long" autoMapping="false">
+        <id property="id" column="id"/>
+        <result property="pickUpLocations" column="pickup_location"/>
+        <result property="dropOffLocation" column="dropoff_location"/>
+        <result property="status" column="ride_status"/>
+<!--        <association property="rideType" resultMap="com.solvd.taxiservice.db.dao.IRideTypeDAO.rideTypeResultMap" />-->
     </resultMap>
 
 </mapper>

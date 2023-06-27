@@ -11,7 +11,7 @@ public class Profile {
     private long id;
     @JsonProperty("Name")
     private String name;
-    @JsonProperty("Phone Number")
+    @JsonProperty("Phone_Number")
     private String phoneNumber;
 
    public Profile(){};
