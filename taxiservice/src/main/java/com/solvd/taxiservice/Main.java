@@ -3,11 +3,16 @@ package com.solvd.taxiservice;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import com.solvd.taxiservice.db.decorator.IRideType;
+import com.solvd.taxiservice.db.decorator.AddStopsRideType;
+import com.solvd.taxiservice.db.decorator.StandardRideType;
+import com.solvd.taxiservice.db.decorator.TSRideType;
 import com.solvd.taxiservice.db.jaxb.ManyUsersJAXB;
 import com.solvd.taxiservice.db.jaxb.DriverLicenseJAXB;
 import com.solvd.taxiservice.db.jaxb.JAXB;
 import com.solvd.taxiservice.db.jaxb.UserJAXB;
 import com.solvd.taxiservice.db.model.*;
+import com.solvd.taxiservice.db.observer.RideCostObserver;
 import com.solvd.taxiservice.db.service.IRideService;
 import com.solvd.taxiservice.db.service.IUserService;
 import com.solvd.taxiservice.db.service.imple.*;
@@ -32,12 +37,55 @@ public class Main {
     private final static Logger LOGGER = LogManager.getLogger(Main.class);
    public static void main(String[] args) {
 
-       task19();
-      //task18();
+       task20();
+       //task19();
+        //task18();
 //       task17();
 //       task16();
 //       task15();
 //       multiThread();
+
+
+    }
+    public static void task20(){
+//   Add Factory, Abstract Factory, Builder, Listener, Facade, Decorator, Proxy, Strategy, MVC patterns to your current project. (confirm assignments with your mentors)
+//   Refactor code for the current project to satisfy SOLID principles.
+
+        //Factory is inside dao package as IDAOFactory
+
+       //Observer
+       RideType rt = new RideType("luxury",4.50);
+       new RideCostObserver(rt);
+       LOGGER.info(rt);
+       rt.setCostPerMile(5.50);
+
+       //Decorator
+        IRideType unlimitedStopsRide = new AddStopsRideType(new StandardRideType());
+        unlimitedStopsRide.includeToRide();
+        IRideType mediaRide = new TSRideType(new AddStopsRideType(new StandardRideType()));
+        mediaRide.includeToRide();
+        IRideType mediaRide2 = new TSRideType(new StandardRideType());
+        mediaRide2.includeToRide();
+
+
+       //Builders
+       Ride ride  = new RideBuilder()
+               .withRideType(rt)
+               .withPickUpLocations("abc street")
+               .withDropOffLocation("zxy street")
+               .createRide();
+
+       LOGGER.info(ride);
+
+        User user = new UserBuilder()
+                .withId(11)
+                .withEmail("Email@gmail.com")
+                .withProfile(new Profile())
+                .withDriverLicense(new DriverLicense())
+                .withVehicle(new Vehicle())
+                .build();
+
+        LOGGER.info(user);
 
 
     }
@@ -47,12 +95,10 @@ public class Main {
 
         //----------------------------User Service myBatis-----------------------------------------
         IUserService userService = new UserService();
-
         User user = userService.getUserbyEmail("myEmail@gmail.com");
         LOGGER.info(user);
 
 //      //------------------------------Ride Service myBatis--------------------------------------
-
         IRideService rideService = new RideService();
         Ride ride = rideService.getById(2);
         LOGGER.info(ride);
@@ -76,17 +122,17 @@ public class Main {
         vehicle.setLicensePlate("24l3j");
 
         List<Ride> rides = new ArrayList<>();
-        Ride rideOne = new Ride();
+        Ride rideOne = new RideBuilder().createRide();
         rideOne.setPickUpLocations("123 Circle street");
         rideOne.setDropOffLocation("32 Hollywood Blvd");
-        Ride rideTwo = new Ride();
+        Ride rideTwo = new RideBuilder().createRide();
         rideTwo.setPickUpLocations("24 Fire street");
         rideTwo.setDropOffLocation("74453 Main ave");
         rides.add(rideOne);
         rides.add(rideTwo);
         rides.add(rideOne);
 
-        User user = new User();
+        User user = new UserBuilder().build();
         user.setId(11);
         user.setEmail("email@gmail.com");
 

@@ -3,6 +3,8 @@ package com.solvd.taxiservice.db.model;
 import com.fasterxml.jackson.annotation.*;
 
 import java.util.List;
+import java.util.Locale;
+
 @JsonRootName(value="User")
 public class User {
 
@@ -31,8 +33,8 @@ public class User {
 
     }
 
-
-    public User(String email, Profile profile, DriverLicense driverLicense, Vehicle vehicle, List<Ride> rides) {
+    public User(long id, String email, Profile profile, DriverLicense driverLicense, Vehicle vehicle, List<Ride> rides) {
+        this.id = id;
         this.email = email;
         this.profile = profile;
         this.driverLicense = driverLicense;
@@ -100,4 +102,5 @@ public class User {
                 ", rides=" + rides +
                 '}';
     }
+
 }

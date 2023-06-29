@@ -3,6 +3,7 @@ package com.solvd.taxiservice.db.dao.mysql;
 import com.solvd.taxiservice.db.dao.IRideDAO;
 import com.solvd.taxiservice.db.model.DriverLicense;
 import com.solvd.taxiservice.db.model.Ride;
+import com.solvd.taxiservice.db.model.RideBuilder;
 import com.solvd.taxiservice.db.utils.DBConnectionPool;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -47,7 +48,7 @@ public class RideDAO implements IRideDAO {
     private Ride queryGet(String query, Object... params) {
 
         Connection connection = DBConnectionPool.getInstance().getConnection();
-        Ride ride = new Ride();
+        Ride ride = new RideBuilder().createRide();
 
         try(PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 

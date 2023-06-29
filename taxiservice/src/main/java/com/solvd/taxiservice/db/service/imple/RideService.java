@@ -1,5 +1,6 @@
 package com.solvd.taxiservice.db.service.imple;
 
+import com.solvd.taxiservice.db.dao.DAOFactory;
 import com.solvd.taxiservice.db.dao.IReviewDAO;
 import com.solvd.taxiservice.db.dao.IRideDAO;
 import com.solvd.taxiservice.db.dao.IRideTypeDAO;
@@ -17,9 +18,9 @@ import java.util.List;
 
 public class RideService implements IRideService {
 
-    private IRideDAO rideDAO = new RideDAO();
-    private IRideTypeDAO rtypeDAO = new RideTypeDAO();
-    private IReviewDAO reviewDAO = new ReviewDAO();
+    private IRideDAO rideDAO = DAOFactory.createDAO("RIDEDAO");
+    private IRideTypeDAO rtypeDAO = DAOFactory.createDAO("ridetypedao");
+    private IReviewDAO reviewDAO = DAOFactory.createDAO("reviewdao");
 
     @Override
     public Ride getById(long id){

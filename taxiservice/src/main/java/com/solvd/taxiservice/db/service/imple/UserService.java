@@ -1,9 +1,6 @@
 package com.solvd.taxiservice.db.service.imple;
 
-import com.solvd.taxiservice.db.dao.IDriverLicenseDAO;
-import com.solvd.taxiservice.db.dao.IProfileDAO;
-import com.solvd.taxiservice.db.dao.IUserDAO;
-import com.solvd.taxiservice.db.dao.IVehicleDAO;
+import com.solvd.taxiservice.db.dao.*;
 import com.solvd.taxiservice.db.model.*;
 import com.solvd.taxiservice.db.service.IUserService;
 //import com.solvd.taxiservice.db.dao.mysql.*;
@@ -15,10 +12,10 @@ import java.util.List;
 
 public class UserService implements IUserService{
 
-        private IUserDAO userDAO = new UserDAO();
-        private IDriverLicenseDAO driverLicenseDAO = new DriverLicenseDAO();
-        private IProfileDAO profileDAO = new ProfileDAO();
-        private IVehicleDAO vehicleDAO = new VehicleDAO();
+        private IUserDAO userDAO = DAOFactory.createDAO("USERDAO");
+        private IDriverLicenseDAO driverLicenseDAO = DAOFactory.createDAO("driverLicenseDAO");
+        private IProfileDAO profileDAO = DAOFactory.createDAO("PROFILEDAO");
+        private IVehicleDAO vehicleDAO = DAOFactory.createDAO("VeHICLEdao");
         private RideService rideService = new RideService();
 
 

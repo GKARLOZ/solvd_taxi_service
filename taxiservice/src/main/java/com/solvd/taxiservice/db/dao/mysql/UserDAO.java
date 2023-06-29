@@ -2,6 +2,7 @@ package com.solvd.taxiservice.db.dao.mysql;
 
 import com.solvd.taxiservice.db.dao.IUserDAO;
 import com.solvd.taxiservice.db.model.User;
+import com.solvd.taxiservice.db.model.UserBuilder;
 import com.solvd.taxiservice.db.utils.DBConnectionPool;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -40,7 +41,7 @@ public class UserDAO  implements IUserDAO {
     private User queryGet(String query, Object... params){
 
         Connection connection = DBConnectionPool.getInstance().getConnection();
-        User user = new User();
+        User user = new UserBuilder().build();
         try(PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
 
