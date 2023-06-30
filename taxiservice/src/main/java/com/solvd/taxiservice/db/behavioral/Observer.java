@@ -1,4 +1,4 @@
-package com.solvd.taxiservice.db.observer;
+package com.solvd.taxiservice.db.behavioral;
 
 import com.solvd.taxiservice.db.model.RideType;
 

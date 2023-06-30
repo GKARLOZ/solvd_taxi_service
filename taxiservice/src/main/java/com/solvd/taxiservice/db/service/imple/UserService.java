@@ -1,10 +1,10 @@
 package com.solvd.taxiservice.db.service.imple;
 
 import com.solvd.taxiservice.db.dao.*;
+import com.solvd.taxiservice.db.dao.DAOFactory;
 import com.solvd.taxiservice.db.model.*;
 import com.solvd.taxiservice.db.service.IUserService;
 //import com.solvd.taxiservice.db.dao.mysql.*;
-import com.solvd.taxiservice.db.dao.mybatis.*;
 
 
 import java.util.List;

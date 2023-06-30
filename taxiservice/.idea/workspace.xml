@@ -5,35 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0449240d-3f44-4e16-9c43-f11897609218" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/dao/DAOFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/decorator/AddStopsRideType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/decorator/IRideType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/decorator/RideTypeDecorator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/decorator/StandardRideType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/decorator/TSRideType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/model/RideBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/model/UserBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/observer/Observer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/observer/RideCostObserver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/behavioral/ICalculateFareStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/behavioral/StandardRideTypeStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/behavioral/VIPRideTypeStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/controller/DriverLicenseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/controller/ProfileController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/controller/VehicleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/structural/RideTypeFacade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/structural/RideTypeProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/view/DriverLicenseView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/view/ProfileView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/view/UserView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/view/VehicleView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/DS-20230628.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/DS-20230628.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/dao/mysql/RideDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/dao/mysql/RideDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/dao/mysql/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/dao/mysql/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/decorator/AddStopsRideType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/structural/AddStopsRideType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/decorator/IRideType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/structural/IRideType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/decorator/RideTypeDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/structural/RideTypeDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/decorator/StandardRideType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/structural/StandardRideType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/decorator/TSRideType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/structural/TSRideType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/model/Ride.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/model/Ride.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/model/RideType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/model/RideType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/observer/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/behavioral/Observer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/observer/RideCostObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/behavioral/RideCostObserver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/service/imple/RideService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/service/imple/RideService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/service/imple/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/taxiservice/db/service/imple/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/results.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/results.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/db/dao/mysql/RideDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/db/dao/mysql/RideDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/db/dao/mysql/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/db/dao/mysql/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/db/decorator/AddStopsRideType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/db/decorator/IRideType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/db/decorator/RideTypeDecorator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/db/decorator/StandardRideType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/db/decorator/TSRideType.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/db/model/Ride.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/db/model/Ride.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/db/model/RideType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/db/model/RideType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/db/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/db/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/db/observer/Observer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/db/observer/RideCostObserver.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/db/service/imple/RideService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/db/service/imple/RideService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/db/service/imple/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/solvd/taxiservice/db/service/imple/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/results.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/results.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,11 +94,11 @@
       <recent name="C:\Users\gianm\Desktop\taxi_service\taxiservice\src\main\java\com\solvd\taxiservice" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.solvd.taxiservice.db.dao" />
+      <recent name="com.solvd.taxiservice.db.dao.factory" />
       <recent name="com.solvd.taxiservice.db.dao.mybatis" />
       <recent name="com.solvd.taxiservice.db.service" />
-      <recent name="com.solvd.taxiservice.db.dao" />
       <recent name="com.solvd.taxiservice.db.xml.parsers" />
-      <recent name="com.solvd.taxiservice.db.xml" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

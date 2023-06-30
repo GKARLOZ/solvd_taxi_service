@@ -1178,7 +1178,7 @@
 18:39:47.397 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
 21:23:51.610 INFO  com.solvd.taxiservice.Main.task20() @58             - User{id=11, email='Email@gmail.com', profile=Profile{id='0', name='null', phoneNumber='null'}, driverLicense=DriverLicense{id='0', licenseNumber='null', dateOfBirth=Wed Jun 28 21:23:51 PDT 2023, expirationDate=Wed Jun 28 21:23:51 PDT 2023}, vehicle=Vehicle{id='0', model='null', licensePlate='null'}, rides=null}
 21:23:51.620 INFO  com.solvd.taxiservice.Main.task20() @63             - RideType{id=0, type='luxury', costPerMile=4.5}
-21:23:51.621 INFO  com.solvd.taxiservice.db.observer.RideCostObserver.update() @21             - Ride Type Cost per Mile:5.5
+21:23:51.621 INFO  com.solvd.taxiservice.db.behavioral.RideCostObserver.update() @21             - Ride Type Cost per Mile:5.5
 21:23:51.624 INFO  com.solvd.taxiservice.Main.task20() @78             - Ride{id=0, pickUpLocations='abc street', dropOffLocation='zxy street', status='null', rideType=RideType{id=0, type='luxury', costPerMile=5.5}, reviews=null}
 21:23:51.719 DEBUG org.apache.ibatis.logging.LogFactory.setImplementation() @109             - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
 21:23:51.732 DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll() @379             - PooledDataSource forcefully closed/removed all connections.
@@ -1375,47 +1375,47 @@
 21:23:53.447 INFO  com.solvd.taxiservice.Main.task19() @94             - Ride{id=2, pickUpLocations=' 323 Pineapple st, San Francisco', dropOffLocation='321 orange, Fresno', status=' DONE ', rideType=RideType{id=2, type='luxury', costPerMile=0.9}, reviews=[Review{id=3, rating=2, comment='hello'}]}
 21:24:06.983 INFO  com.solvd.taxiservice.Main.task20() @58             - User{id=11, email='Email@gmail.com', profile=Profile{id='0', name='null', phoneNumber='null'}, driverLicense=DriverLicense{id='0', licenseNumber='null', dateOfBirth=Wed Jun 28 21:24:06 PDT 2023, expirationDate=Wed Jun 28 21:24:06 PDT 2023}, vehicle=Vehicle{id='0', model='null', licensePlate='null'}, rides=null}
 21:24:06.993 INFO  com.solvd.taxiservice.Main.task20() @63             - RideType{id=0, type='luxury', costPerMile=4.5}
-21:24:06.994 INFO  com.solvd.taxiservice.db.observer.RideCostObserver.update() @21             - Ride Type Cost per Mile:5.5
+21:24:06.994 INFO  com.solvd.taxiservice.db.behavioral.RideCostObserver.update() @21             - Ride Type Cost per Mile:5.5
 21:24:06.996 INFO  com.solvd.taxiservice.Main.task20() @78             - Ride{id=0, pickUpLocations='abc street', dropOffLocation='zxy street', status='null', rideType=RideType{id=0, type='luxury', costPerMile=5.5}, reviews=null}
 21:57:47.386 INFO  com.solvd.taxiservice.Main.task20() @56             - RideType{id=0, type='luxury', costPerMile=4.5}
 22:00:12.895 INFO  com.solvd.taxiservice.Main.task20() @56             - RideType{id=0, type='luxury', costPerMile=4.5}
-22:00:12.902 INFO  com.solvd.taxiservice.db.observer.RideCostObserver.update() @22             - Ride Type Cost per Mile with taxes:5.5
+22:00:12.902 INFO  com.solvd.taxiservice.db.behavioral.RideCostObserver.update() @22             - Ride Type Cost per Mile with taxes:5.5
 22:00:12.905 INFO  com.solvd.taxiservice.Main.task20() @66             - Ride{id=0, pickUpLocations='abc street', dropOffLocation='zxy street', status='null', rideType=RideType{id=0, type='luxury', costPerMile=5.5}, reviews=null}
 22:00:12.913 INFO  com.solvd.taxiservice.Main.task20() @76             - User{id=11, email='Email@gmail.com', profile=Profile{id='0', name='null', phoneNumber='null'}, driverLicense=DriverLicense{id='0', licenseNumber='null', dateOfBirth=Wed Jun 28 22:00:12 PDT 2023, expirationDate=Wed Jun 28 22:00:12 PDT 2023}, vehicle=Vehicle{id='0', model='null', licensePlate='null'}, rides=null}
 23:31:03.938 INFO  com.solvd.taxiservice.Main.task20() @59             - RideType{id=0, type='luxury', costPerMile=4.5}
-23:31:03.945 INFO  com.solvd.taxiservice.db.observer.RideCostObserver.update() @22             - Ride Type Cost per Mile with taxes:5.5
-23:31:03.947 INFO  com.solvd.taxiservice.db.decorator.AddStopsRideType.includeToRide() @16             -  Add unlimited stops
-23:31:03.949 INFO  com.solvd.taxiservice.db.decorator.TSRideType.includeToRide() @15             - Tequila and Sushi
+23:31:03.945 INFO  com.solvd.taxiservice.db.behavioral.RideCostObserver.update() @22             - Ride Type Cost per Mile with taxes:5.5
+23:31:03.947 INFO  com.solvd.taxiservice.db.structural.AddStopsRideType.includeToRide() @16             -  Add unlimited stops
+23:31:03.949 INFO  com.solvd.taxiservice.db.structural.TSRideType.includeToRide() @15             - Tequila and Sushi
 23:31:03.951 INFO  com.solvd.taxiservice.Main.task20() @76             - Ride{id=0, pickUpLocations='abc street', dropOffLocation='zxy street', status='null', rideType=RideType{id=0, type='luxury', costPerMile=5.5}, reviews=null}
 23:31:03.961 INFO  com.solvd.taxiservice.Main.task20() @86             - User{id=11, email='Email@gmail.com', profile=Profile{id='0', name='null', phoneNumber='null'}, driverLicense=DriverLicense{id='0', licenseNumber='null', dateOfBirth=Wed Jun 28 23:31:03 PDT 2023, expirationDate=Wed Jun 28 23:31:03 PDT 2023}, vehicle=Vehicle{id='0', model='null', licensePlate='null'}, rides=null}
 23:32:17.723 INFO  com.solvd.taxiservice.Main.task20() @59             - RideType{id=0, type='luxury', costPerMile=4.5}
-23:32:17.731 INFO  com.solvd.taxiservice.db.observer.RideCostObserver.update() @22             - Ride Type Cost per Mile with taxes:5.5
-23:32:17.734 INFO  com.solvd.taxiservice.db.decorator.StandardRideType.includeToRide() @14             - Free bottle of water.
-23:32:17.735 INFO  com.solvd.taxiservice.db.decorator.AddStopsRideType.includeToRide() @17             -  Add unlimited stops
-23:32:17.737 INFO  com.solvd.taxiservice.db.decorator.StandardRideType.includeToRide() @14             - Free bottle of water.
-23:32:17.737 INFO  com.solvd.taxiservice.db.decorator.AddStopsRideType.includeToRide() @17             -  Add unlimited stops
-23:32:17.737 INFO  com.solvd.taxiservice.db.decorator.TSRideType.includeToRide() @16             - Tequila and Sushi
+23:32:17.731 INFO  com.solvd.taxiservice.db.behavioral.RideCostObserver.update() @22             - Ride Type Cost per Mile with taxes:5.5
+23:32:17.734 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @14             - Free bottle of water.
+23:32:17.735 INFO  com.solvd.taxiservice.db.structural.AddStopsRideType.includeToRide() @17             -  Add unlimited stops
+23:32:17.737 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @14             - Free bottle of water.
+23:32:17.737 INFO  com.solvd.taxiservice.db.structural.AddStopsRideType.includeToRide() @17             -  Add unlimited stops
+23:32:17.737 INFO  com.solvd.taxiservice.db.structural.TSRideType.includeToRide() @16             - Tequila and Sushi
 23:32:17.740 INFO  com.solvd.taxiservice.Main.task20() @76             - Ride{id=0, pickUpLocations='abc street', dropOffLocation='zxy street', status='null', rideType=RideType{id=0, type='luxury', costPerMile=5.5}, reviews=null}
 23:32:17.750 INFO  com.solvd.taxiservice.Main.task20() @86             - User{id=11, email='Email@gmail.com', profile=Profile{id='0', name='null', phoneNumber='null'}, driverLicense=DriverLicense{id='0', licenseNumber='null', dateOfBirth=Wed Jun 28 23:32:17 PDT 2023, expirationDate=Wed Jun 28 23:32:17 PDT 2023}, vehicle=Vehicle{id='0', model='null', licensePlate='null'}, rides=null}
 23:33:02.123 INFO  com.solvd.taxiservice.Main.task20() @59             - RideType{id=0, type='luxury', costPerMile=4.5}
-23:33:02.131 INFO  com.solvd.taxiservice.db.observer.RideCostObserver.update() @22             - Ride Type Cost per Mile with taxes:5.5
-23:33:02.134 INFO  com.solvd.taxiservice.db.decorator.StandardRideType.includeToRide() @14             - Free bottle of water.
-23:33:02.134 INFO  com.solvd.taxiservice.db.decorator.AddStopsRideType.includeToRide() @17             -  Add unlimited stops
-23:33:02.136 INFO  com.solvd.taxiservice.db.decorator.StandardRideType.includeToRide() @14             - Free bottle of water.
-23:33:02.136 INFO  com.solvd.taxiservice.db.decorator.AddStopsRideType.includeToRide() @17             -  Add unlimited stops
-23:33:02.137 INFO  com.solvd.taxiservice.db.decorator.TSRideType.includeToRide() @16             - Tequila and Sushi
-23:33:02.137 INFO  com.solvd.taxiservice.db.decorator.StandardRideType.includeToRide() @14             - Free bottle of water.
-23:33:02.137 INFO  com.solvd.taxiservice.db.decorator.TSRideType.includeToRide() @16             - Tequila and Sushi
+23:33:02.131 INFO  com.solvd.taxiservice.db.behavioral.RideCostObserver.update() @22             - Ride Type Cost per Mile with taxes:5.5
+23:33:02.134 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @14             - Free bottle of water.
+23:33:02.134 INFO  com.solvd.taxiservice.db.structural.AddStopsRideType.includeToRide() @17             -  Add unlimited stops
+23:33:02.136 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @14             - Free bottle of water.
+23:33:02.136 INFO  com.solvd.taxiservice.db.structural.AddStopsRideType.includeToRide() @17             -  Add unlimited stops
+23:33:02.137 INFO  com.solvd.taxiservice.db.structural.TSRideType.includeToRide() @16             - Tequila and Sushi
+23:33:02.137 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @14             - Free bottle of water.
+23:33:02.137 INFO  com.solvd.taxiservice.db.structural.TSRideType.includeToRide() @16             - Tequila and Sushi
 23:33:02.139 INFO  com.solvd.taxiservice.Main.task20() @78             - Ride{id=0, pickUpLocations='abc street', dropOffLocation='zxy street', status='null', rideType=RideType{id=0, type='luxury', costPerMile=5.5}, reviews=null}
 23:33:02.148 INFO  com.solvd.taxiservice.Main.task20() @88             - User{id=11, email='Email@gmail.com', profile=Profile{id='0', name='null', phoneNumber='null'}, driverLicense=DriverLicense{id='0', licenseNumber='null', dateOfBirth=Wed Jun 28 23:33:02 PDT 2023, expirationDate=Wed Jun 28 23:33:02 PDT 2023}, vehicle=Vehicle{id='0', model='null', licensePlate='null'}, rides=null}
 23:40:32.100 INFO  com.solvd.taxiservice.Main.task20() @59             - RideType{id=0, type='luxury', costPerMile=4.5}
-23:40:32.107 INFO  com.solvd.taxiservice.db.observer.RideCostObserver.update() @22             - Ride Type Cost per Mile with taxes:5.5
-23:40:32.110 INFO  com.solvd.taxiservice.db.decorator.StandardRideType.includeToRide() @14             - Enable radio and AC
-23:40:32.111 INFO  com.solvd.taxiservice.db.decorator.AddStopsRideType.includeToRide() @17             -  Enable unlimited stops
-23:40:32.112 INFO  com.solvd.taxiservice.db.decorator.StandardRideType.includeToRide() @14             - Enable radio and AC
-23:40:32.113 INFO  com.solvd.taxiservice.db.decorator.AddStopsRideType.includeToRide() @17             -  Enable unlimited stops
-23:40:32.113 INFO  com.solvd.taxiservice.db.decorator.TSRideType.includeToRide() @16             - Enable access to touch screen
-23:40:32.113 INFO  com.solvd.taxiservice.db.decorator.StandardRideType.includeToRide() @14             - Enable radio and AC
-23:40:32.113 INFO  com.solvd.taxiservice.db.decorator.TSRideType.includeToRide() @16             - Enable access to touch screen
+23:40:32.107 INFO  com.solvd.taxiservice.db.behavioral.RideCostObserver.update() @22             - Ride Type Cost per Mile with taxes:5.5
+23:40:32.110 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @14             - Enable radio and AC
+23:40:32.111 INFO  com.solvd.taxiservice.db.structural.AddStopsRideType.includeToRide() @17             -  Enable unlimited stops
+23:40:32.112 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @14             - Enable radio and AC
+23:40:32.113 INFO  com.solvd.taxiservice.db.structural.AddStopsRideType.includeToRide() @17             -  Enable unlimited stops
+23:40:32.113 INFO  com.solvd.taxiservice.db.structural.TSRideType.includeToRide() @16             - Enable access to touch screen
+23:40:32.113 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @14             - Enable radio and AC
+23:40:32.113 INFO  com.solvd.taxiservice.db.structural.TSRideType.includeToRide() @16             - Enable access to touch screen
 23:40:32.116 INFO  com.solvd.taxiservice.Main.task20() @78             - Ride{id=0, pickUpLocations='abc street', dropOffLocation='zxy street', status='null', rideType=RideType{id=0, type='luxury', costPerMile=5.5}, reviews=null}
 23:40:32.129 INFO  com.solvd.taxiservice.Main.task20() @88             - User{id=11, email='Email@gmail.com', profile=Profile{id='0', name='null', phoneNumber='null'}, driverLicense=DriverLicense{id='0', licenseNumber='null', dateOfBirth=Wed Jun 28 23:40:32 PDT 2023, expirationDate=Wed Jun 28 23:40:32 PDT 2023}, vehicle=Vehicle{id='0', model='null', licensePlate='null'}, rides=null}

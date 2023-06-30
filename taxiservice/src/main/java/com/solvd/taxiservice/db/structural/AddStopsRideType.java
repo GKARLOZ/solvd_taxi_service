@@ -1,4 +1,4 @@
-package com.solvd.taxiservice.db.decorator;
+package com.solvd.taxiservice.db.structural;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

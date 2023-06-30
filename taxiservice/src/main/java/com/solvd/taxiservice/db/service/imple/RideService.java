@@ -10,7 +10,6 @@ import com.solvd.taxiservice.db.model.RideType;
 //import com.solvd.taxiservice.db.dao.mysql.ReviewDAO;
 //import com.solvd.taxiservice.db.dao.mysql.RideDAO;
 //import com.solvd.taxiservice.db.dao.mysql.RideTypeDAO;
-import com.solvd.taxiservice.db.dao.mybatis.*;
 import com.solvd.taxiservice.db.service.IRideService;
 
 import java.util.ArrayList;

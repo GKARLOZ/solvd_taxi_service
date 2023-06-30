@@ -3,9 +3,7 @@ package com.solvd.taxiservice.db.model;
 import com.fasterxml.jackson.annotation.JsonIncludeProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRootName;
-import com.solvd.taxiservice.db.observer.Observer;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @JsonRootName(value="Ride")

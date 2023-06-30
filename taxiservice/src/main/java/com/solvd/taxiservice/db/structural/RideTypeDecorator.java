@@ -1,4 +1,4 @@
-package com.solvd.taxiservice.db.decorator;
+package com.solvd.taxiservice.db.structural;
 
 public class RideTypeDecorator implements IRideType{
 

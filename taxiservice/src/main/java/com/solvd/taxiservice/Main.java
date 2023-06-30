@@ -3,21 +3,22 @@ package com.solvd.taxiservice;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import com.solvd.taxiservice.db.decorator.IRideType;
-import com.solvd.taxiservice.db.decorator.AddStopsRideType;
-import com.solvd.taxiservice.db.decorator.StandardRideType;
-import com.solvd.taxiservice.db.decorator.TSRideType;
+import com.solvd.taxiservice.db.behavioral.ICalculateFareStrategy;
+import com.solvd.taxiservice.db.behavioral.StandardRideTypeStrategy;
+import com.solvd.taxiservice.db.controller.UserController;
+import com.solvd.taxiservice.db.structural.*;
 import com.solvd.taxiservice.db.jaxb.ManyUsersJAXB;
 import com.solvd.taxiservice.db.jaxb.DriverLicenseJAXB;
 import com.solvd.taxiservice.db.jaxb.JAXB;
 import com.solvd.taxiservice.db.jaxb.UserJAXB;
 import com.solvd.taxiservice.db.model.*;
-import com.solvd.taxiservice.db.observer.RideCostObserver;
+import com.solvd.taxiservice.db.behavioral.RideCostObserver;
 import com.solvd.taxiservice.db.service.IRideService;
 import com.solvd.taxiservice.db.service.IUserService;
 import com.solvd.taxiservice.db.service.imple.*;
 import com.solvd.taxiservice.db.stax.parsers.*;
 import com.solvd.taxiservice.db.utils.DBConnectionPool;
+import com.solvd.taxiservice.db.view.UserView;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -38,8 +39,8 @@ public class Main {
    public static void main(String[] args) {
 
        task20();
-       //task19();
-        //task18();
+//       task19();
+//       task18();
 //       task17();
 //       task16();
 //       task15();
@@ -51,9 +52,7 @@ public class Main {
 //   Add Factory, Abstract Factory, Builder, Listener, Facade, Decorator, Proxy, Strategy, MVC patterns to your current project. (confirm assignments with your mentors)
 //   Refactor code for the current project to satisfy SOLID principles.
 
-        //Factory is inside dao package as IDAOFactory
-
-       //Observer
+       //Observer(Listener)
        RideType rt = new RideType("luxury",4.50);
        new RideCostObserver(rt);
        LOGGER.info(rt);
@@ -67,6 +66,19 @@ public class Main {
         IRideType mediaRide2 = new TSRideType(new StandardRideType());
         mediaRide2.includeToRide();
 
+        //Strategy
+        StandardRideType standardType = new StandardRideType();
+        ICalculateFareStrategy iCal = new StandardRideTypeStrategy();
+        standardType.setRideTypeStrategy(iCal, standardType.getCostPerMile());
+
+        //Proxy
+        IRideType iRideType = new RideTypeProxy();
+        iRideType.includeToRide();
+
+        //Facade
+        RideTypeFacade rtf = new RideTypeFacade();
+        rtf.useComboB();
+        rtf.useComboD();
 
        //Builders
        Ride ride  = new RideBuilder()
@@ -80,12 +92,20 @@ public class Main {
         User user = new UserBuilder()
                 .withId(11)
                 .withEmail("Email@gmail.com")
-                .withProfile(new Profile())
+                .withProfile(new Profile("Charlie","123123123"))
                 .withDriverLicense(new DriverLicense())
-                .withVehicle(new Vehicle())
+                .withVehicle(new Vehicle("Jeep","Q123f3"))
                 .build();
 
         LOGGER.info(user);
+
+        //mvn
+        UserView userView = new UserView();
+        UserController userController = new UserController(user, userView);
+        userController.updateView();
+        userController.setEmail("hello@gmail.com");
+        userController.updateView();
+
 
 
     }

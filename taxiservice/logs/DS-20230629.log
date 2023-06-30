@@ -1,0 +1,144 @@
+15:30:31.521 INFO  com.solvd.taxiservice.Main.task20() @56             - RideType{id=0, type='luxury', costPerMile=4.5}
+15:30:31.534 INFO  com.solvd.taxiservice.db.behavioral.RideCostObserver.update() @22             - Ride Type Cost per Mile with taxes:5.5
+15:30:31.538 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @14             - Enable radio and AC
+15:30:31.539 INFO  com.solvd.taxiservice.db.structural.AddStopsRideType.includeToRide() @17             -  Enable unlimited stops
+15:30:31.540 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @14             - Enable radio and AC
+15:30:31.541 INFO  com.solvd.taxiservice.db.structural.AddStopsRideType.includeToRide() @17             -  Enable unlimited stops
+15:30:31.541 INFO  com.solvd.taxiservice.db.structural.TSRideType.includeToRide() @16             - Enable access to touch screen
+15:30:31.542 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @14             - Enable radio and AC
+15:30:31.542 INFO  com.solvd.taxiservice.db.structural.TSRideType.includeToRide() @16             - Enable access to touch screen
+15:30:31.544 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @14             - Enable radio and AC
+15:30:31.546 INFO  com.solvd.taxiservice.Main.task20() @79             - Ride{id=0, pickUpLocations='abc street', dropOffLocation='zxy street', status='null', rideType=RideType{id=0, type='luxury', costPerMile=5.5}, reviews=null}
+15:30:31.551 INFO  com.solvd.taxiservice.Main.task20() @89             - User{id=11, email='Email@gmail.com', profile=Profile{id='0', name='null', phoneNumber='null'}, driverLicense=DriverLicense{id='0', licenseNumber='null', dateOfBirth=Thu Jun 29 15:30:31 PDT 2023, expirationDate=Thu Jun 29 15:30:31 PDT 2023}, vehicle=Vehicle{id='0', model='null', licensePlate='null'}, rides=null}
+15:31:02.861 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @14             - Enable radio and AC
+15:31:16.760 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @14             - Enable radio and AC
+15:31:16.766 INFO  com.solvd.taxiservice.db.structural.AddStopsRideType.includeToRide() @17             -  Enable unlimited stops
+18:15:30.456 INFO  com.solvd.taxiservice.Main.task20() @56             - RideType{id=0, type='luxury', costPerMile=4.5}
+18:15:30.464 INFO  com.solvd.taxiservice.db.behavioral.RideCostObserver.update() @22             - Ride Type Cost per Mile with taxes:5.5
+18:15:30.468 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @15             - Enable radio and AC
+18:15:30.469 INFO  com.solvd.taxiservice.db.structural.AddStopsRideType.includeToRide() @17             -  Enable unlimited stops
+18:15:30.470 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @15             - Enable radio and AC
+18:15:30.471 INFO  com.solvd.taxiservice.db.structural.AddStopsRideType.includeToRide() @17             -  Enable unlimited stops
+18:15:30.471 INFO  com.solvd.taxiservice.db.structural.TSRideType.includeToRide() @16             - Enable access to touch screen
+18:15:30.471 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @15             - Enable radio and AC
+18:15:30.471 INFO  com.solvd.taxiservice.db.structural.TSRideType.includeToRide() @16             - Enable access to touch screen
+18:15:30.473 INFO  com.solvd.taxiservice.db.structural.RideTypeProxy.includeToRide() @19             -  Checking for restrictions before executing real IrideType....
+18:15:30.473 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @15             - Enable radio and AC
+18:15:30.475 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @15             - Enable radio and AC
+18:15:30.475 INFO  com.solvd.taxiservice.db.structural.AddStopsRideType.includeToRide() @17             -  Enable unlimited stops
+18:15:30.475 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @15             - Enable radio and AC
+18:15:30.475 INFO  com.solvd.taxiservice.db.structural.AddStopsRideType.includeToRide() @17             -  Enable unlimited stops
+18:15:30.476 INFO  com.solvd.taxiservice.db.structural.TSRideType.includeToRide() @16             - Enable access to touch screen
+18:15:30.479 INFO  com.solvd.taxiservice.Main.task20() @84             - Ride{id=0, pickUpLocations='abc street', dropOffLocation='zxy street', status='null', rideType=RideType{id=0, type='luxury', costPerMile=5.5}, reviews=null}
+18:15:30.490 INFO  com.solvd.taxiservice.Main.task20() @94             - User{id=11, email='Email@gmail.com', profile=Profile{id='0', name='null', phoneNumber='null'}, driverLicense=DriverLicense{id='0', licenseNumber='null', dateOfBirth=Thu Jun 29 18:15:30 PDT 2023, expirationDate=Thu Jun 29 18:15:30 PDT 2023}, vehicle=Vehicle{id='0', model='null', licensePlate='null'}, rides=null}
+18:54:49.882 INFO  com.solvd.taxiservice.Main.main() @40             - RideType{id=0, type='luxury', costPerMile=4.5}
+18:54:49.889 INFO  com.solvd.taxiservice.db.behavioral.RideCostObserver.update() @22             - Ride Type Cost per Mile with taxes:5.5
+18:54:49.889 INFO  com.solvd.taxiservice.Main.main() @42             - RideType{id=0, type='luxury', costPerMile=5.5}
+18:55:22.854 INFO  com.solvd.taxiservice.Main.main() @40             - RideType{id=0, type='luxury', costPerMile=4.5}
+18:55:22.861 INFO  com.solvd.taxiservice.Main.main() @42             - RideType{id=0, type='luxury', costPerMile=5.5}
+18:56:40.358 INFO  com.solvd.taxiservice.Main.task20() @56             - RideType{id=0, type='luxury', costPerMile=4.5}
+18:56:40.365 INFO  com.solvd.taxiservice.db.behavioral.RideCostObserver.update() @22             - Ride Type Cost per Mile with taxes:5.5
+18:56:40.369 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @15             - Enable radio and AC
+18:56:40.369 INFO  com.solvd.taxiservice.db.structural.AddStopsRideType.includeToRide() @17             -  Enable unlimited stops
+18:56:40.371 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @15             - Enable radio and AC
+18:56:40.371 INFO  com.solvd.taxiservice.db.structural.AddStopsRideType.includeToRide() @17             -  Enable unlimited stops
+18:56:40.372 INFO  com.solvd.taxiservice.db.structural.TSRideType.includeToRide() @16             - Enable access to touch screen
+18:56:40.372 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @15             - Enable radio and AC
+18:56:40.372 INFO  com.solvd.taxiservice.db.structural.TSRideType.includeToRide() @16             - Enable access to touch screen
+18:56:40.374 INFO  com.solvd.taxiservice.db.structural.RideTypeProxy.includeToRide() @19             -  Checking for restrictions before executing real IrideType....
+18:56:40.374 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @15             - Enable radio and AC
+18:56:40.376 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @15             - Enable radio and AC
+18:56:40.376 INFO  com.solvd.taxiservice.db.structural.AddStopsRideType.includeToRide() @17             -  Enable unlimited stops
+18:56:40.376 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @15             - Enable radio and AC
+18:56:40.377 INFO  com.solvd.taxiservice.db.structural.AddStopsRideType.includeToRide() @17             -  Enable unlimited stops
+18:56:40.377 INFO  com.solvd.taxiservice.db.structural.TSRideType.includeToRide() @16             - Enable access to touch screen
+18:56:40.379 INFO  com.solvd.taxiservice.Main.task20() @85             - Ride{id=0, pickUpLocations='abc street', dropOffLocation='zxy street', status='null', rideType=RideType{id=0, type='luxury', costPerMile=5.5}, reviews=null}
+18:56:40.388 INFO  com.solvd.taxiservice.Main.task20() @95             - User{id=11, email='Email@gmail.com', profile=Profile{id='0', name='null', phoneNumber='null'}, driverLicense=DriverLicense{id='0', licenseNumber='null', dateOfBirth=Thu Jun 29 18:56:40 PDT 2023, expirationDate=Thu Jun 29 18:56:40 PDT 2023}, vehicle=Vehicle{id='0', model='null', licensePlate='null'}, rides=null}
+20:56:27.687 INFO  com.solvd.taxiservice.Main.main() @47             - User{id=11, email='Email@gmail.com', profile=Profile{id='0', name='null', phoneNumber='null'}, driverLicense=DriverLicense{id='0', licenseNumber='null', dateOfBirth=Thu Jun 29 20:56:27 PDT 2023, expirationDate=Thu Jun 29 20:56:27 PDT 2023}, vehicle=Vehicle{id='0', model='null', licensePlate='null'}, rides=null}
+20:56:27.700 INFO  com.solvd.taxiservice.db.view.UserView.printUserDetails() @19             - User 
+20:56:27.701 INFO  com.solvd.taxiservice.db.view.UserView.printUserDetails() @20             -        :email: Email@gmail.com
+20:56:27.701 INFO  com.solvd.taxiservice.db.view.ProfileView.printProfileDetails() @13             - Profile: 
+20:56:27.702 INFO  com.solvd.taxiservice.db.view.ProfileView.printProfileDetails() @14             -        :name: null
+20:56:27.702 INFO  com.solvd.taxiservice.db.view.ProfileView.printProfileDetails() @15             -        :phone num: null
+20:56:27.702 INFO  com.solvd.taxiservice.db.view.DriverLicenseView.printDLDetails() @13             - Driver License: 
+20:56:27.703 INFO  com.solvd.taxiservice.db.view.DriverLicenseView.printDLDetails() @14             -        :license number: null
+20:56:27.703 INFO  com.solvd.taxiservice.db.view.VehicleView.printVehicleDetails() @13             - Vehicle: 
+20:56:27.703 INFO  com.solvd.taxiservice.db.view.VehicleView.printVehicleDetails() @14             -        :model: null
+20:56:27.704 INFO  com.solvd.taxiservice.db.view.VehicleView.printVehicleDetails() @15             -        :license plate: null
+20:58:35.004 INFO  com.solvd.taxiservice.Main.main() @47             - User{id=11, email='Email@gmail.com', profile=Profile{id='0', name='Charlie', phoneNumber='123123123'}, driverLicense=DriverLicense{id='0', licenseNumber='null', dateOfBirth=Thu Jun 29 20:58:34 PDT 2023, expirationDate=Thu Jun 29 20:58:34 PDT 2023}, vehicle=Vehicle{id='0', model='Jeep', licensePlate='Q123f3'}, rides=null}
+20:58:35.014 INFO  com.solvd.taxiservice.db.view.UserView.printUserDetails() @19             - User 
+20:58:35.015 INFO  com.solvd.taxiservice.db.view.UserView.printUserDetails() @20             -        :email: Email@gmail.com
+20:58:35.015 INFO  com.solvd.taxiservice.db.view.ProfileView.printProfileDetails() @13             - Profile: 
+20:58:35.016 INFO  com.solvd.taxiservice.db.view.ProfileView.printProfileDetails() @14             -        :name: Charlie
+20:58:35.016 INFO  com.solvd.taxiservice.db.view.ProfileView.printProfileDetails() @15             -        :phone num: 123123123
+20:58:35.016 INFO  com.solvd.taxiservice.db.view.DriverLicenseView.printDLDetails() @13             - Driver License: 
+20:58:35.016 INFO  com.solvd.taxiservice.db.view.DriverLicenseView.printDLDetails() @14             -               :license number: null
+20:58:35.017 INFO  com.solvd.taxiservice.db.view.VehicleView.printVehicleDetails() @13             - Vehicle: 
+20:58:35.017 INFO  com.solvd.taxiservice.db.view.VehicleView.printVehicleDetails() @14             -        :model: Jeep
+20:58:35.018 INFO  com.solvd.taxiservice.db.view.VehicleView.printVehicleDetails() @15             -        :license plate: Q123f3
+20:59:51.398 INFO  com.solvd.taxiservice.Main.task20() @59             - RideType{id=0, type='luxury', costPerMile=4.5}
+20:59:51.406 INFO  com.solvd.taxiservice.db.behavioral.RideCostObserver.update() @22             - Ride Type Cost per Mile with taxes:5.5
+20:59:51.409 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @17             - Enable radio and AC
+20:59:51.410 INFO  com.solvd.taxiservice.db.structural.AddStopsRideType.includeToRide() @17             -  Enable unlimited stops
+20:59:51.411 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @17             - Enable radio and AC
+20:59:51.412 INFO  com.solvd.taxiservice.db.structural.AddStopsRideType.includeToRide() @17             -  Enable unlimited stops
+20:59:51.412 INFO  com.solvd.taxiservice.db.structural.TSRideType.includeToRide() @16             - Enable access to touch screen
+20:59:51.412 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @17             - Enable radio and AC
+20:59:51.413 INFO  com.solvd.taxiservice.db.structural.TSRideType.includeToRide() @16             - Enable access to touch screen
+20:59:51.415 INFO  com.solvd.taxiservice.db.structural.RideTypeProxy.includeToRide() @19             -  Checking for restrictions before executing real IrideType....
+20:59:51.415 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @17             - Enable radio and AC
+20:59:51.417 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @17             - Enable radio and AC
+20:59:51.417 INFO  com.solvd.taxiservice.db.structural.AddStopsRideType.includeToRide() @17             -  Enable unlimited stops
+20:59:51.418 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @17             - Enable radio and AC
+20:59:51.418 INFO  com.solvd.taxiservice.db.structural.AddStopsRideType.includeToRide() @17             -  Enable unlimited stops
+20:59:51.418 INFO  com.solvd.taxiservice.db.structural.TSRideType.includeToRide() @16             - Enable access to touch screen
+20:59:51.420 INFO  com.solvd.taxiservice.Main.task20() @94             - Ride{id=0, pickUpLocations='abc street', dropOffLocation='zxy street', status='null', rideType=RideType{id=0, type='luxury', costPerMile=5.5}, reviews=null}
+20:59:51.430 INFO  com.solvd.taxiservice.Main.task20() @104             - User{id=11, email='Email@gmail.com', profile=Profile{id='0', name='Charlie', phoneNumber='123123123'}, driverLicense=DriverLicense{id='0', licenseNumber='null', dateOfBirth=Thu Jun 29 20:59:51 PDT 2023, expirationDate=Thu Jun 29 20:59:51 PDT 2023}, vehicle=Vehicle{id='0', model='Jeep', licensePlate='Q123f3'}, rides=null}
+20:59:51.434 INFO  com.solvd.taxiservice.db.view.UserView.printUserDetails() @19             - User 
+20:59:51.434 INFO  com.solvd.taxiservice.db.view.UserView.printUserDetails() @20             -        :email: Email@gmail.com
+20:59:51.434 INFO  com.solvd.taxiservice.db.view.ProfileView.printProfileDetails() @13             - Profile: 
+20:59:51.434 INFO  com.solvd.taxiservice.db.view.ProfileView.printProfileDetails() @14             -        :name: Charlie
+20:59:51.435 INFO  com.solvd.taxiservice.db.view.ProfileView.printProfileDetails() @15             -        :phone num: 123123123
+20:59:51.435 INFO  com.solvd.taxiservice.db.view.DriverLicenseView.printDLDetails() @13             - Driver License: 
+20:59:51.435 INFO  com.solvd.taxiservice.db.view.DriverLicenseView.printDLDetails() @14             -               :license number: null
+20:59:51.435 INFO  com.solvd.taxiservice.db.view.VehicleView.printVehicleDetails() @13             - Vehicle: 
+20:59:51.435 INFO  com.solvd.taxiservice.db.view.VehicleView.printVehicleDetails() @14             -        :model: Jeep
+20:59:51.435 INFO  com.solvd.taxiservice.db.view.VehicleView.printVehicleDetails() @15             -        :license plate: Q123f3
+22:01:51.458 INFO  com.solvd.taxiservice.Main.task20() @58             - RideType{id=0, type='luxury', costPerMile=4.5}
+22:01:51.464 INFO  com.solvd.taxiservice.db.behavioral.RideCostObserver.update() @22             - Ride Type Cost per Mile with taxes:5.5
+22:01:51.467 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @17             - Enable radio and AC
+22:01:51.468 INFO  com.solvd.taxiservice.db.structural.AddStopsRideType.includeToRide() @17             -  Enable unlimited stops
+22:01:51.470 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @17             - Enable radio and AC
+22:01:51.470 INFO  com.solvd.taxiservice.db.structural.AddStopsRideType.includeToRide() @17             -  Enable unlimited stops
+22:01:51.471 INFO  com.solvd.taxiservice.db.structural.TSRideType.includeToRide() @16             - Enable access to touch screen
+22:01:51.471 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @17             - Enable radio and AC
+22:01:51.471 INFO  com.solvd.taxiservice.db.structural.TSRideType.includeToRide() @16             - Enable access to touch screen
+22:01:51.475 INFO  com.solvd.taxiservice.db.structural.RideTypeProxy.includeToRide() @19             -  Checking for restrictions before executing real IrideType....
+22:01:51.475 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @17             - Enable radio and AC
+22:01:51.477 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @17             - Enable radio and AC
+22:01:51.477 INFO  com.solvd.taxiservice.db.structural.AddStopsRideType.includeToRide() @17             -  Enable unlimited stops
+22:01:51.478 INFO  com.solvd.taxiservice.db.structural.StandardRideType.includeToRide() @17             - Enable radio and AC
+22:01:51.478 INFO  com.solvd.taxiservice.db.structural.AddStopsRideType.includeToRide() @17             -  Enable unlimited stops
+22:01:51.478 INFO  com.solvd.taxiservice.db.structural.TSRideType.includeToRide() @16             - Enable access to touch screen
+22:01:51.480 INFO  com.solvd.taxiservice.Main.task20() @90             - Ride{id=0, pickUpLocations='abc street', dropOffLocation='zxy street', status='null', rideType=RideType{id=0, type='luxury', costPerMile=5.5}, reviews=null}
+22:01:51.491 INFO  com.solvd.taxiservice.Main.task20() @100             - User{id=11, email='Email@gmail.com', profile=Profile{id='0', name='Charlie', phoneNumber='123123123'}, driverLicense=DriverLicense{id='0', licenseNumber='null', dateOfBirth=Thu Jun 29 22:01:51 PDT 2023, expirationDate=Thu Jun 29 22:01:51 PDT 2023}, vehicle=Vehicle{id='0', model='Jeep', licensePlate='Q123f3'}, rides=null}
+22:01:51.496 INFO  com.solvd.taxiservice.db.view.UserView.printUserDetails() @19             - User 
+22:01:51.496 INFO  com.solvd.taxiservice.db.view.UserView.printUserDetails() @20             -        :email: Email@gmail.com
+22:01:51.497 INFO  com.solvd.taxiservice.db.view.ProfileView.printProfileDetails() @13             - Profile: 
+22:01:51.497 INFO  com.solvd.taxiservice.db.view.ProfileView.printProfileDetails() @14             -        :name: Charlie
+22:01:51.497 INFO  com.solvd.taxiservice.db.view.ProfileView.printProfileDetails() @15             -        :phone num: 123123123
+22:01:51.497 INFO  com.solvd.taxiservice.db.view.DriverLicenseView.printDLDetails() @13             - Driver License: 
+22:01:51.498 INFO  com.solvd.taxiservice.db.view.DriverLicenseView.printDLDetails() @14             -               :license number: null
+22:01:51.498 INFO  com.solvd.taxiservice.db.view.VehicleView.printVehicleDetails() @13             - Vehicle: 
+22:01:51.498 INFO  com.solvd.taxiservice.db.view.VehicleView.printVehicleDetails() @14             -        :model: Jeep
+22:01:51.498 INFO  com.solvd.taxiservice.db.view.VehicleView.printVehicleDetails() @15             -        :license plate: Q123f3
+22:01:51.499 INFO  com.solvd.taxiservice.db.view.UserView.printUserDetails() @19             - User 
+22:01:51.499 INFO  com.solvd.taxiservice.db.view.UserView.printUserDetails() @20             -        :email: hello@gmail.com
+22:01:51.499 INFO  com.solvd.taxiservice.db.view.ProfileView.printProfileDetails() @13             - Profile: 
+22:01:51.499 INFO  com.solvd.taxiservice.db.view.ProfileView.printProfileDetails() @14             -        :name: Charlie
+22:01:51.500 INFO  com.solvd.taxiservice.db.view.ProfileView.printProfileDetails() @15             -        :phone num: 123123123
+22:01:51.500 INFO  com.solvd.taxiservice.db.view.DriverLicenseView.printDLDetails() @13             - Driver License: 
+22:01:51.500 INFO  com.solvd.taxiservice.db.view.DriverLicenseView.printDLDetails() @14             -               :license number: null
+22:01:51.500 INFO  com.solvd.taxiservice.db.view.VehicleView.printVehicleDetails() @13             - Vehicle: 
+22:01:51.501 INFO  com.solvd.taxiservice.db.view.VehicleView.printVehicleDetails() @14             -        :model: Jeep
+22:01:51.501 INFO  com.solvd.taxiservice.db.view.VehicleView.printVehicleDetails() @15             -        :license plate: Q123f3

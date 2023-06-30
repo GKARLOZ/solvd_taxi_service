@@ -1,11 +1,11 @@
 package com.solvd.taxiservice.db.model;
 
-import com.solvd.taxiservice.db.observer.Observer;
+import com.solvd.taxiservice.db.behavioral.Observer;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class RideType {
+public class RideType{
 
     private long id;
     private String type;
@@ -63,4 +63,6 @@ public class RideType {
                 ", costPerMile=" + costPerMile +
                 '}';
     }
+
+
 }
